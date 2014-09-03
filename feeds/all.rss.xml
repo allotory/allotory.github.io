@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Amazilia</title><link>/</link><description></description><atom:link href="/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 02 Sep 2014 00:00:00 +0200</lastBuildDate><item><title>pelican install</title><link>/pelican-install.html</link><description>&lt;h3&gt;安装Pelican和Markdown&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;easy_install&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;span class="n"&gt;easy_install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;测试&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Tue, 02 Sep 2014 00:00:00 +0200</pubDate><guid>tag:,2014-09-02:pelican-install.html</guid><category>pelican</category></item></channel></rss>
