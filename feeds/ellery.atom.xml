@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Amazilia</title><link href="/" rel="alternate"></link><link href="/feeds%5Cellery.atom.xml" rel="self"></link><id>/</id><updated>2014-09-02T00:00:00+02:00</updated><entry><title>pelican install</title><link href="/pelican-install.html" rel="alternate"></link><updated>2014-09-02T00:00:00+02:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-02:pelican-install.html</id><summary type="html">&lt;h3&gt;安装Pelican和Markdown&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Amazilia</title><link href="/" rel="alternate"></link><link href="/feeds%5Cellery.atom.xml" rel="self"></link><id>/</id><updated>2014-09-02T00:00:00+08:00</updated><entry><title>pelican install</title><link href="/posts/2014/09/02/pelican-install/" rel="alternate"></link><updated>2014-09-02T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-02:posts/2014/09/02/pelican-install/</id><summary type="html">&lt;h3&gt;安装Pelican和Markdown&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;easy_install&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
 &lt;span class="n"&gt;easy_install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
