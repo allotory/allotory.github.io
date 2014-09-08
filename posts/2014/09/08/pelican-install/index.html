@@ -181,6 +181,16 @@
 <p>注册<a href="https://disqus.com/">Google Analytics</a>可以更好的管理自己的站点，按顺序注册，得到<code>Tracking ID</code>配置到<code>pelicanconf.py</code>里面。</p>
 <div class="highlight"><pre><span class="n">GOOGLE_ANALYTICS</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Tracking</span> <span class="n">ID</span><span class="err">&#39;</span>
 </pre></div>
+
+
+<h2>URL配置</h2>
+<p>使用URL配置可以更好的设置博文的URL。打开<code>pelicanconf.py</code>，按照如下修改或添加：</p>
+<div class="highlight"><pre><span class="n">ARTICLE_URL</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">posts</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">Y</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">m</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">d</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">slug</span><span class="p">}</span><span class="o">/</span><span class="err">&#39;</span>
+<span class="n">ARTICLE_SAVE_AS</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">posts</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">Y</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">m</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">d</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">slug</span><span class="p">}</span><span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">html</span><span class="err">&#39;</span>
+</pre></div>
+
+
+<p>此时的URL为<code>http://allotory.github.io/posts/2014/09/08/pelican-install/</code>,而文件保存路径为<code>http://allotory.github.io/posts/2014/09/08/pelican-install/index.html</code>。</p>
             </div><!-- /.entry-content -->
             <div class="comments">
               <h3>Comments</h3>
