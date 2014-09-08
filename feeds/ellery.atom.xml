@@ -94,7 +94,7 @@
 
 
 &lt;h2&gt;添加评论系统&lt;/h2&gt;
-&lt;p&gt;在[Disqus][15]上注册，按照流程Disqus会分配给站点一个&lt;code&gt;Shortname&lt;/code&gt;，然后修改&lt;code&gt;pelicanconf.py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;a href="https://disqus.com/"&gt;Disqus&lt;/a&gt;上注册，按照流程Disqus会分配给站点一个&lt;code&gt;Shortname&lt;/code&gt;，然后修改&lt;code&gt;pelicanconf.py&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;DISQUS_SITENAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Shortname&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -111,6 +111,6 @@
 
 &lt;p&gt;如此完成博客发布，访问&lt;code&gt;allotory.github.io&lt;/code&gt;即可。&lt;/p&gt;
 &lt;h2&gt;Google Analytics&lt;/h2&gt;
-&lt;p&gt;注册[Google Analytics][15]可以更好的管理自己的站点，按顺序注册，得到&lt;code&gt;Tracking ID&lt;/code&gt;配置到&lt;code&gt;pelicanconf.py&lt;/code&gt;里面。&lt;/p&gt;
+&lt;p&gt;注册&lt;a href="https://disqus.com/"&gt;Google Analytics&lt;/a&gt;可以更好的管理自己的站点，按顺序注册，得到&lt;code&gt;Tracking ID&lt;/code&gt;配置到&lt;code&gt;pelicanconf.py&lt;/code&gt;里面。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;GOOGLE_ANALYTICS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;Tracking&lt;/span&gt; &lt;span class="n"&gt;ID&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category><category term="Pelican"></category><category term="GitHub"></category><category term="Markdown"></category></entry></feed>
