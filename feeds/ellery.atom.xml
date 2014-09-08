@@ -12,4 +12,105 @@
 &lt;li&gt;&lt;a href="https://pypi.python.org/pypi"&gt;Pip&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://daringfireball.net/projects/markdown/syntax"&gt;Pelican&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;</summary><category term="Python"></category><category term="Pelican"></category><category term="GitHub"></category><category term="Markdown"></category></entry></feed>
+&lt;/blockquote&gt;
+&lt;h2&gt;下载安装&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.python.org/getit/"&gt;Python下载&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://msysgit.github.io/"&gt;Git下载&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pypi.python.org/pypi/distribute#downloads"&gt;Pip下载&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.equation.com/servlet/equation.cmd?fa=make"&gt;Windows下make下载&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;安装Python，本文使用的是Python 2.7&lt;/li&gt;
+&lt;li&gt;安装Git，Git简单教程参见&lt;a href="http://www.git-scm.com/book/zh"&gt;Git教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;将Python安装文件夹中的scripts和make.exe加入环境变量&lt;/li&gt;
+&lt;li&gt;安装pip，具体可以看&lt;a href="http://www.pip-installer.org/en/latest/installing.html"&gt;官网介绍&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;安装pelican和markdown，具体请参见&lt;a href="http://daringfireball.net/projects/markdown/syntax"&gt;markdown教程&lt;/a&gt;。&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;开始搭建博客&lt;/h2&gt;
+&lt;p&gt;打开Git bash，创建一个文件夹Amazilia（可以按喜好拟定），执行如下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;Amazilia&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;Amazilia&lt;/span&gt;
+&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;quickstart&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;执行完pelican-quickstart命令后，会提示博客的配置选项，除少数几项必填之外，其他可以选择默认，如有需要可以在&lt;code&gt;pelicanconf.py&lt;/code&gt;文件中可以进行修改。
+命令成功执行后，会出现Pelican框架，如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Amazilia&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;                &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;存放输入的&lt;/span&gt;&lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="err"&gt;源文件&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pages&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;            &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;存放手工创建的静态页面，可选&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;                 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;存放最终生成的静态博客&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;develop_server&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;      &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;测试服务器&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;Makefile&lt;/span&gt;               &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;管理博客的&lt;/span&gt;&lt;span class="n"&gt;Makefile&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;pelicanconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;         &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;配置文件&lt;/span&gt;
+&lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;publishconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;         &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;发布文件，可删除&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;撰写博客&lt;/h2&gt;
+&lt;p&gt;完成博客主体搭建后，可以使用Sublime Text创建一个&lt;code&gt;.md&lt;/code&gt;文件，使用markdown语法书写博客，完成后保存于&lt;code&gt;content&lt;/code&gt;文件夹中。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;Title:&lt;/span&gt; &lt;span class="err"&gt;使用&lt;/span&gt;&lt;span class="n"&gt;Pelican&lt;/span&gt;&lt;span class="err"&gt;和&lt;/span&gt;&lt;span class="n"&gt;GitHub&lt;/span&gt;&lt;span class="err"&gt;搭建个人博客&lt;/span&gt;
+&lt;span class="nl"&gt;Date:&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;09&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;
+&lt;span class="nl"&gt;Tags:&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;GitHub&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Markdown&lt;/span&gt;
+&lt;span class="nl"&gt;Category:&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt;
+&lt;span class="nl"&gt;Slug:&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;
+&lt;span class="nl"&gt;Author:&lt;/span&gt; &lt;span class="n"&gt;Ellery&lt;/span&gt;
+&lt;span class="cp"&gt;##简介&lt;/span&gt;
+&lt;span class="n"&gt;Github&lt;/span&gt;&lt;span class="err"&gt;是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。&lt;/span&gt;&lt;span class="n"&gt;GitHub&lt;/span&gt;&lt;span class="err"&gt;设计了&lt;/span&gt;&lt;span class="n"&gt;Pages&lt;/span&gt;&lt;span class="err"&gt;功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt; &lt;span class="n"&gt;Pages&lt;/span&gt;&lt;span class="err"&gt;可以被认为是用户编写的、托管在&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="err"&gt;上的静态网页。&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;完成之后，在&lt;code&gt;Amazilia&lt;/code&gt;目录下，执行&lt;code&gt;make html&lt;/code&gt;命令生成博客&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pelicanconfg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;make html&lt;/code&gt;命令是将&lt;code&gt;.md&lt;/code&gt;文件生成HTML，存放在output目录下，如果没有make命令，可以使用第二行的Pelican命令。
+接着执行&lt;code&gt;make serve&lt;/code&gt;命令开启测试服务器&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;serve&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;同样&lt;code&gt;make serve&lt;/code&gt;命令也可以由第二行的Pelican命令替代，在浏览器中输入&lt;code&gt;http://localhost:8000&lt;/code&gt;即可看到博文效果。&lt;/p&gt;
+&lt;h2&gt;配置主题&lt;/h2&gt;
+&lt;p&gt;在Amazilia目录下，按照如下步骤下载Pelican主题，只挑选喜欢的即可，其他不喜欢的可以删掉。主题可以在&lt;a href="https://github.com/getpelican/pelican-themes"&gt;Pelican主题库&lt;/a&gt;查看。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/getpelican/pelican-themes.git&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;打开配置文件&lt;code&gt;pelicanconf.py&lt;/code&gt;，更改或添加&lt;code&gt;THEME&lt;/code&gt;为自己喜欢的主题。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;themes&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gum&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;添加评论系统&lt;/h2&gt;
+&lt;p&gt;在[Disqus][15]上注册，按照流程Disqus会分配给站点一个&lt;code&gt;Shortname&lt;/code&gt;，然后修改&lt;code&gt;pelicanconf.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;DISQUS_SITENAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Shortname&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;发布博客&lt;/h2&gt;
+&lt;p&gt;在github上面建立一个&lt;code&gt;当前github用户名.github.io&lt;/code&gt;的版本仓库，如我博客版本仓库的为&lt;code&gt;allotory.github.io&lt;/code&gt;，然后进入&lt;code&gt;output&lt;/code&gt;目录下，依次执行如下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;allotory&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;allotory&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;pull&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如此完成博客发布，访问&lt;code&gt;allotory.github.io&lt;/code&gt;即可。&lt;/p&gt;
+&lt;h2&gt;Google Analytics&lt;/h2&gt;
+&lt;p&gt;注册[Google Analytics][15]可以更好的管理自己的站点，按顺序注册，得到&lt;code&gt;Tracking ID&lt;/code&gt;配置到&lt;code&gt;pelicanconf.py&lt;/code&gt;里面。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;GOOGLE_ANALYTICS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;Tracking&lt;/span&gt; &lt;span class="n"&gt;ID&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category><category term="Pelican"></category><category term="GitHub"></category><category term="Markdown"></category></entry></feed>
