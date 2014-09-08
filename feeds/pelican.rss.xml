@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Amazilia</title><link>/</link><description></description><atom:link href="/feeds/pelican.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 02 Sep 2014 00:00:00 +0800</lastBuildDate><item><title>pelican install</title><link>/posts/2014/09/02/pelican-install/</link><description>&lt;h3&gt;安装Pelican和Markdown&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;easy_install&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
-&lt;span class="n"&gt;easy_install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;测试&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Tue, 02 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-02:posts/2014/09/02/pelican-install/</guid><category>pelican</category></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Amazilia</title><link>/</link><description></description><atom:link href="/feeds/pelican.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 08 Sep 2014 00:00:00 +0800</lastBuildDate><item><title>使用Pelican和GitHub搭建个人博客</title><link>/posts/2014/09/08/pelican-install/</link><description>&lt;h2&gt;简介&lt;/h2&gt;
+&lt;p&gt;Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。&lt;/p&gt;
+&lt;h2&gt;基础知识&lt;/h2&gt;
+&lt;p&gt;搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gihub.com/"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://git-scm.com/"&gt;Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.python.org/"&gt;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pypi.python.org/pypi"&gt;Pip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://daringfireball.net/projects/markdown/syntax"&gt;Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Mon, 08 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-08:posts/2014/09/08/pelican-install/</guid><category>Python</category><category>Pelican</category><category>GitHub</category><category>Markdown</category></item></channel></rss>
