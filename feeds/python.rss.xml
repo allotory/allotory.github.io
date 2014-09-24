@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Amazilia</title><link>/</link><description></description><atom:link href="/feeds/python.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 08 Sep 2014 00:00:00 +0800</lastBuildDate><item><title>修复Pelican代码块中红框问题</title><link>/posts/2014/09/08/fix-code-err/</link><description>&lt;p&gt;在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Amazilia</title><link>/</link><description></description><atom:link href="/feeds/python.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 24 Sep 2014 00:00:00 +0800</lastBuildDate><item><title>解决Django同步数据库No module named MySQLdb错误</title><link>/posts/2014/09/24/django-syncdb/</link><description>&lt;p&gt;Django在同步数据库时会根据models.py中描述的数据模型，在MySQL中创建各个关系表&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;syncdb&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;同步数据库后，Django将建立相关的MySQL表格，并要求你创建一个超级用户等信息，但有时在windows环境下执行上述命令后会提示出错信息：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;django&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;core&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exceptions&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ImproperlyConfigured&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; 
+&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;loading&lt;/span&gt; &lt;span class="n"&gt;MySQLdb&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;No&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt; &lt;span class="n"&gt;named&lt;/span&gt; &lt;span class="n"&gt;MySQLdb&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;No model named Mysqldb，这是因为当前Python环境没有安装MySQL for Python组件，解决办法：下载相应&lt;a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/"&gt;MySQL for Python组件&lt;/a&gt;并安装即可。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Wed, 24 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-24:posts/2014/09/24/django-syncdb/</guid><category>Django</category><category>MySQL</category><category>MySQL-python</category></item><item><title>修复Pelican代码块中红框问题</title><link>/posts/2014/09/08/fix-code-err/</link><description>&lt;p&gt;在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
 在Pelican中使用&lt;code&gt;pygment.css&lt;/code&gt;文件处理代码高亮，我们可以修改该文件修复红框问题。可以修改&lt;code&gt;output/theme/pygment.css&lt;/code&gt;处理该问题，但是当我们重新调用&lt;code&gt;make html&lt;/code&gt;时，文件会被重置，所以可以修改博客根目录下&lt;code&gt;pelican-themes&lt;/code&gt;里的&lt;code&gt;pygment.css&lt;/code&gt;文件。如本博客为&lt;code&gt;Amazilia\pelican-themes\gum\static&lt;/code&gt;下的&lt;code&gt;pygment.css&lt;/code&gt;。找到如下代码去掉即可。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;err&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="nl"&gt;border:&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;px&lt;/span&gt; &lt;span class="n"&gt;solid&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;FF0000&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Mon, 08 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-08:posts/2014/09/08/fix-code-err/</guid><category>CSS</category><category>Pelican</category><category>Markdown</category></item><item><title>使用Pelican和GitHub搭建个人博客</title><link>/posts/2014/09/08/pelican-install/</link><description>&lt;h2&gt;简介&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Mon, 08 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-08:posts/2014/09/08/fix-code-err/</guid><category>CSS</category><category>Pelican</category><category>Markdown</category></item><item><title>使用Pelican和GitHub搭建个人博客</title><link>/posts/2014/09/08/pelican-install/</link><description>&lt;h3&gt;简介&lt;/h3&gt;
 &lt;p&gt;Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。&lt;/p&gt;
-&lt;h2&gt;基础知识&lt;/h2&gt;
+&lt;h3&gt;基础知识&lt;/h3&gt;
 &lt;p&gt;搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
@@ -18,7 +29,7 @@
 &lt;li&gt;&lt;a href="http://daringfireball.net/projects/markdown/syntax"&gt;Pelican&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h2&gt;下载安装&lt;/h2&gt;
+&lt;h3&gt;下载安装&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.python.org/getit/"&gt;Python下载&lt;/a&gt;&lt;/li&gt;
@@ -39,7 +50,7 @@
 
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;开始搭建博客&lt;/h2&gt;
+&lt;h3&gt;开始搭建博客&lt;/h3&gt;
 &lt;p&gt;打开Git bash，创建一个文件夹Amazilia（可以按喜好拟定），执行如下命令：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;Amazilia&lt;/span&gt;
 &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;Amazilia&lt;/span&gt;
@@ -60,7 +71,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;撰写博客&lt;/h2&gt;
+&lt;h3&gt;撰写博客&lt;/h3&gt;
 &lt;p&gt;完成博客主体搭建后，可以使用Sublime Text创建一个&lt;code&gt;.md&lt;/code&gt;文件，使用markdown语法书写博客，完成后保存于&lt;code&gt;content&lt;/code&gt;文件夹中。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;Title:&lt;/span&gt; &lt;span class="err"&gt;使用&lt;/span&gt;&lt;span class="n"&gt;Pelican&lt;/span&gt;&lt;span class="err"&gt;和&lt;/span&gt;&lt;span class="n"&gt;GitHub&lt;/span&gt;&lt;span class="err"&gt;搭建个人博客&lt;/span&gt;
 &lt;span class="nl"&gt;Date:&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;09&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;
@@ -68,7 +79,7 @@
 &lt;span class="nl"&gt;Category:&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt;
 &lt;span class="nl"&gt;Slug:&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;
 &lt;span class="nl"&gt;Author:&lt;/span&gt; &lt;span class="n"&gt;Ellery&lt;/span&gt;
-&lt;span class="cp"&gt;##简介&lt;/span&gt;
+&lt;span class="cp"&gt;###简介&lt;/span&gt;
 &lt;span class="n"&gt;Github&lt;/span&gt;&lt;span class="err"&gt;是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。&lt;/span&gt;&lt;span class="n"&gt;GitHub&lt;/span&gt;&lt;span class="err"&gt;设计了&lt;/span&gt;&lt;span class="n"&gt;Pages&lt;/span&gt;&lt;span class="err"&gt;功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt; &lt;span class="n"&gt;Pages&lt;/span&gt;&lt;span class="err"&gt;可以被认为是用户编写的、托管在&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="err"&gt;上的静态网页。&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -87,7 +98,7 @@
 
 
 &lt;p&gt;同样&lt;code&gt;make serve&lt;/code&gt;命令也可以由第二行的Pelican命令替代，在浏览器中输入&lt;code&gt;http://localhost:8000&lt;/code&gt;即可看到博文效果。&lt;/p&gt;
-&lt;h2&gt;配置主题&lt;/h2&gt;
+&lt;h3&gt;配置主题&lt;/h3&gt;
 &lt;p&gt;在Amazilia目录下，按照如下步骤下载Pelican主题，只挑选喜欢的即可，其他不喜欢的可以删掉。主题可以在&lt;a href="https://github.com/getpelican/pelican-themes"&gt;Pelican主题库&lt;/a&gt;查看。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/getpelican/pelican-themes.git&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -98,13 +109,13 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;添加评论系统&lt;/h2&gt;
+&lt;h3&gt;添加评论系统&lt;/h3&gt;
 &lt;p&gt;在&lt;a href="https://disqus.com/"&gt;Disqus&lt;/a&gt;上注册，按照流程Disqus会分配给站点一个&lt;code&gt;Shortname&lt;/code&gt;，然后修改&lt;code&gt;pelicanconf.py&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;DISQUS_SITENAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Shortname&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;发布博客&lt;/h2&gt;
+&lt;h3&gt;发布博客&lt;/h3&gt;
 &lt;p&gt;在github上面建立一个&lt;code&gt;当前github用户名.github.io&lt;/code&gt;的版本仓库，如我博客版本仓库的为&lt;code&gt;allotory.github.io&lt;/code&gt;，然后进入&lt;code&gt;output&lt;/code&gt;目录下，依次执行如下命令：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;
 &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;allotory&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;allotory&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
@@ -115,13 +126,13 @@
 
 
 &lt;p&gt;如此完成博客发布，访问&lt;code&gt;allotory.github.io&lt;/code&gt;即可。&lt;/p&gt;
-&lt;h2&gt;Google Analytics&lt;/h2&gt;
+&lt;h3&gt;Google Analytics&lt;/h3&gt;
 &lt;p&gt;注册&lt;a href="https://disqus.com/"&gt;Google Analytics&lt;/a&gt;可以更好的管理自己的站点，按顺序注册，得到&lt;code&gt;Tracking ID&lt;/code&gt;配置到&lt;code&gt;pelicanconf.py&lt;/code&gt;里面。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;GOOGLE_ANALYTICS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;Tracking&lt;/span&gt; &lt;span class="n"&gt;ID&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;URL配置&lt;/h2&gt;
+&lt;h3&gt;URL配置&lt;/h3&gt;
 &lt;p&gt;使用URL配置可以更好的设置博文的URL。打开&lt;code&gt;pelicanconf.py&lt;/code&gt;，按照如下修改或添加：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;ARTICLE_URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;posts&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:%&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:%&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:%&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;ARTICLE_SAVE_AS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;posts&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:%&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:%&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:%&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;

@@ -52,9 +52,9 @@
 
 
             <header>
-              <h2 class="entry-title">
+              <h3 class="entry-title">
                 <a href="/posts/2014/09/08/pelican-install/" rel="bookmark"
-                   title="Permalink to 使用Pelican和GitHub搭建个人博客">使用Pelican和GitHub搭建个人博客</a></h2>
+                   title="Permalink to 使用Pelican和GitHub搭建个人博客">使用Pelican和GitHub搭建个人博客</a></h3>
            
             </header>
             <footer class="post-info">
@@ -66,9 +66,9 @@
               </address>
             </footer><!-- /.post-info -->
             <div class="entry-content">
-              <h2>简介</h2>
+              <h3>简介</h3>
 <p>Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
-<h2>基础知识</h2>
+<h3>基础知识</h3>
 <p>搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。</p>
 <blockquote>
 <ul>
@@ -80,7 +80,7 @@
 <li><a href="http://daringfireball.net/projects/markdown/syntax">Pelican</a></li>
 </ul>
 </blockquote>
-<h2>下载安装</h2>
+<h3>下载安装</h3>
 <blockquote>
 <ul>
 <li><a href="http://www.python.org/getit/">Python下载</a></li>
@@ -101,7 +101,7 @@
 
 </li>
 </ol>
-<h2>开始搭建博客</h2>
+<h3>开始搭建博客</h3>
 <p>打开Git bash，创建一个文件夹Amazilia（可以按喜好拟定），执行如下命令：</p>
 <div class="highlight"><pre><span class="n">mkdir</span> <span class="n">Amazilia</span>
 <span class="n">cd</span> <span class="n">Amazilia</span>
@@ -122,7 +122,7 @@
 </pre></div>
 
 
-<h2>撰写博客</h2>
+<h3>撰写博客</h3>
 <p>完成博客主体搭建后，可以使用Sublime Text创建一个<code>.md</code>文件，使用markdown语法书写博客，完成后保存于<code>content</code>文件夹中。</p>
 <div class="highlight"><pre><span class="nl">Title:</span> <span class="err">使用</span><span class="n">Pelican</span><span class="err">和</span><span class="n">GitHub</span><span class="err">搭建个人博客</span>
 <span class="nl">Date:</span> <span class="mi">2014</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">08</span>
@@ -130,7 +130,7 @@
 <span class="nl">Category:</span> <span class="n">Pelican</span>
 <span class="nl">Slug:</span> <span class="n">pelican</span><span class="o">-</span><span class="n">install</span>
 <span class="nl">Author:</span> <span class="n">Ellery</span>
-<span class="cp">##简介</span>
+<span class="cp">###简介</span>
 <span class="n">Github</span><span class="err">是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。</span><span class="n">GitHub</span><span class="err">设计了</span><span class="n">Pages</span><span class="err">功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，</span><span class="n">github</span> <span class="n">Pages</span><span class="err">可以被认为是用户编写的、托管在</span><span class="n">github</span><span class="err">上的静态网页。</span>
 </pre></div>
 
@@ -149,7 +149,7 @@
 
 
 <p>同样<code>make serve</code>命令也可以由第二行的Pelican命令替代，在浏览器中输入<code>http://localhost:8000</code>即可看到博文效果。</p>
-<h2>配置主题</h2>
+<h3>配置主题</h3>
 <p>在Amazilia目录下，按照如下步骤下载Pelican主题，只挑选喜欢的即可，其他不喜欢的可以删掉。主题可以在<a href="https://github.com/getpelican/pelican-themes">Pelican主题库</a>查看。</p>
 <div class="highlight"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/getpelican/pelican-themes.git</span>
 </pre></div>
@@ -160,13 +160,13 @@
 </pre></div>
 
 
-<h2>添加评论系统</h2>
+<h3>添加评论系统</h3>
 <p>在<a href="https://disqus.com/">Disqus</a>上注册，按照流程Disqus会分配给站点一个<code>Shortname</code>，然后修改<code>pelicanconf.py</code></p>
 <div class="highlight"><pre><span class="n">DISQUS_SITENAME</span><span class="o">=</span><span class="n">Shortname</span>
 </pre></div>
 
 
-<h2>发布博客</h2>
+<h3>发布博客</h3>
 <p>在github上面建立一个<code>当前github用户名.github.io</code>的版本仓库，如我博客版本仓库的为<code>allotory.github.io</code>，然后进入<code>output</code>目录下，依次执行如下命令：</p>
 <div class="highlight"><pre><span class="n">git</span> <span class="n">init</span>
 <span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">allotory</span><span class="o">/</span><span class="n">allotory</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span>
@@ -177,13 +177,13 @@
 
 
 <p>如此完成博客发布，访问<code>allotory.github.io</code>即可。</p>
-<h2>Google Analytics</h2>
+<h3>Google Analytics</h3>
 <p>注册<a href="https://disqus.com/">Google Analytics</a>可以更好的管理自己的站点，按顺序注册，得到<code>Tracking ID</code>配置到<code>pelicanconf.py</code>里面。</p>
 <div class="highlight"><pre><span class="n">GOOGLE_ANALYTICS</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Tracking</span> <span class="n">ID</span><span class="err">&#39;</span>
 </pre></div>
 
 
-<h2>URL配置</h2>
+<h3>URL配置</h3>
 <p>使用URL配置可以更好的设置博文的URL。打开<code>pelicanconf.py</code>，按照如下修改或添加：</p>
 <div class="highlight"><pre><span class="n">ARTICLE_URL</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">posts</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">Y</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">m</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">d</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">slug</span><span class="p">}</span><span class="o">/</span><span class="err">&#39;</span>
 <span class="n">ARTICLE_SAVE_AS</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">posts</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">Y</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">m</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">date</span><span class="o">:%</span><span class="n">d</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">slug</span><span class="p">}</span><span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">html</span><span class="err">&#39;</span>
@@ -225,11 +225,14 @@
 
 <h4>Tags</h4>
 	<ul>
-	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
-	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
+	    <li class="tag-4"><a href="/tag/django.html">Django</a></li>
 	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
-	    <li class="tag-4"><a href="/tag/python.html">Python</a></li>
 	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
+	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
+	    <li class="tag-4"><a href="/tag/mysql-python.html">MySQL-python</a></li>
+	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-4"><a href="/tag/python.html">Python</a></li>
 </ul>
 
 

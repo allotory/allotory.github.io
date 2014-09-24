@@ -2,7 +2,7 @@
 <html lang="cn">
 <head>
 
-        <title>Amazilia - CSS</title>
+        <title>Amazilia - Django</title>
         <meta charset="utf-8" />
         <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Amazilia RSS Feed" />
 
@@ -54,26 +54,32 @@
         <div class="eleven columns">
 		         <ol id="post-list">
 				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/08/fix-code-err/" rel="bookmark" title="Permalink to 修复Pelican代码块中红框问题">修复Pelican代码块中红框问题</a></h3> </header>
+				                <header> <h3 class="entry-title"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">解决Django同步数据库No module named MySQLdb错误</a></h3> </header>
 				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-08T00:00:00"> 周一 08 九月 2014 </abbr>
+				                    <abbr class="published" title="2014-09-24T00:00:00"> 周三 24 九月 2014 </abbr>
 <address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <p>在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
-在Pelican中使用<code>pygment.css</code>文件处理代码高亮，我们可以修改该文件修复红框问题。可以修改<code>output/theme/pygment.css</code>处理该问题，但是当我们重新调用<code>make html</code>时，文件会被重置，所以可以修改博客根目录下<code>pelican-themes</code>里的<code>pygment.css</code>文件。如本博客为<code>Amazilia\pelican-themes\gum\static</code>下的<code>pygment.css</code>。找到如下代码去掉即可。</p>
-<div class="highlight"><pre><span class="p">.</span><span class="n">err</span> <span class="p">{</span>
-<span class="nl">border:</span><span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="err">#</span><span class="n">FF0000</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div> </div><!-- /.entry-content -->
+				                <div class="entry-content"> <p>Django在同步数据库时会根据models.py中描述的数据模型，在MySQL中创建各个关系表</p>
+<div class="highlight"><pre><span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">syncdb</span>
+</pre></div>
 
-								<div class="medium primary btn"><a href="/posts/2014/09/08/fix-code-err/" rel="bookmark" title="Permalink to 修复Pelican代码块中红框问题">Read more <i class="icon-arrow-right"></i></a></div>
+
+<p>同步数据库后，Django将建立相关的MySQL表格，并要求你创建一个超级用户等信息，但有时在windows环境下执行上述命令后会提示出错信息：</p>
+<div class="highlight"><pre><span class="n">django</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">exceptions</span><span class="p">.</span><span class="n">ImproperlyConfigured</span><span class="o">:</span> 
+<span class="n">Error</span> <span class="n">loading</span> <span class="n">MySQLdb</span> <span class="n">module</span><span class="o">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">MySQLdb</span>
+</pre></div>
+
+
+<p>No model named Mysqldb，这是因为当前Python环境没有安装MySQL for Python组件，解决办法：下载相应<a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/">MySQL for Python组件</a>并安装即可。</p> </div><!-- /.entry-content -->
+
+								<div class="medium primary btn"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">Read more <i class="icon-arrow-right"></i></a></div>
 
 
 
 								<div class="row tag-row">
 										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/css.html">CSS</a>
-											<a class="danger label" href="/tag/pelican.html">Pelican</a>
-											<a class="danger label" href="/tag/markdown.html">Markdown</a>
+											<a class="danger label" href="/tag/django.html">Django</a>
+											<a class="danger label" href="/tag/mysql.html">MySQL</a>
+											<a class="danger label" href="/tag/mysql-python.html">MySQL-python</a>
 								</div>
 
 
