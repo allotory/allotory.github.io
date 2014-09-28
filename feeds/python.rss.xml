@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Amazilia</title><link>/</link><description></description><atom:link href="/feeds/python.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 24 Sep 2014 00:00:00 +0800</lastBuildDate><item><title>解决Django同步数据库No module named MySQLdb错误</title><link>/posts/2014/09/24/django-syncdb/</link><description>&lt;p&gt;Django在同步数据库时会根据models.py中描述的数据模型，在MySQL中创建各个关系表&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Amazilia</title><link>/</link><description></description><atom:link href="/feeds/python.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0800</lastBuildDate><item><title>Django 1.7 使用migrations建立数据库连接</title><link>/posts/2014/09/28/django-migrations/</link><description>&lt;p&gt;Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了&lt;code&gt;django-south&lt;/code&gt;的（数据库）迁移功能，其提供的&lt;code&gt;django-admin migrate&lt;/code&gt;也将代替&lt;code&gt;syncdb&lt;/code&gt;命令.&lt;/p&gt;
+&lt;p&gt;因此在我们建立数据库模型之后，就不能使用django的&lt;code&gt;syncdb&lt;/code&gt;命令同步数据库了&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;syncdb&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;否则数据库模型将不会同步到真正的数据库中。&lt;/p&gt;
+&lt;p&gt;在Django 1.7中使用将使用全新的&lt;code&gt;migrations&lt;/code&gt;同步数据库。建立数据库模型后使用命令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;makemigrations&lt;/span&gt; &lt;span class="n"&gt;west&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;创建migrations，成功显示如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Migrations&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;west&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="mo"&gt;0001&lt;/span&gt;&lt;span class="n"&gt;_initial&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Create&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="n"&gt;Character&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;使用&lt;code&gt;sqlmigrate&lt;/code&gt;命令查看sql语句&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;sqlmigrate&lt;/span&gt; &lt;span class="n"&gt;west&lt;/span&gt; &lt;span class="mo"&gt;0001&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;最后使用&lt;code&gt;migrate&lt;/code&gt;命令同步数据库&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;migrate&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;此时数据库模型已经真正的同步到数据库中了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Sun, 28 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-28:posts/2014/09/28/django-migrations/</guid><category>Django</category><category>Python</category></item><item><title>解决Django同步数据库No module named MySQLdb错误</title><link>/posts/2014/09/24/django-syncdb/</link><description>&lt;p&gt;Django在同步数据库时会根据models.py中描述的数据模型，在MySQL中创建各个关系表&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;syncdb&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
