@@ -28,7 +28,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;此时数据库模型已经真正的同步到数据库中了。&lt;/p&gt;</summary><category term="Django"></category><category term="Python"></category></entry><entry><title>解决Django同步数据库No module named MySQLdb错误</title><link href="/posts/2014/09/24/django-syncdb/" rel="alternate"></link><updated>2014-09-24T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-24:posts/2014/09/24/django-syncdb/</id><summary type="html">&lt;p&gt;Django在同步数据库时会根据models.py中描述的数据模型，在MySQL中创建各个关系表&lt;/p&gt;
+&lt;p&gt;此时数据库模型已经真正的同步到数据库中了。&lt;/p&gt;</summary><category term="Django"></category><category term="Python"></category></entry><entry><title>解决Django同步数据库No module named MySQLdb错误</title><link href="/posts/2014/09/24/django-syncdb/" rel="alternate"></link><updated>2014-09-24T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-24:posts/2014/09/24/django-syncdb/</id><summary type="html">&lt;p&gt;Django在同步数据库时会根据&lt;code&gt;models.py&lt;/code&gt;中描述的数据模型，在MySQL中创建各个关系表&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;syncdb&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -39,7 +39,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;No model named Mysqldb，这是因为当前Python环境没有安装MySQL for Python组件，解决办法：下载相应&lt;a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/"&gt;MySQL for Python组件&lt;/a&gt;并安装即可。&lt;/p&gt;</summary><category term="Django"></category><category term="MySQL"></category><category term="MySQL-python"></category></entry><entry><title>修复Pelican代码块中红框问题</title><link href="/posts/2014/09/08/fix-code-err/" rel="alternate"></link><updated>2014-09-08T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-08:posts/2014/09/08/fix-code-err/</id><summary type="html">&lt;p&gt;在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
+&lt;p&gt;No model named Mysqldb，这是因为当前Python环境没有安装&lt;code&gt;MySQL for Python&lt;/code&gt;组件，解决办法：下载相应&lt;a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/"&gt;MySQL for Python组件&lt;/a&gt;并安装即可。&lt;/p&gt;</summary><category term="Django"></category><category term="MySQL"></category><category term="MySQL-python"></category></entry><entry><title>修复Pelican代码块中红框问题</title><link href="/posts/2014/09/08/fix-code-err/" rel="alternate"></link><updated>2014-09-08T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-08:posts/2014/09/08/fix-code-err/</id><summary type="html">&lt;p&gt;在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
 在Pelican中使用&lt;code&gt;pygment.css&lt;/code&gt;文件处理代码高亮，我们可以修改该文件修复红框问题。可以修改&lt;code&gt;output/theme/pygment.css&lt;/code&gt;处理该问题，但是当我们重新调用&lt;code&gt;make html&lt;/code&gt;时，文件会被重置，所以可以修改博客根目录下&lt;code&gt;pelican-themes&lt;/code&gt;里的&lt;code&gt;pygment.css&lt;/code&gt;文件。如本博客为&lt;code&gt;Amazilia\pelican-themes\gum\static&lt;/code&gt;下的&lt;code&gt;pygment.css&lt;/code&gt;。找到如下代码去掉即可。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;err&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="nl"&gt;border:&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;px&lt;/span&gt; &lt;span class="n"&gt;solid&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;FF0000&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -80,7 +80,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;开始搭建博客&lt;/h3&gt;
-&lt;p&gt;打开Git bash，创建一个文件夹Amazilia（可以按喜好拟定），执行如下命令：&lt;/p&gt;
+&lt;p&gt;打开Git bash，创建一个文件夹&lt;code&gt;Amazilia&lt;/code&gt;（可以按喜好拟定），执行如下命令：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;Amazilia&lt;/span&gt;
 &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;Amazilia&lt;/span&gt;
 &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;quickstart&lt;/span&gt;
@@ -119,14 +119,14 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;code&gt;make html&lt;/code&gt;命令是将&lt;code&gt;.md&lt;/code&gt;文件生成HTML，存放在output目录下，如果没有make命令，可以使用第二行的Pelican命令。
+&lt;p&gt;&lt;code&gt;make html&lt;/code&gt;命令是将&lt;code&gt;.md&lt;/code&gt;文件生成HTML，存放在&lt;code&gt;output&lt;/code&gt;目录下，如果没有&lt;code&gt;make&lt;/code&gt;命令，可以使用第二行的&lt;code&gt;Pelican&lt;/code&gt;命令。
 接着执行&lt;code&gt;make serve&lt;/code&gt;命令开启测试服务器&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;serve&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;同样&lt;code&gt;make serve&lt;/code&gt;命令也可以由第二行的Pelican命令替代，在浏览器中输入&lt;code&gt;http://localhost:8000&lt;/code&gt;即可看到博文效果。&lt;/p&gt;
+&lt;p&gt;同样&lt;code&gt;make serve&lt;/code&gt;命令也可以由第二行的&lt;code&gt;Pelican&lt;/code&gt;命令替代，在浏览器中输入&lt;code&gt;http://localhost:8000&lt;/code&gt;即可看到博文效果。&lt;/p&gt;
 &lt;h3&gt;配置主题&lt;/h3&gt;
 &lt;p&gt;在Amazilia目录下，按照如下步骤下载Pelican主题，只挑选喜欢的即可，其他不喜欢的可以删掉。主题可以在&lt;a href="https://github.com/getpelican/pelican-themes"&gt;Pelican主题库&lt;/a&gt;查看。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/getpelican/pelican-themes.git&lt;/span&gt;
