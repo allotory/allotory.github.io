@@ -5,6 +5,7 @@
         <title>Amazilia</title>
         <meta charset="utf-8" />
         <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Amazilia RSS Feed" />
+        <link href="/feeds/python.rss.xml" type="application/rss+xml" rel="alternate" title="Amazilia Categories RSS Feed" />
 
 
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
@@ -45,7 +46,7 @@
             </div>
 
 <section id="content">
-
+<h2>Articles in the Python category</h2>
 
 
    <div class="row">
@@ -54,39 +55,50 @@
         <div class="eleven columns">
 		         <ol id="post-list">
 				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Django 1.7 使用migrations建立数据库连接</a></h3> </header>
+				                <header> <h3 class="entry-title"><a href="/posts/2014/09/08/pelican-install/" rel="bookmark" title="Permalink to 使用Pelican和GitHub搭建个人博客">使用Pelican和GitHub搭建个人博客</a></h3> </header>
 				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-28T00:00:00"> 周日 28 九月 2014 </abbr>
+				                    <abbr class="published" title="2014-09-08T00:00:00"> 周一 08 九月 2014 </abbr>
 <address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <p>Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了<code>django-south</code>的（数据库）迁移功能，其提供的<code>django-admin migrate</code>也将代替<code>syncdb</code>命令.</p>
-<p>因此在我们建立数据库模型之后，就不能使用django的<code>syncdb</code>命令同步数据库了</p>
-<div class="highlight"><pre><span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">syncdb</span>
-</pre></div>
+				                <div class="entry-content"> <h3>简介</h3>
+<p>Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
+<h3>基础知识</h3>
+<p>搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。</p>
+<blockquote>
+<ul>
+<li><a href="https://gihub.com/">GitHub</a></li>
+<li><a href="http://pages.github.com/">GitHub Pages</a></li>
+<li><a href="http://git-scm.com/">Git</a></li>
+<li><a href="http://www.python.org/">Python</a></li>
+<li><a href="https://pypi.python.org/pypi">Pip</a></li>
+<li><a href="http://daringfireball.net/projects/markdown/syntax">Pelican</a></li>
+</ul>
+</blockquote>
+<h3>下载安装</h3>
+<blockquote>
+<ul>
+<li><a href="http://www.python.org/getit/">Python下载</a></li>
+<li><a href="http://msysgit.github.io/">Git下载</a> </li>
+<li><a href="https://pypi.python.org/pypi/distribute#downloads">Pip下载</a> </li>
+<li><a href="http://www.equation.com/servlet/equation.cmd?fa=make">Windows下make下载</a></li>
+</ul>
+</blockquote>
+<ol>
+<li>安装Python，本文使用的是Python 2.7</li>
+<li>安装Git，Git简单教程参见<a href="http://www.git-scm.com/book/zh">Git教程</a></li>
+<li>将Python安装文件夹中的scripts和make.exe加入环境变量</li>
+<li>安装pip，具体可以看<a href="http://www.pip-installer.org/en/latest/installing.html">官网介绍</a>。</li>
+<li>安装pelican和markdown，具体请参见<a href="http://daringfireball.net/projects/markdown/syntax">markdown教程 ...</a></li></ol> </div><!-- /.entry-content -->
 
-
-<p>否则数据库模型将不会同步到真正的数据库中。</p>
-<p>在Django 1.7中使用将使用全新的<code>migrations</code>同步数据库。建立数据库模型后使用命令</p>
-<div class="highlight"><pre><span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">makemigrations</span> <span class="n">west</span>
-</pre></div>
-
-
-<p>创建migrations，成功显示如下：</p>
-<div class="highlight"><pre><span class="n">Migrations</span> <span class="k">for</span> <span class="err">&#39;</span><span class="n">west</span><span class="err">&#39;</span><span class="o">:</span>
-    <span class="mo">0001</span><span class="n">_initial</span><span class="p">.</span><span class="n">py</span><span class="o">:</span>
-    <span class="o">-</span> <span class="n">Create</span> <span class="n">model</span> <span class="n">Character</span>
-</pre></div>
-
-
-<p>使用<code>sqlmigrate</code>命令查看sql语句 ...</p> </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Read more <i class="icon-arrow-right"></i></a></div>
+								<div class="medium primary btn"><a href="/posts/2014/09/08/pelican-install/" rel="bookmark" title="Permalink to 使用Pelican和GitHub搭建个人博客">Read more <i class="icon-arrow-right"></i></a></div>
 
 
 
 								<div class="row tag-row">
 										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/django.html">Django</a>
 											<a class="danger label" href="/tag/python.html">Python</a>
+											<a class="danger label" href="/tag/pelican.html">Pelican</a>
+											<a class="danger label" href="/tag/github.html">GitHub</a>
+											<a class="danger label" href="/tag/markdown.html">Markdown</a>
 								</div>
 
 
@@ -138,8 +150,8 @@
 </div> </div><!-- /.row -->
 
 <p class="paginator">
-    Page 1 / 4
-        <a href="/index2.html"><i class="icon-arrow-right"></i></a>
+            <a href="/category/python3.html"><i class="icon-arrow-left"></i></a>
+    Page 4 / 4
 </p>
 </section><!-- /#content -->
 

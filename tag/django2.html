@@ -2,7 +2,7 @@
 <html lang="cn">
 <head>
 
-        <title>Amazilia</title>
+        <title>Amazilia - Django</title>
         <meta charset="utf-8" />
         <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Amazilia RSS Feed" />
 
@@ -54,39 +54,32 @@
         <div class="eleven columns">
 		         <ol id="post-list">
 				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Django 1.7 使用migrations建立数据库连接</a></h3> </header>
+				                <header> <h3 class="entry-title"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">解决Django同步数据库No module named MySQLdb错误</a></h3> </header>
 				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-28T00:00:00"> 周日 28 九月 2014 </abbr>
+				                    <abbr class="published" title="2014-09-24T00:00:00"> 周三 24 九月 2014 </abbr>
 <address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <p>Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了<code>django-south</code>的（数据库）迁移功能，其提供的<code>django-admin migrate</code>也将代替<code>syncdb</code>命令.</p>
-<p>因此在我们建立数据库模型之后，就不能使用django的<code>syncdb</code>命令同步数据库了</p>
+				                <div class="entry-content"> <p>Django在同步数据库时会根据<code>models.py</code>中描述的数据模型，在MySQL中创建各个关系表</p>
 <div class="highlight"><pre><span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">syncdb</span>
 </pre></div>
 
 
-<p>否则数据库模型将不会同步到真正的数据库中。</p>
-<p>在Django 1.7中使用将使用全新的<code>migrations</code>同步数据库。建立数据库模型后使用命令</p>
-<div class="highlight"><pre><span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">makemigrations</span> <span class="n">west</span>
+<p>同步数据库后，Django将建立相关的MySQL表格，并要求你创建一个超级用户等信息，但有时在windows环境下执行上述命令后会提示出错信息：</p>
+<div class="highlight"><pre><span class="n">django</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">exceptions</span><span class="p">.</span><span class="n">ImproperlyConfigured</span><span class="o">:</span> 
+<span class="n">Error</span> <span class="n">loading</span> <span class="n">MySQLdb</span> <span class="n">module</span><span class="o">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">MySQLdb</span>
 </pre></div>
 
 
-<p>创建migrations，成功显示如下：</p>
-<div class="highlight"><pre><span class="n">Migrations</span> <span class="k">for</span> <span class="err">&#39;</span><span class="n">west</span><span class="err">&#39;</span><span class="o">:</span>
-    <span class="mo">0001</span><span class="n">_initial</span><span class="p">.</span><span class="n">py</span><span class="o">:</span>
-    <span class="o">-</span> <span class="n">Create</span> <span class="n">model</span> <span class="n">Character</span>
-</pre></div>
+<p>No model named Mysqldb，这是因为当前Python环境没有安装<code>MySQL for Python</code>组件，解决办法：下载相应<a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/">MySQL for Python组件</a>并安装即可。</p> </div><!-- /.entry-content -->
 
-
-<p>使用<code>sqlmigrate</code>命令查看sql语句 ...</p> </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Read more <i class="icon-arrow-right"></i></a></div>
+								<div class="medium primary btn"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">Read more <i class="icon-arrow-right"></i></a></div>
 
 
 
 								<div class="row tag-row">
 										<span>Tagged as : </span>
 											<a class="danger label" href="/tag/django.html">Django</a>
-											<a class="danger label" href="/tag/python.html">Python</a>
+											<a class="danger label" href="/tag/mysql.html">MySQL</a>
+											<a class="danger label" href="/tag/mysql-python.html">MySQL-python</a>
 								</div>
 
 
@@ -138,8 +131,8 @@
 </div> </div><!-- /.row -->
 
 <p class="paginator">
-    Page 1 / 4
-        <a href="/index2.html"><i class="icon-arrow-right"></i></a>
+            <a href="/tag/django.html"><i class="icon-arrow-left"></i></a>
+    Page 2 / 2
 </p>
 </section><!-- /#content -->
 
