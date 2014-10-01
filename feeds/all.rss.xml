@@ -5,8 +5,9 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;否则数据库模型将不会同步到真正的数据库中。&lt;/p&gt;
-&lt;p&gt;在Django 1.7中使用将使用全新的&lt;code&gt;migrations&lt;/code&gt;同步数据库。建立数据库模型后使用命令&lt;/p&gt;
+&lt;p&gt;否则数据库模型将不会同步到真正的数据库中。
+
+在Django 1.7中使用将使用全新的&lt;code&gt;migrations&lt;/code&gt;同步数据库。建立数据库模型后使用命令&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;makemigrations&lt;/span&gt; &lt;span class="n"&gt;west&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -47,7 +48,8 @@
 &lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Mon, 08 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-08:posts/2014/09/08/fix-code-err/</guid><category>CSS</category><category>Pelican</category><category>Markdown</category></item><item><title>使用Pelican和GitHub搭建个人博客</title><link>/posts/2014/09/08/pelican-install/</link><description>&lt;h3&gt;简介&lt;/h3&gt;
 &lt;p&gt;Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。&lt;/p&gt;
 &lt;h3&gt;基础知识&lt;/h3&gt;
-&lt;p&gt;搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。&lt;/p&gt;
+&lt;p&gt;搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://gihub.com/"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
