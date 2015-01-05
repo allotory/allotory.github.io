@@ -4,8 +4,8 @@
 
         <title>解决Django同步数据库No module named MySQLdb错误</title>
         <meta charset="utf-8" />
-        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Amazilia RSS Feed" />
-        <link href="/feeds/python.rss.xml" type="application/rss+xml" rel="alternate" title="Amazilia Categories RSS Feed" />
+        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin RSS Feed" />
+        <link href="/feeds/python.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin Categories RSS Feed" />
 
 
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
@@ -31,7 +31,7 @@
         <div class="row">
 
           <header id="banner" class="body">
-                  <h1><a href="/">Amazilia <strong></strong></a></h1>
+                  <h1><a href="/">Heliactin <strong></strong></a></h1>
           </header><!-- /#banner -->
 
             <div id="navigation" class="navbar row">
@@ -59,7 +59,7 @@
            
             </header>
             <footer class="post-info">
-              <abbr class="published" title="2014-09-24T00:00:00">
+              <abbr class="published" title="2014-09-24T00:00:00+08:00">
                 周三 24 九月 2014
               </abbr>
               <address class="vcard author">
@@ -68,13 +68,13 @@
             </footer><!-- /.post-info -->
             <div class="entry-content">
               <p>Django在同步数据库时会根据<code>models.py</code>中描述的数据模型，在MySQL中创建各个关系表</p>
-<div class="highlight"><pre><span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">syncdb</span>
+<div class="highlight"><pre>python manage.py syncdb
 </pre></div>
 
 
 <p>同步数据库后，Django将建立相关的MySQL表格，并要求你创建一个超级用户等信息，但有时在windows环境下执行上述命令后会提示出错信息：</p>
-<div class="highlight"><pre><span class="n">django</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">exceptions</span><span class="p">.</span><span class="n">ImproperlyConfigured</span><span class="o">:</span> 
-<span class="n">Error</span> <span class="n">loading</span> <span class="n">MySQLdb</span> <span class="n">module</span><span class="o">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">MySQLdb</span>
+<div class="highlight"><pre>django.core.exceptions.ImproperlyConfigured: 
+Error loading MySQLdb module: No module named MySQLdb
 </pre></div>
 
 
@@ -127,14 +127,13 @@
 
 <h4>Tags</h4>
 	<ul>
-	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
+	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
 	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
 	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
 	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
-	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
-	    <li class="tag-4"><a href="/tag/mysql-python.html">MySQL-python</a></li>
-	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
-	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
 </ul>
 
 
@@ -169,7 +168,7 @@
                     which takes great advantage of <a href="http://python.org">Python</a> 
                     and <a href="http://getpelican.com/">Pelican</a>.
                     <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>.&nbsp;&nbsp;&nbsp;Copyright &copy; 2014&nbsp; ALLOTORY
+                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>.&nbsp;&nbsp;&nbsp;Copyright &copy; 2015&nbsp; ALLOTORY
                     </address>
           </div>
 

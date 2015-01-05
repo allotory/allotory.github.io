@@ -2,9 +2,9 @@
 <html lang="cn">
 <head>
 
-        <title>Amazilia</title>
+        <title>Heliactin</title>
         <meta charset="utf-8" />
-        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Amazilia RSS Feed" />
+        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin RSS Feed" />
 
 
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
@@ -30,7 +30,7 @@
         <div class="row">
 
           <header id="banner" class="body">
-                  <h1><a href="/">Amazilia <strong></strong></a></h1>
+                  <h1><a href="/">Heliactin <strong></strong></a></h1>
           </header><!-- /#banner -->
 
             <div id="navigation" class="navbar row">
@@ -57,7 +57,7 @@
 				        <li><article class="hentry">
 				                <header> <h3 class="entry-title"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Django 1.7 使用migrations建立数据库连接</a></h3> </header>
 				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-28T00:00:00"> 周日 28 九月 2014 </abbr>
+				                    <abbr class="published" title="2014-09-28T00:00:00+08:00"> 周日 28 九月 2014 </abbr>
 <address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
 				                <div class="entry-content"> <p>Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了<code>django-south</code>的（数据库）迁移功能，其提供的<code>django-admin migrate</code>也将代替<code>syncdb</code>命令.</p>
 <p>因此在我们建立数据库模型之后，就不能使用django的<code>syncdb</code>命令同步数据库了</p>
@@ -84,16 +84,16 @@
 				        <li><article class="hentry">
 				                <header> <h3 class="entry-title"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">解决Django同步数据库No module named MySQLdb错误</a></h3> </header>
 				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-24T00:00:00"> 周三 24 九月 2014 </abbr>
+				                    <abbr class="published" title="2014-09-24T00:00:00+08:00"> 周三 24 九月 2014 </abbr>
 <address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
 				                <div class="entry-content"> <p>Django在同步数据库时会根据<code>models.py</code>中描述的数据模型，在MySQL中创建各个关系表</p>
-<div class="highlight"><pre><span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">syncdb</span>
+<div class="highlight"><pre>python manage.py syncdb
 </pre></div>
 
 
 <p>同步数据库后，Django将建立相关的MySQL表格，并要求你创建一个超级用户等信息，但有时在windows环境下执行上述命令后会提示出错信息：</p>
-<div class="highlight"><pre><span class="n">django</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">exceptions</span><span class="p">.</span><span class="n">ImproperlyConfigured</span><span class="o">:</span> 
-<span class="n">Error</span> <span class="n">loading</span> <span class="n">MySQLdb</span> <span class="n">module</span><span class="o">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">MySQLdb</span>
+<div class="highlight"><pre>django.core.exceptions.ImproperlyConfigured: 
+Error loading MySQLdb module: No module named MySQLdb
 </pre></div>
 
 
@@ -107,7 +107,6 @@
 										<span>Tagged as : </span>
 											<a class="danger label" href="/tag/django.html">Django</a>
 											<a class="danger label" href="/tag/mysql.html">MySQL</a>
-											<a class="danger label" href="/tag/mysql-python.html">MySQL-python</a>
 								</div>
 
 
@@ -116,7 +115,7 @@
 				        <li><article class="hentry">
 				                <header> <h3 class="entry-title"><a href="/posts/2014/09/08/fix-code-err/" rel="bookmark" title="Permalink to 修复Pelican代码块中红框问题">修复Pelican代码块中红框问题</a></h3> </header>
 				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-08T00:00:00"> 周一 08 九月 2014 </abbr>
+				                    <abbr class="published" title="2014-09-08T00:00:00+08:00"> 周一 08 九月 2014 </abbr>
 <address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
 				                <div class="entry-content"> <p>在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
 在Pelican中使用<code>pygment.css</code>文件处理代码高亮，我们可以修改该文件修复红框问题。可以修改<code>output/theme/pygment.css</code>处理该问题，但是当我们重新调用<code>make html</code>时，文件会被重置，所以可以修改博客根目录下<code>pelican-themes</code>里的<code>pygment.css</code>文件。如本博客为<code>Amazilia\pelican-themes\gum\static</code>下的<code>pygment.css</code>。找到如下代码去掉即可。</p>
@@ -142,7 +141,7 @@
 				        <li><article class="hentry">
 				                <header> <h3 class="entry-title"><a href="/posts/2014/09/08/pelican-install/" rel="bookmark" title="Permalink to 使用Pelican和GitHub搭建个人博客">使用Pelican和GitHub搭建个人博客</a></h3> </header>
 				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-08T00:00:00"> 周一 08 九月 2014 </abbr>
+				                    <abbr class="published" title="2014-09-08T00:00:00+08:00"> 周一 08 九月 2014 </abbr>
 <address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
 				                <div class="entry-content"> <h3>简介</h3>
 <p>Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
@@ -186,14 +185,13 @@
 
 <h4>Tags</h4>
 	<ul>
-	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
+	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
 	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
 	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
 	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
-	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
-	    <li class="tag-4"><a href="/tag/mysql-python.html">MySQL-python</a></li>
-	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
-	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
 </ul>
 
 
@@ -230,7 +228,7 @@
                     which takes great advantage of <a href="http://python.org">Python</a> 
                     and <a href="http://getpelican.com/">Pelican</a>.
                     <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>.&nbsp;&nbsp;&nbsp;Copyright &copy; 2014&nbsp; ALLOTORY
+                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>.&nbsp;&nbsp;&nbsp;Copyright &copy; 2015&nbsp; ALLOTORY
                     </address>
           </div>
 
