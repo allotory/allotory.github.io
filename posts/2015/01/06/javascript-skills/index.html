@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+
+        <title>常用Javascript技术</title>
+        <meta charset="utf-8" />
+        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin RSS Feed" />
+        <link href="/feeds/javascript.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin Categories RSS Feed" />
+
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="/theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/pygment.css" />
+
+        <script src="/theme/js/libs/modernizr-2.6.2.min.js"></script>
+
+
+
+
+</head>
+
+<body id="index" class="home">
+
+
+    <a href="https://github.com/allotory"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+    <div class="container">
+
+        <div class="row">
+
+          <header id="banner" class="body">
+                  <h1><a href="/">Heliactin <strong></strong></a></h1>
+          </header><!-- /#banner -->
+
+            <div id="navigation" class="navbar row">
+              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
+             
+              <ul class="columns">
+                <li><a href="/">Home</a></li>
+
+                <li><a href="feeds/all.rss.xml">Feed</a></li>
+                <li><a href="#">About</a></li>
+
+              </ul>
+            </div>
+
+<section id="content" class="body">
+
+   <div class="row">
+        <div class="eleven columns">
+
+
+            <header>
+              <h3 class="entry-title">
+                <a href="/posts/2015/01/06/javascript-skills/" rel="bookmark"
+                   title="Permalink to 常用Javascript技术">常用Javascript技术</a></h3>
+           
+            </header>
+            <footer class="post-info">
+              <abbr class="published" title="2015-01-06T00:00:00+08:00">
+                周二 06 一月 2015
+              </abbr>
+              <address class="vcard author">
+                By <a class="url fn" href="/author/ellery.html">Ellery</a>
+              </address>
+            </footer><!-- /.post-info -->
+            <div class="entry-content">
+              <h3>正则表达式校验数据</h3>
+<div class="highlight"><pre>    var username = document.getElementById(&quot;username&quot;).value.trim();
+    var reg = /^[a-zA-Z][a-zA-Z0-9_]{5,14}$/;
+    if (!reg.test(username)){
+        alert(&quot;用户名必须为6-15个以字母开头，可带数字、“_”的字符串&quot;);
+    }else {
+        alert(&quot;用户名可用&quot;);
+    }
+</pre></div>
+
+
+<h3>下拉列表动态添加选项</h3>
+<div class="highlight"><pre>    //根据id查找对象，
+    var obj = document.getElementById(&#39;year&#39;);
+    //添加一个选项
+    obj.add(new Option(&quot;文本&quot;, &quot;值&quot;));         //这个只能在IE中有效
+    obj.options.add(new Option(&quot;文本&quot;, &quot;值&quot;)); //这个兼容IE与firefox
+</pre></div>
+
+
+<h3>动态添加组件</h3>
+<div class="highlight"><pre>    var error = document.createElement(&quot;div&quot;);
+    error.setAttribute(&quot;id&quot;, &quot;err_div&quot;);
+    error.setAttribute(&quot;class&quot;, &quot;alert bg-success&quot;);
+
+    var divSpan = document.createElement(&quot;span&quot;);
+    divSpanSign.setAttribute(&quot;class&quot;, &quot;glyphicon glyphicon-warning-sign&quot;);
+
+    error.appendChild(divSpan);
+</pre></div>
+
+
+<h3>动态删除组件</h3>
+<div class="highlight"><pre>    document.getElementById(&quot;alert_errors&quot;).removeChild(document.getElementById(&quot;id&quot;));
+</pre></div>
+
+
+<h3>innerText兼容firefox</h3>
+<div class="highlight"><pre>    <span class="kd">function</span> <span class="nx">setInnerText</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">element</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">==</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">element</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">text</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">element</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">text</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+
+
+<h3>实现 JavaScript trim() 方法</h3>
+<div class="highlight"><pre>    <span class="nb">String</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">trim</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/(^\s*)|(\s*$)/g</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>  
+    <span class="p">}</span>
+</pre></div>
+
+
+<h3>用户名唯一性校验</h3>
+<div class="highlight"><pre>    <span class="c1">//定义XMLHttpRequest对象  </span>
+    <span class="kd">var</span> <span class="nx">xmlhttp</span><span class="p">;</span>
+
+    <span class="c1">//用户名唯一性校验</span>
+    <span class="kd">function</span> <span class="nx">checkUsernameUniqueness</span><span class="p">(){</span>  
+        <span class="kd">var</span> <span class="nx">username</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;username&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+
+        <span class="c1">//创建XMLHttpRequest对象  </span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">XMLHttpRequest</span><span class="p">)</span> <span class="p">{</span>  
+            <span class="c1">//针对FireFox,Mozillar,Opera,Safari,IE7,IE8  </span>
+            <span class="nx">xmlhttp</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>  
+            <span class="c1">//对某些特定版本的mozillar浏览器的bug进行修正  </span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">overrideMineType</span><span class="p">)</span> <span class="p">{</span>  
+                <span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">overrideMineType</span><span class="p">(</span><span class="s2">&quot;text/xml&quot;</span><span class="p">);</span>  
+            <span class="p">}</span>  
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">ActiveXObject</span><span class="p">)</span> <span class="p">{</span>  
+            <span class="c1">//针对IE5，IE5.5，IE6  </span>
+            <span class="c1">//两个可以用于创建XMLHTTPRequest对象的控件名称。保存在一个JS数组中。  </span>
+            <span class="kd">var</span> <span class="nx">activexName</span> <span class="o">=</span> <span class="cp">[</span><span class="s2">&quot;MSXML2.XMLHTTP&quot;</span><span class="p">,</span><span class="s2">&quot;Microsoft.XMLHTTP&quot;</span><span class="cp">]</span><span class="p">;</span>  
+            <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">activeName</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>  
+                <span class="c1">//取出一个控件名进行创建，如果成功就终止循环  </span>
+                <span class="k">try</span><span class="p">{</span>  
+                    <span class="nx">xmlhttp</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActiveXObject</span><span class="p">(</span><span class="nx">activexName</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="p">);</span>  
+                    <span class="k">break</span><span class="p">;</span>  
+                <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;An exception occured in the script.Error name: &quot;</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">name</span>
+                            <span class="o">+</span> <span class="s2">&quot;.Error message: &quot;</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+                <span class="p">}</span>  
+            <span class="p">}</span>
+
+        <span class="p">}</span>
+
+        <span class="c1">//注册回调函数,只写函数名，不能写括号，写括号表示调用函数。  </span>
+        <span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="nx">usernameUniqueCallback</span><span class="p">;</span>  
+        <span class="c1">//设置连接信息(请求方式，请求的url,true表示异步方式交互)  </span>
+        <span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="s2">&quot;UserCheck?username=&quot;</span> <span class="o">+</span> <span class="nx">username</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>  
+        <span class="c1">//发送数据，开始和服务器进行交互。  </span>
+        <span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+
+        <span class="c1">//使用POST方式请求，需要手动设置http的请求头  </span>
+        <span class="c1">//xmlhttp.setRequestHeader(&quot;Content-Type&quot;,&quot;aplication/x-www-form-urlencoded&quot;);  </span>
+        <span class="c1">//xmlhttp.send(&quot;name=&quot; + username);  </span>
+    <span class="p">}</span>
+
+    <span class="c1">//用户名唯一性校验回调函数  </span>
+    <span class="kd">function</span> <span class="nx">usernameUniqueCallback</span><span class="p">(){</span>  
+        <span class="c1">//判断对象的状态是否交互完成  </span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mi">4</span><span class="p">){</span>  
+            <span class="c1">//判断http的交互是否成功  </span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">){</span>  
+                <span class="c1">//获取服务器端返回的数据（文本）  </span>
+                <span class="kd">var</span> <span class="nx">responseText</span> <span class="o">=</span> <span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>  
+                <span class="c1">//alert(responseText);</span>
+
+                <span class="c1">//用户名不唯一</span>
+                <span class="k">if</span><span class="p">(</span><span class="nx">responseText</span> <span class="o">==</span> <span class="s2">&quot;0&quot;</span><span class="p">){</span>
+                    <span class="c1">//输出提示信息</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;用户名已存在&quot;</span><span class="p">);</span>
+                    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+                <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">responseText</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">){</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;用户名可用&quot;</span><span class="p">);</span>
+                    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+                <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;哎呀，出错啦～&quot;</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>  
+        <span class="p">}</span>  
+    <span class="p">}</span>
+</pre></div>
+
+
+<p>回调函数UserCheck Servlet:</p>
+<div class="highlight"><pre>    <span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="p">;</span>
+    <span class="kn">import</span> <span class="nn">java.io.PrintWriter</span><span class="p">;</span>
+
+    <span class="kn">import</span> <span class="nn">javax.servlet.ServletException</span><span class="p">;</span>
+    <span class="kn">import</span> <span class="nn">javax.servlet.annotation.WebServlet</span><span class="p">;</span>
+    <span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServlet</span><span class="p">;</span>
+    <span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="p">;</span>
+    <span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="p">;</span>
+
+    <span class="kn">import</span> <span class="nn">com.archilochus.bean.User</span><span class="p">;</span>
+    <span class="kn">import</span> <span class="nn">com.archilochus.dao.UserDAOImpl</span><span class="p">;</span>
+
+    <span class="nd">@WebServlet</span><span class="p">(</span><span class="s">&quot;/UserCheck&quot;</span><span class="p">)</span>
+    <span class="n">public</span> <span class="k">class</span> <span class="nc">UserCheck</span> <span class="n">extends</span> <span class="n">HttpServlet</span> <span class="p">{</span>
+        <span class="n">private</span> <span class="n">static</span> <span class="n">final</span> <span class="nb">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="il">1L</span><span class="p">;</span>
+
+        <span class="n">public</span> <span class="n">UserCheck</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nb">super</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="n">protected</span> <span class="n">void</span> <span class="n">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="p">)</span> 
+                <span class="n">throws</span> <span class="n">ServletException</span><span class="p">,</span> <span class="n">IOException</span> <span class="p">{</span>
+             <span class="k">try</span><span class="p">{</span>  
+                    <span class="n">request</span><span class="o">.</span><span class="n">setCharacterEncoding</span><span class="p">(</span><span class="s">&quot;utf-8&quot;</span><span class="p">);</span>  
+                    <span class="n">response</span><span class="o">.</span><span class="n">setContentType</span><span class="p">(</span><span class="s">&quot;text/html; charset=utf-8&quot;</span><span class="p">);</span>  
+                    <span class="n">PrintWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">getWriter</span><span class="p">();</span>  
+                    <span class="n">String</span> <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s">&quot;username&quot;</span><span class="p">);</span>  
+                    <span class="o">//</span><span class="err">数据库查询</span>
+                    <span class="n">UserDAOImpl</span> <span class="n">userDAOImpl</span> <span class="o">=</span> <span class="n">new</span> <span class="n">UserDAOImpl</span><span class="p">();</span>
+                    <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">new</span> <span class="n">User</span><span class="p">();</span>
+                    <span class="n">user</span><span class="o">.</span><span class="n">setUsername</span><span class="p">(</span><span class="n">username</span><span class="p">);</span>
+                 <span class="k">if</span><span class="p">(</span><span class="n">userDAOImpl</span><span class="o">.</span><span class="n">findUserByName</span><span class="p">(</span><span class="n">user</span><span class="p">)){</span>  
+                     <span class="o">//</span><span class="err">不唯一</span>
+                     <span class="n">out</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s">&quot;0&quot;</span><span class="p">);</span>  
+                 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                     <span class="n">out</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">);</span>  
+                 <span class="p">}</span>
+             <span class="p">}</span><span class="n">catch</span><span class="p">(</span><span class="ne">Exception</span> <span class="n">e</span><span class="p">){</span>  
+                 <span class="n">e</span><span class="o">.</span><span class="n">printStackTrace</span><span class="p">();</span>  
+             <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">protected</span> <span class="n">void</span> <span class="n">doPost</span><span class="p">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="p">)</span> 
+                <span class="n">throws</span> <span class="n">ServletException</span><span class="p">,</span> <span class="n">IOException</span> <span class="p">{</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+</pre></div>
+            </div><!-- /.entry-content -->
+
+             <ul><!-- Neighbor Articles Plugin -->
+                 <li>
+                     &larr;上一篇：<a href="/posts/2014/09/28/django-migrations/">
+                         Django 1.7 使用migrations建立数据库连接
+                     </a>
+                 </li>
+                 <li>
+                     &rarr;下一篇：<a href="/posts/2015/01/06/ide-key-setting/">
+                         设置IDE移动光标快捷键
+                     </a>
+                 </li>
+            </ul>
+
+            <div class="comments">
+              <h3>Comments</h3>
+              <div id="disqus_thread"></div>
+              <script type="text/javascript">
+                var disqus_identifier = "posts/2015/01/06/javascript-skills/";
+                (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://amazilia.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              </script>
+            </div>
+
+
+        </div><!-- /.eleven.columns -->
+
+<div class="three columns">
+
+<h4>Pages</h4>
+
+ <ul>
+      <li><a href="feeds/all.rss.xml">Feed</a></li>
+      <li><a href="#">About</a></li>
+  </ul>
+
+<h4>Categories</h4>
+<ul>
+		<li><a href="/category/ide.html">IDE</a></li>
+		<li><a href="/category/javascript.html">Javascript</a></li>
+		<li><a href="/category/python.html">Python</a></li>
+</ul>
+
+
+<h4>Tags</h4>
+	<ul>
+	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
+	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
+	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
+	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
+	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-4"><a href="/tag/ide.html">IDE</a></li>
+	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
+</ul>
+
+
+<nav class="widget">
+  <h4>Social</h4>
+  <ul>
+    <li><a href="feeds/all.rss.xml">RSS</a></li>
+    <li><a href="https://github.com/allotory">Github</a></li>
+    <li><a href="https://www.facebook.com/allotory">Facebook</a></li>
+    <li><a href="https://twitter.com/allotory">Twitter</a></li>
+  </ul>
+</nav>
+
+</div> </div><!-- /.row -->
+
+
+</section>
+
+       </div><!-- /.row -->
+    </div><!-- /.container -->
+
+
+       <div class="container.nopad bg">
+
+    
+        <footer id="credits" class="row">
+          <div class="seven columns left-center">
+
+                   <address id="about" class="vcard body">
+                    Proudly powered by <a href="http://allotory.github.io/">Ellery</a>,
+                    which takes great advantage of <a href="http://python.org">Python</a> 
+                    and <a href="http://getpelican.com/">Pelican</a>.
+                    <br />
+                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>.&nbsp;&nbsp;&nbsp;Copyright &copy; 2015&nbsp; ALLOTORY
+                    </address>
+          </div>
+
+
+          <div class="seven columns">
+            <div class="row">
+              <ul class="socbtns">
+
+                <li><div class="btn primary"><a href="https://github.com/allotory" target="_blank">Github</a></div></li>
+
+                <li><div class="btn twitter"><a href="https://twitter.com/allotory" target="_blank">Twitter</a></div></li>
+
+                <li><div class="btn facebook"><a href="https://www.facebook.com/allotory" target="_blank">Facebook</a></div></li>
+
+                <li><div class="btn danger"><a href="https://plus.google.com/u/0/105072098982208020695" target="_blank">Google+</a></div></li>
+
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+    </div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'amazilia';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+  <script src="/theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="/theme/js/libs/gumby.min.js"></script>
+  <script src="/theme/js/plugins.js"></script>
+</body>
+</html>

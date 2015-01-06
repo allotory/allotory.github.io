@@ -88,6 +88,45 @@
 
 				        </article></li>
 				        <li><article class="hentry">
+				                <header> <h3 class="entry-title"><a href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">常用Javascript技术</a></h3> </header>
+				                <footer class="post-info">
+				                    <abbr class="published" title="2015-01-06T00:00:00+08:00"> 周二 06 一月 2015 </abbr>
+<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
+				                <div class="entry-content"> <h3>正则表达式校验数据</h3>
+<div class="highlight"><pre>    var username = document.getElementById(&quot;username&quot;).value.trim();
+    var reg = /^[a-zA-Z][a-zA-Z0-9_]{5,14}$/;
+    if (!reg.test(username)){
+        alert(&quot;用户名必须为6-15个以字母开头，可带数字、“_”的字符串&quot;);
+    }else {
+        alert(&quot;用户名可用&quot;);
+    }
+</pre></div>
+
+
+<h3>下拉列表动态添加选项</h3>
+<div class="highlight"><pre>    //根据id查找对象，
+    var obj = document.getElementById(&#39;year&#39;);
+    //添加一个选项
+    obj.add(new Option(&quot;文本&quot;, &quot;值&quot;));         //这个只能在IE中有效
+    obj.options.add(new Option(&quot;文本&quot;, &quot;值&quot;)); //这个兼容IE与firefox
+</pre></div>
+
+
+<h3>动态添加组件 ...</h3> </div><!-- /.entry-content -->
+
+								<div class="medium primary btn"><a href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">Read more <i class="icon-arrow-right"></i></a></div>
+
+
+
+								<div class="row tag-row">
+										<span>Tagged as : </span>
+											<a class="danger label" href="/tag/javascript.html">Javascript</a>
+								</div>
+
+
+
+				        </article></li>
+				        <li><article class="hentry">
 				                <header> <h3 class="entry-title"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Django 1.7 使用migrations建立数据库连接</a></h3> </header>
 				                <footer class="post-info">
 				                    <abbr class="published" title="2014-09-28T00:00:00+08:00"> 周日 28 九月 2014 </abbr>
@@ -171,32 +210,6 @@ Error loading MySQLdb module: No module named MySQLdb
 
 
 				        </article></li>
-				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/08/pelican-install/" rel="bookmark" title="Permalink to 使用Pelican和GitHub搭建个人博客">使用Pelican和GitHub搭建个人博客</a></h3> </header>
-				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-08T00:00:00+08:00"> 周一 08 九月 2014 </abbr>
-<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <h3>简介</h3>
-<p>Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
-<h3>基础知识</h3>
-<p>搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。
- </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2014/09/08/pelican-install/" rel="bookmark" title="Permalink to 使用Pelican和GitHub搭建个人博客">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-								<div class="row tag-row">
-										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/python.html">Python</a>
-											<a class="danger label" href="/tag/pelican.html">Pelican</a>
-											<a class="danger label" href="/tag/github.html">GitHub</a>
-											<a class="danger label" href="/tag/markdown.html">Markdown</a>
-								</div>
-
-
-
-				        </article></li>
 				</ol><!-- /#posts-list -->
 
         </div><!-- /.eleven.columns -->
@@ -213,6 +226,7 @@ Error loading MySQLdb module: No module named MySQLdb
 <h4>Categories</h4>
 <ul>
 		<li><a href="/category/ide.html">IDE</a></li>
+		<li><a href="/category/javascript.html">Javascript</a></li>
 		<li><a href="/category/python.html">Python</a></li>
 </ul>
 
@@ -220,13 +234,14 @@ Error loading MySQLdb module: No module named MySQLdb
 <h4>Tags</h4>
 	<ul>
 	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
-	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
-	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
-	    <li class="tag-4"><a href="/tag/ide.html">IDE</a></li>
+	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
 	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
 	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
 	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
 	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-4"><a href="/tag/ide.html">IDE</a></li>
+	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
 </ul>
 
 
@@ -237,14 +252,14 @@ Error loading MySQLdb module: No module named MySQLdb
     <li><a href="https://github.com/allotory">Github</a></li>
     <li><a href="https://www.facebook.com/allotory">Facebook</a></li>
     <li><a href="https://twitter.com/allotory">Twitter</a></li>
-    <li><a href="http://www.zhihu.com/people/elleryzhang">Zhihu</a></li>
   </ul>
 </nav>
 
 </div> </div><!-- /.row -->
 
 <p class="paginator">
-    Page 1 / 1
+    Page 1 / 2
+        <a href="/author/ellery2.html"><i class="icon-arrow-right"></i></a>
 </p>
 </section><!-- /#content -->
 

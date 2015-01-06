@@ -2,9 +2,9 @@
 <html lang="cn">
 <head>
 
-        <title>Amazilia</title>
+        <title>Heliactin</title>
         <meta charset="utf-8" />
-        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Amazilia RSS Feed" />
+        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin RSS Feed" />
 
 
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
@@ -24,12 +24,13 @@
 <body id="index" class="home">
 
 
+    <a href="https://github.com/allotory"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
     <div class="container">
 
         <div class="row">
 
           <header id="banner" class="body">
-                  <h1><a href="/">Amazilia <strong></strong></a></h1>
+                  <h1><a href="/">Heliactin <strong></strong></a></h1>
           </header><!-- /#banner -->
 
             <div id="navigation" class="navbar row">
@@ -54,32 +55,26 @@
         <div class="eleven columns">
 		         <ol id="post-list">
 				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">解决Django同步数据库No module named MySQLdb错误</a></h3> </header>
+				                <header> <h3 class="entry-title"><a href="/posts/2014/09/08/pelican-install/" rel="bookmark" title="Permalink to 使用Pelican和GitHub搭建个人博客">使用Pelican和GitHub搭建个人博客</a></h3> </header>
 				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-24T00:00:00"> 周三 24 九月 2014 </abbr>
+				                    <abbr class="published" title="2014-09-08T00:00:00+08:00"> 周一 08 九月 2014 </abbr>
 <address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <p>Django在同步数据库时会根据<code>models.py</code>中描述的数据模型，在MySQL中创建各个关系表</p>
-<div class="highlight"><pre><span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">syncdb</span>
-</pre></div>
+				                <div class="entry-content"> <h3>简介</h3>
+<p>Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
+<h3>基础知识</h3>
+<p>搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。
+ </div><!-- /.entry-content -->
 
-
-<p>同步数据库后，Django将建立相关的MySQL表格，并要求你创建一个超级用户等信息，但有时在windows环境下执行上述命令后会提示出错信息：</p>
-<div class="highlight"><pre><span class="n">django</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">exceptions</span><span class="p">.</span><span class="n">ImproperlyConfigured</span><span class="o">:</span> 
-<span class="n">Error</span> <span class="n">loading</span> <span class="n">MySQLdb</span> <span class="n">module</span><span class="o">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">MySQLdb</span>
-</pre></div>
-
-
-<p>No model named Mysqldb，这是因为当前Python环境没有安装<code>MySQL for Python</code>组件，解决办法：下载相应<a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/">MySQL for Python组件</a>并安装即可。</p> </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">Read more <i class="icon-arrow-right"></i></a></div>
+								<div class="medium primary btn"><a href="/posts/2014/09/08/pelican-install/" rel="bookmark" title="Permalink to 使用Pelican和GitHub搭建个人博客">Read more <i class="icon-arrow-right"></i></a></div>
 
 
 
 								<div class="row tag-row">
 										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/django.html">Django</a>
-											<a class="danger label" href="/tag/mysql.html">MySQL</a>
-											<a class="danger label" href="/tag/mysql-python.html">MySQL-python</a>
+											<a class="danger label" href="/tag/python.html">Python</a>
+											<a class="danger label" href="/tag/pelican.html">Pelican</a>
+											<a class="danger label" href="/tag/github.html">GitHub</a>
+											<a class="danger label" href="/tag/markdown.html">Markdown</a>
 								</div>
 
 
@@ -100,20 +95,23 @@
 
 <h4>Categories</h4>
 <ul>
+		<li><a href="/category/ide.html">IDE</a></li>
+		<li><a href="/category/javascript.html">Javascript</a></li>
 		<li><a href="/category/python.html">Python</a></li>
 </ul>
 
 
 <h4>Tags</h4>
 	<ul>
-	    <li class="tag-4"><a href="/tag/mysql-python.html">MySQL-python</a></li>
-	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
-	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
 	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
-	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
-	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
 	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
+	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
 	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-4"><a href="/tag/ide.html">IDE</a></li>
+	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
 </ul>
 
 
@@ -124,7 +122,6 @@
     <li><a href="https://github.com/allotory">Github</a></li>
     <li><a href="https://www.facebook.com/allotory">Facebook</a></li>
     <li><a href="https://twitter.com/allotory">Twitter</a></li>
-    <li><a href="http://www.zhihu.com/people/elleryzhang">Zhihu</a></li>
   </ul>
 </nav>
 
@@ -132,8 +129,7 @@
 
 <p class="paginator">
             <a href="/index.html"><i class="icon-arrow-left"></i></a>
-    Page 2 / 4
-        <a href="/index3.html"><i class="icon-arrow-right"></i></a>
+    Page 2 / 2
 </p>
 </section><!-- /#content -->
 
@@ -148,10 +144,11 @@
           <div class="seven columns left-center">
 
                    <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a>.
+                    Proudly powered by <a href="http://allotory.github.io/">Ellery</a>,
+                    which takes great advantage of <a href="http://python.org">Python</a> 
+                    and <a href="http://getpelican.com/">Pelican</a>.
                     <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
+                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>.&nbsp;&nbsp;&nbsp;Copyright &copy; 2015&nbsp; ALLOTORY
                     </address>
           </div>
 

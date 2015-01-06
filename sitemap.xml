@@ -5,34 +5,41 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2015-01-06T14:06:35-00:00</lastmod>
+<lastmod>2015-01-06T14:34:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2015-01-06T14:06:35-00:00</lastmod>
+<lastmod>2015-01-06T14:34:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2015-01-06T14:06:35-00:00</lastmod>
+<lastmod>2015-01-06T14:34:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2015-01-06T14:06:35-00:00</lastmod>
+<lastmod>2015-01-06T14:34:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2015/01/06/ide-key-setting/</loc>
+<lastmod>2015-01-06T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>/posts/2015/01/06/javascript-skills/</loc>
 <lastmod>2015-01-06T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
@@ -74,6 +81,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/category/javascript.html</loc>
+<lastmod>2015-01-06T00:00:00+07:37</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/category/python.html</loc>
 <lastmod>2014-09-28T00:00:00+07:37</lastmod>
 <changefreq>daily</changefreq>
@@ -97,6 +111,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/tag/python.html</loc>
 <lastmod>2014-09-28T00:00:00+07:37</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/javascript.html</loc>
+<lastmod>2015-01-06T00:00:00+07:37</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
