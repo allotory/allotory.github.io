@@ -55,6 +55,30 @@
         <div class="eleven columns">
 		         <ol id="post-list">
 				        <li><article class="hentry">
+				                <header> <h3 class="entry-title"><a href="/posts/2015/01/06/eclipse-tomcat-404/" rel="bookmark" title="Permalink to Eclipse启动Tomcat访问http://localhost:8080/时报404错误">Eclipse启动Tomcat访问http://localhost:8080/时报404错误</a></h3> </header>
+				                <footer class="post-info">
+				                    <abbr class="published" title="2015-01-06T00:00:00+08:00"> 周二 06 一月 2015 </abbr>
+<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
+				                <div class="entry-content"> <h3>原因</h3>
+<p>Eclipse启动Tomcat服务输入<code>http://localhost:8080/</code>会报404错误, 即<code>The requested resource (/) is not avaliable</code>。</p>
+<p>错误产生的原因在于工作空间的项目部署的目录不对。</p>
+<p>配置Tomcat时, 如果只想运行Eclipse工作空间的应用项目, 可以选择<code>User workspace metadata</code>, 此时采用的是<code>%ECLIPSE_WORKSPACE_HOME%/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps</code>作为webapp目录的, wtpwebapps下没有ROOT webapp或者有时包括一个空的ROOT webapp。在这种情况下, 访问<code>http://localhost:8080/</code>就会看到HTTP error 404或者一个空白页面。</p>
+<p>如果希望同时运行其他Eclipse工作空间之外的应用项目, 就可以选择<code>Use Tomcat installation</code>。启动Tomcat时, 是采用 ...</p> </div><!-- /.entry-content -->
+
+								<div class="medium primary btn"><a href="/posts/2015/01/06/eclipse-tomcat-404/" rel="bookmark" title="Permalink to Eclipse启动Tomcat访问http://localhost:8080/时报404错误">Read more <i class="icon-arrow-right"></i></a></div>
+
+
+
+								<div class="row tag-row">
+										<span>Tagged as : </span>
+											<a class="danger label" href="/tag/ide.html">IDE</a>
+											<a class="danger label" href="/tag/server.html">Server</a>
+								</div>
+
+
+
+				        </article></li>
+				        <li><article class="hentry">
 				                <header> <h3 class="entry-title"><a href="/posts/2015/01/06/ide-key-setting/" rel="bookmark" title="Permalink to 设置IDE移动光标快捷键">设置IDE移动光标快捷键</a></h3> </header>
 				                <footer class="post-info">
 				                    <abbr class="published" title="2015-01-06T00:00:00+08:00"> 周二 06 一月 2015 </abbr>
@@ -105,19 +129,21 @@
 		<li><a href="/category/ide.html">IDE</a></li>
 		<li><a href="/category/javascript.html">Javascript</a></li>
 		<li><a href="/category/python.html">Python</a></li>
+		<li><a href="/category/server.html">Server</a></li>
 </ul>
 
 
 <h4>Tags</h4>
 	<ul>
-	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
-	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
 	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
-	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
-	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
-	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
-	    <li class="tag-4"><a href="/tag/ide.html">IDE</a></li>
 	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
+	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
+	    <li class="tag-4"><a href="/tag/server.html">Server</a></li>
+	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
+	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-1"><a href="/tag/ide.html">IDE</a></li>
 	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
 </ul>
 
