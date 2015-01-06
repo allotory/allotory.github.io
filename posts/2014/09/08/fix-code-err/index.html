@@ -69,9 +69,9 @@
             <div class="entry-content">
               <p>在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
 在Pelican中使用<code>pygment.css</code>文件处理代码高亮，我们可以修改该文件修复红框问题。可以修改<code>output/theme/pygment.css</code>处理该问题，但是当我们重新调用<code>make html</code>时，文件会被重置，所以可以修改博客根目录下<code>pelican-themes</code>里的<code>pygment.css</code>文件。如本博客为<code>Amazilia\pelican-themes\gum\static</code>下的<code>pygment.css</code>。找到如下代码去掉即可。</p>
-<div class="highlight"><pre><span class="p">.</span><span class="n">err</span> <span class="p">{</span>
-<span class="nl">border:</span><span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="err">#</span><span class="n">FF0000</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="na">.err</span> <span class="err">{</span>
+<span class="nl">border:</span><span class="err">1</span><span class="nf">px</span> <span class="no">solid</span> <span class="c">#FF0000;</span>
+<span class="err">}</span>
 </pre></div>
             </div><!-- /.entry-content -->
 
@@ -115,19 +115,21 @@
 
 <h4>Categories</h4>
 <ul>
+		<li><a href="/category/ide.html">IDE</a></li>
 		<li><a href="/category/python.html">Python</a></li>
 </ul>
 
 
 <h4>Tags</h4>
 	<ul>
+	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
 	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
-	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
-	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-4"><a href="/tag/ide.html">IDE</a></li>
 	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
 	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
-	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
-	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
 </ul>
 
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heliactin</title><link>/</link><description></description><atom:link href="/feeds/ide.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 06 Jan 2015 00:00:00 +0800</lastBuildDate><item><title>设置IDE移动光标快捷键</title><link>/posts/2015/01/06/ide-key-setting/</link><description>&lt;h3&gt;Eclipse&lt;/h3&gt;
+&lt;p&gt;在Eclipse的一堆快捷键设置中&lt;code&gt;Window -&amp;gt; Preferences -&amp;gt; General -&amp;gt; Keys&lt;/code&gt; 分别找出上下左右命令名称设置为：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    Previous Column -&amp;gt; Alt + H      
+    Line Up         -&amp;gt; Alt + J
+    Line Down       -&amp;gt; Alt + K
+    Next Column     -&amp;gt; Alt + L
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Sublime Text&lt;/h3&gt;
+&lt;p&gt;在Sublime Text里，打开&lt;code&gt;Preferences -&amp;gt; Key Bindings -&amp;gt; User&lt;/code&gt;设置移动快捷键：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    { &amp;quot;keys&amp;quot;: [&amp;quot;Alt + L&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;move&amp;quot;, 
+        &amp;quot;args&amp;quot;: {&amp;quot;by&amp;quot;: &amp;quot;characters&amp;quot;, &amp;quot;forward&amp;quot;: true} },
+    { &amp;quot;keys&amp;quot;: [&amp;quot;Alt + H&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;move&amp;quot;, 
+        &amp;quot;args&amp;quot;: {&amp;quot;by&amp;quot;: &amp;quot;characters&amp;quot;, &amp;quot;forward&amp;quot;: false} },
+    { &amp;quot;keys&amp;quot;: [&amp;quot;Alt + Space&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;move&amp;quot;, 
+        &amp;quot;args&amp;quot;: {&amp;quot;by&amp;quot;: &amp;quot;word_ends&amp;quot;, &amp;quot;forward&amp;quot;: true} },
+    { &amp;quot;keys&amp;quot;: [&amp;quot;Shift + Alt + Space&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;move&amp;quot;, 
+        &amp;quot;args&amp;quot;: {&amp;quot;by&amp;quot;: &amp;quot;word_ends&amp;quot;, &amp;quot;forward&amp;quot;: false} },
+    { &amp;quot;keys&amp;quot;: [&amp;quot;Alt + K&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;move&amp;quot;, 
+        &amp;quot;args&amp;quot;: {&amp;quot;by&amp;quot;: &amp;quot;lines&amp;quot;, &amp;quot;forward&amp;quot;: true} },
+    { &amp;quot;keys&amp;quot;: [&amp;quot;Alt + J&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;move&amp;quot;, 
+        &amp;quot;args&amp;quot;: {&amp;quot;by&amp;quot;: &amp;quot;lines&amp;quot;, &amp;quot;forward&amp;quot;: false} }
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;快捷键对照：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    Alt + L                 右移光标一个字符
+    Alt + H                 左移光标一个字符
+    Alt + Space             右移光标一个单元
+    Shift + Alt + Space     左移光标一个单元
+    Alt + K                 下移光标一行
+    Alt + J                 上移光标一行
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Tue, 06 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-06:posts/2015/01/06/ide-key-setting/</guid><category>IDE</category></item></channel></rss>

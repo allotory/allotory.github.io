@@ -62,7 +62,7 @@
 <address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
 				                <div class="entry-content"> <p>Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了<code>django-south</code>的（数据库）迁移功能，其提供的<code>django-admin migrate</code>也将代替<code>syncdb</code>命令.</p>
 <p>因此在我们建立数据库模型之后，就不能使用django的<code>syncdb</code>命令同步数据库了</p>
-<div class="highlight"><pre><span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">syncdb</span>
+<div class="highlight"><pre>python manage.py syncdb
 </pre></div>
 
 
@@ -120,9 +120,9 @@ Error loading MySQLdb module: No module named MySQLdb
 <address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
 				                <div class="entry-content"> <p>在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
 在Pelican中使用<code>pygment.css</code>文件处理代码高亮，我们可以修改该文件修复红框问题。可以修改<code>output/theme/pygment.css</code>处理该问题，但是当我们重新调用<code>make html</code>时，文件会被重置，所以可以修改博客根目录下<code>pelican-themes</code>里的<code>pygment.css</code>文件。如本博客为<code>Amazilia\pelican-themes\gum\static</code>下的<code>pygment.css</code>。找到如下代码去掉即可。</p>
-<div class="highlight"><pre><span class="p">.</span><span class="n">err</span> <span class="p">{</span>
-<span class="nl">border:</span><span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="err">#</span><span class="n">FF0000</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="na">.err</span> <span class="err">{</span>
+<span class="nl">border:</span><span class="err">1</span><span class="nf">px</span> <span class="no">solid</span> <span class="c">#FF0000;</span>
+<span class="err">}</span>
 </pre></div> </div><!-- /.entry-content -->
 
 								<div class="medium primary btn"><a href="/posts/2014/09/08/fix-code-err/" rel="bookmark" title="Permalink to 修复Pelican代码块中红框问题">Read more <i class="icon-arrow-right"></i></a></div>
@@ -180,19 +180,21 @@ Error loading MySQLdb module: No module named MySQLdb
 
 <h4>Categories</h4>
 <ul>
+		<li><a href="/category/ide.html">IDE</a></li>
 		<li><a href="/category/python.html">Python</a></li>
 </ul>
 
 
 <h4>Tags</h4>
 	<ul>
+	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
 	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
-	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
-	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-4"><a href="/tag/ide.html">IDE</a></li>
 	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
 	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
-	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
-	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
 </ul>
 
 
