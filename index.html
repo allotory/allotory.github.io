@@ -105,6 +105,32 @@
 
 				        </article></li>
 				        <li><article class="hentry">
+				                <header> <h3 class="entry-title"><a href="/posts/2015/01/07/java-message-digest/" rel="bookmark" title="Permalink to Java MessageDiges使用">Java MessageDiges使用</a></h3> </header>
+				                <footer class="post-info">
+				                    <abbr class="published" title="2015-01-07T00:00:00+08:00"> 周三 07 一月 2015 </abbr>
+<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
+				                <div class="entry-content"> <h3>MessageDigest简介</h3>
+<p><code>java.security.MessageDigest</code> 类用于为应用程序提供信息摘要算法的功能，如 <code>MD5</code> 或 <code>SHA</code> 算法。简单点说就是用于生成散列码。信息摘要是安全的单向哈希函数，它接收任意大小的数据，输出固定长度的哈希值。</p>
+<p><code>MessageDigest</code> 通过其 <code>getInstance</code> 系列静态函数来进行实例化和初始化。<code>MessageDigest</code> 对象通过使用 <code>update</code> 方法处理数据。任何时候都可以调用 <code>reset</code> 方法重置摘要。一旦所有需要更新的数据都已经被更新了，应该调用 <code>digest</code> 方法之一完成哈希计算并返回结果。</p>
+<p>对于给定数量的更新数据，<code>digest</code> 方法只能被调用一次。<code>digest</code> 方法被调用后，<code>MessageDigest</code> 对象被重新设置成其初始状态。</p>
+<h3>实例</h3>
+<p>1.创建 MessageDigest 对象</p>
+<p>计算信息摘（即散列码）要做的第一步是创建 <code>MessageDigest</code> 对象实例。像所有的引擎类一样，获取某类报文摘要算法（即散列算法，比如MD5 ...</p> </div><!-- /.entry-content -->
+
+								<div class="medium primary btn"><a href="/posts/2015/01/07/java-message-digest/" rel="bookmark" title="Permalink to Java MessageDiges使用">Read more <i class="icon-arrow-right"></i></a></div>
+
+
+
+								<div class="row tag-row">
+										<span>Tagged as : </span>
+											<a class="danger label" href="/tag/java.html">Java</a>
+											<a class="danger label" href="/tag/security.html">Security</a>
+								</div>
+
+
+
+				        </article></li>
+				        <li><article class="hentry">
 				                <header> <h3 class="entry-title"><a href="/posts/2015/01/06/eclipse-tomcat-404/" rel="bookmark" title="Permalink to Eclipse启动Tomcat访问http://localhost:8080/时报404错误">Eclipse启动Tomcat访问http://localhost:8080/时报404错误</a></h3> </header>
 				                <footer class="post-info">
 				                    <abbr class="published" title="2015-01-06T00:00:00+08:00"> 周二 06 一月 2015 </abbr>
@@ -200,33 +226,6 @@
 
 
 				        </article></li>
-				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Django 1.7 使用migrations建立数据库连接</a></h3> </header>
-				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-28T00:00:00+08:00"> 周日 28 九月 2014 </abbr>
-<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <p>Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了<code>django-south</code>的（数据库）迁移功能，其提供的<code>django-admin migrate</code>也将代替<code>syncdb</code>命令.</p>
-<p>因此在我们建立数据库模型之后，就不能使用django的<code>syncdb</code>命令同步数据库了</p>
-<div class="highlight"><pre>python manage.py syncdb
-</pre></div>
-
-
-<p>否则数据库模型将不会同步到真正的数据库中。
- </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-								<div class="row tag-row">
-										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/django.html">Django</a>
-											<a class="danger label" href="/tag/python.html">Python</a>
-								</div>
-
-
-
-				        </article></li>
 				</ol><!-- /#posts-list -->
 
         </div><!-- /.eleven.columns -->
@@ -252,18 +251,19 @@
 
 <h4>Tags</h4>
 	<ul>
-	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
-	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
 	    <li class="tag-4"><a href="/tag/jdbc.html">JDBC</a></li>
-	    <li class="tag-4"><a href="/tag/java.html">Java</a></li>
-	    <li class="tag-4"><a href="/tag/server.html">Server</a></li>
-	    <li class="tag-1"><a href="/tag/ide.html">IDE</a></li>
-	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
-	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
-	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
-	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
-	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
 	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-4"><a href="/tag/server.html">Server</a></li>
+	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
+	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
+	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
+	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
+	    <li class="tag-4"><a href="/tag/security.html">Security</a></li>
+	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
+	    <li class="tag-1"><a href="/tag/ide.html">IDE</a></li>
+	    <li class="tag-1"><a href="/tag/java.html">Java</a></li>
 </ul>
 
 

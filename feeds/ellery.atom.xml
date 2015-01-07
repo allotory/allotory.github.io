@@ -246,7 +246,77 @@
     url = jdbc:mysql://localhost/archilochus_im
     username = root
     password = root
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Java"></category><category term="JDBC"></category></entry><entry><title>Eclipse启动Tomcat访问http://localhost:8080/时报404错误</title><link href="/posts/2015/01/06/eclipse-tomcat-404/" rel="alternate"></link><updated>2015-01-06T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2015-01-06:posts/2015/01/06/eclipse-tomcat-404/</id><summary type="html">&lt;h3&gt;原因&lt;/h3&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Java"></category><category term="JDBC"></category></entry><entry><title>Java MessageDiges使用</title><link href="/posts/2015/01/07/java-message-digest/" rel="alternate"></link><updated>2015-01-07T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2015-01-07:posts/2015/01/07/java-message-digest/</id><summary type="html">&lt;h3&gt;MessageDigest简介&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;java.security.MessageDigest&lt;/code&gt; 类用于为应用程序提供信息摘要算法的功能，如 &lt;code&gt;MD5&lt;/code&gt; 或 &lt;code&gt;SHA&lt;/code&gt; 算法。简单点说就是用于生成散列码。信息摘要是安全的单向哈希函数，它接收任意大小的数据，输出固定长度的哈希值。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;MessageDigest&lt;/code&gt; 通过其 &lt;code&gt;getInstance&lt;/code&gt; 系列静态函数来进行实例化和初始化。&lt;code&gt;MessageDigest&lt;/code&gt; 对象通过使用 &lt;code&gt;update&lt;/code&gt; 方法处理数据。任何时候都可以调用 &lt;code&gt;reset&lt;/code&gt; 方法重置摘要。一旦所有需要更新的数据都已经被更新了，应该调用 &lt;code&gt;digest&lt;/code&gt; 方法之一完成哈希计算并返回结果。&lt;/p&gt;
+&lt;p&gt;对于给定数量的更新数据，&lt;code&gt;digest&lt;/code&gt; 方法只能被调用一次。&lt;code&gt;digest&lt;/code&gt; 方法被调用后，&lt;code&gt;MessageDigest&lt;/code&gt; 对象被重新设置成其初始状态。&lt;/p&gt;
+&lt;h3&gt;实例&lt;/h3&gt;
+&lt;p&gt;1.创建 MessageDigest 对象&lt;/p&gt;
+&lt;p&gt;计算信息摘（即散列码）要做的第一步是创建 &lt;code&gt;MessageDigest&lt;/code&gt; 对象实例。像所有的引擎类一样，获取某类报文摘要算法（即散列算法，比如MD5）的 &lt;code&gt;MessageDigest&lt;/code&gt; 对象的途径是调用 &lt;code&gt;MessageDigest&lt;/code&gt; 类中的 &lt;code&gt;getInstance&lt;/code&gt; 静态 &lt;code&gt;factory&lt;/code&gt; 方法：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    public static MessageDigest getInstance(String algorithm)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;注：算法名不区分大小写。即&lt;code&gt;md5&lt;/code&gt;等价于&lt;code&gt;MD5&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;2.向 MessageDigest 传递数据&lt;/p&gt;
+&lt;p&gt;计算数据的摘要的第二步是向已初始化的 &lt;code&gt;MessageDigest&lt;/code&gt; 对象提供传送要计算的数据。这将通过一次或多次调用以下某个 &lt;code&gt;update&lt;/code&gt;（更新）方法来完成。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    public void update(byte input);
+    public void update(byte[] input);
+    public void update(byte[] input, int offset, int len);
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3.计算摘要
+通过调用 &lt;code&gt;update&lt;/code&gt; 方法向 &lt;code&gt;MessageDigest&lt;/code&gt; 对象提传送要计算的数据后，你就可以调用以下某个 &lt;code&gt;digest&lt;/code&gt;（摘要）方法来计算摘要（即生成散列码）。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    public byte[] digest();
+    public byte[] digest(byte[] input);
+    public int digest(byte[] buf, int offset, int len);
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;前两个方法返回计算出的摘要。后一个方法把计算出的摘要储存在所提供的 &lt;code&gt;buf&lt;/code&gt; 缓冲区中，起点是 &lt;code&gt;offset&lt;/code&gt;。&lt;code&gt;len&lt;/code&gt; 是 &lt;code&gt;buf&lt;/code&gt; 中分配给该摘要的字节数。该方法返回实际存储在 &lt;code&gt;buf&lt;/code&gt; 中的字节数。
+对第二个接受输入字节数组变量的 &lt;code&gt;digest&lt;/code&gt; 方法的调用等价于用指定的输入调用。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    public void update(byte[] input)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;测试源码&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.io.UnsupportedEncodingException&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.security.MessageDigest&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.security.NoSuchAlgorithmException&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Encryption&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;encryptionPwd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;algorithm&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;byte&lt;/span&gt; &lt;span class="n"&gt;resultData&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;MessageDigest&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;创建&lt;/span&gt;  &lt;span class="n"&gt;MessageDigest&lt;/span&gt; &lt;span class="err"&gt;对象&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;调用&lt;/span&gt; &lt;span class="n"&gt;MessageDigest&lt;/span&gt; &lt;span class="err"&gt;类中的&lt;/span&gt; &lt;span class="n"&gt;getInstance&lt;/span&gt; &lt;span class="err"&gt;静态&lt;/span&gt; &lt;span class="n"&gt;factory&lt;/span&gt; &lt;span class="err"&gt;方法&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;算法名不区分大小写&lt;/span&gt;
+                &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;MessageDigest&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getInstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;algorithm&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+                &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;向&lt;/span&gt;&lt;span class="n"&gt;MessageDigest&lt;/span&gt;&lt;span class="err"&gt;传送要计算的数据&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="err"&gt;传入的参数是字节类型或字节类型数组，&lt;/span&gt;
+                &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;对于字符串，需要先使用&lt;/span&gt;&lt;span class="n"&gt;getBytes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;方法生成字符串数组。&lt;/span&gt;
+                &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getBytes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;UTF8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+                &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;计算摘要&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;生成散列码&lt;/span&gt;
+                &lt;span class="n"&gt;resultData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;digest&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;NoSuchAlgorithmException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;UnsupportedEncodingException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;convertToHexString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;resultData&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+
+        &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;将计算结果&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;byte&lt;/span&gt;&lt;span class="err"&gt;数组&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;转换为字符串&lt;/span&gt;
+        &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;convertToHexString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;byte&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[])&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;StringBuffer&lt;/span&gt; &lt;span class="n"&gt;strBuffer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;StringBuffer&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;strBuffer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toHexString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mh"&gt;0xff&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]));&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;strBuffer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Java"></category><category term="Security"></category></entry><entry><title>Eclipse启动Tomcat访问http://localhost:8080/时报404错误</title><link href="/posts/2015/01/06/eclipse-tomcat-404/" rel="alternate"></link><updated>2015-01-06T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2015-01-06:posts/2015/01/06/eclipse-tomcat-404/</id><summary type="html">&lt;h3&gt;原因&lt;/h3&gt;
 &lt;p&gt;Eclipse启动Tomcat服务输入&lt;code&gt;http://localhost:8080/&lt;/code&gt;会报404错误, 即&lt;code&gt;The requested resource (/) is not avaliable&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;错误产生的原因在于工作空间的项目部署的目录不对。&lt;/p&gt;
 &lt;p&gt;配置Tomcat时, 如果只想运行Eclipse工作空间的应用项目, 可以选择&lt;code&gt;User workspace metadata&lt;/code&gt;, 此时采用的是&lt;code&gt;%ECLIPSE_WORKSPACE_HOME%/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps&lt;/code&gt;作为webapp目录的, wtpwebapps下没有ROOT webapp或者有时包括一个空的ROOT webapp。在这种情况下, 访问&lt;code&gt;http://localhost:8080/&lt;/code&gt;就会看到HTTP error 404或者一个空白页面。&lt;/p&gt;

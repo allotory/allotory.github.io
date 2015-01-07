@@ -2,10 +2,9 @@
 <html lang="cn">
 <head>
 
-        <title>Heliactin</title>
+        <title>Heliactin - Security</title>
         <meta charset="utf-8" />
         <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin RSS Feed" />
-        <link href="/feeds/javascript.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin Categories RSS Feed" />
 
 
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
@@ -47,7 +46,7 @@
             </div>
 
 <section id="content">
-<h2>Articles in the Javascript category</h2>
+
 
 
    <div class="row">
@@ -56,39 +55,26 @@
         <div class="eleven columns">
 		         <ol id="post-list">
 				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">常用Javascript技术</a></h3> </header>
+				                <header> <h3 class="entry-title"><a href="/posts/2015/01/07/java-message-digest/" rel="bookmark" title="Permalink to Java MessageDiges使用">Java MessageDiges使用</a></h3> </header>
 				                <footer class="post-info">
-				                    <abbr class="published" title="2015-01-06T00:00:00+08:00"> 周二 06 一月 2015 </abbr>
+				                    <abbr class="published" title="2015-01-07T00:00:00+08:00"> 周三 07 一月 2015 </abbr>
 <address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <h3>正则表达式校验数据</h3>
-<div class="highlight"><pre>    var username = document.getElementById(&quot;username&quot;).value.trim();
-    var reg = /^[a-zA-Z][a-zA-Z0-9_]{5,14}$/;
-    if (!reg.test(username)){
-        alert(&quot;用户名必须为6-15个以字母开头，可带数字、“_”的字符串&quot;);
-    }else {
-        alert(&quot;用户名可用&quot;);
-    }
-</pre></div>
+				                <div class="entry-content"> <h3>MessageDigest简介</h3>
+<p><code>java.security.MessageDigest</code> 类用于为应用程序提供信息摘要算法的功能，如 <code>MD5</code> 或 <code>SHA</code> 算法。简单点说就是用于生成散列码。信息摘要是安全的单向哈希函数，它接收任意大小的数据，输出固定长度的哈希值。</p>
+<p><code>MessageDigest</code> 通过其 <code>getInstance</code> 系列静态函数来进行实例化和初始化。<code>MessageDigest</code> 对象通过使用 <code>update</code> 方法处理数据。任何时候都可以调用 <code>reset</code> 方法重置摘要。一旦所有需要更新的数据都已经被更新了，应该调用 <code>digest</code> 方法之一完成哈希计算并返回结果。</p>
+<p>对于给定数量的更新数据，<code>digest</code> 方法只能被调用一次。<code>digest</code> 方法被调用后，<code>MessageDigest</code> 对象被重新设置成其初始状态。</p>
+<h3>实例</h3>
+<p>1.创建 MessageDigest 对象</p>
+<p>计算信息摘（即散列码）要做的第一步是创建 <code>MessageDigest</code> 对象实例。像所有的引擎类一样，获取某类报文摘要算法（即散列算法，比如MD5 ...</p> </div><!-- /.entry-content -->
 
-
-<h3>下拉列表动态添加选项</h3>
-<div class="highlight"><pre>    //根据id查找对象，
-    var obj = document.getElementById(&#39;year&#39;);
-    //添加一个选项
-    obj.add(new Option(&quot;文本&quot;, &quot;值&quot;));         //这个只能在IE中有效
-    obj.options.add(new Option(&quot;文本&quot;, &quot;值&quot;)); //这个兼容IE与firefox
-</pre></div>
-
-
-<h3>动态添加组件 ...</h3> </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">Read more <i class="icon-arrow-right"></i></a></div>
+								<div class="medium primary btn"><a href="/posts/2015/01/07/java-message-digest/" rel="bookmark" title="Permalink to Java MessageDiges使用">Read more <i class="icon-arrow-right"></i></a></div>
 
 
 
 								<div class="row tag-row">
 										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/javascript.html">Javascript</a>
+											<a class="danger label" href="/tag/java.html">Java</a>
+											<a class="danger label" href="/tag/security.html">Security</a>
 								</div>
 
 

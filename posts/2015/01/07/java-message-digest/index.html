@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+
+        <title>Java MessageDiges使用</title>
+        <meta charset="utf-8" />
+        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin RSS Feed" />
+        <link href="/feeds/java.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin Categories RSS Feed" />
+
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="/theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/pygment.css" />
+
+        <script src="/theme/js/libs/modernizr-2.6.2.min.js"></script>
+
+
+
+
+</head>
+
+<body id="index" class="home">
+
+
+    <a href="https://github.com/allotory"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+    <div class="container">
+
+        <div class="row">
+
+          <header id="banner" class="body">
+                  <h1><a href="/">Heliactin <strong></strong></a></h1>
+          </header><!-- /#banner -->
+
+            <div id="navigation" class="navbar row">
+              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
+             
+              <ul class="columns">
+                <li><a href="/">Home</a></li>
+
+                <li><a href="feeds/all.rss.xml">Feed</a></li>
+                <li><a href="#">About</a></li>
+
+              </ul>
+            </div>
+
+<section id="content" class="body">
+
+   <div class="row">
+        <div class="eleven columns">
+
+
+            <header>
+              <h3 class="entry-title">
+                <a href="/posts/2015/01/07/java-message-digest/" rel="bookmark"
+                   title="Permalink to Java MessageDiges使用">Java MessageDiges使用</a></h3>
+           
+            </header>
+            <footer class="post-info">
+              <abbr class="published" title="2015-01-07T00:00:00+08:00">
+                周三 07 一月 2015
+              </abbr>
+              <address class="vcard author">
+                By <a class="url fn" href="/author/ellery.html">Ellery</a>
+              </address>
+            </footer><!-- /.post-info -->
+            <div class="entry-content">
+              <h3>MessageDigest简介</h3>
+<p><code>java.security.MessageDigest</code> 类用于为应用程序提供信息摘要算法的功能，如 <code>MD5</code> 或 <code>SHA</code> 算法。简单点说就是用于生成散列码。信息摘要是安全的单向哈希函数，它接收任意大小的数据，输出固定长度的哈希值。</p>
+<p><code>MessageDigest</code> 通过其 <code>getInstance</code> 系列静态函数来进行实例化和初始化。<code>MessageDigest</code> 对象通过使用 <code>update</code> 方法处理数据。任何时候都可以调用 <code>reset</code> 方法重置摘要。一旦所有需要更新的数据都已经被更新了，应该调用 <code>digest</code> 方法之一完成哈希计算并返回结果。</p>
+<p>对于给定数量的更新数据，<code>digest</code> 方法只能被调用一次。<code>digest</code> 方法被调用后，<code>MessageDigest</code> 对象被重新设置成其初始状态。</p>
+<h3>实例</h3>
+<p>1.创建 MessageDigest 对象</p>
+<p>计算信息摘（即散列码）要做的第一步是创建 <code>MessageDigest</code> 对象实例。像所有的引擎类一样，获取某类报文摘要算法（即散列算法，比如MD5）的 <code>MessageDigest</code> 对象的途径是调用 <code>MessageDigest</code> 类中的 <code>getInstance</code> 静态 <code>factory</code> 方法：</p>
+<div class="highlight"><pre>    public static MessageDigest getInstance(String algorithm)
+</pre></div>
+
+
+<p>注：算法名不区分大小写。即<code>md5</code>等价于<code>MD5</code>。</p>
+<p>2.向 MessageDigest 传递数据</p>
+<p>计算数据的摘要的第二步是向已初始化的 <code>MessageDigest</code> 对象提供传送要计算的数据。这将通过一次或多次调用以下某个 <code>update</code>（更新）方法来完成。</p>
+<div class="highlight"><pre>    public void update(byte input);
+    public void update(byte[] input);
+    public void update(byte[] input, int offset, int len);
+</pre></div>
+
+
+<p>3.计算摘要
+通过调用 <code>update</code> 方法向 <code>MessageDigest</code> 对象提传送要计算的数据后，你就可以调用以下某个 <code>digest</code>（摘要）方法来计算摘要（即生成散列码）。</p>
+<div class="highlight"><pre>    public byte[] digest();
+    public byte[] digest(byte[] input);
+    public int digest(byte[] buf, int offset, int len);
+</pre></div>
+
+
+<p>前两个方法返回计算出的摘要。后一个方法把计算出的摘要储存在所提供的 <code>buf</code> 缓冲区中，起点是 <code>offset</code>。<code>len</code> 是 <code>buf</code> 中分配给该摘要的字节数。该方法返回实际存储在 <code>buf</code> 中的字节数。
+对第二个接受输入字节数组变量的 <code>digest</code> 方法的调用等价于用指定的输入调用。</p>
+<div class="highlight"><pre>    public void update(byte[] input)
+</pre></div>
+
+
+<h3>测试源码</h3>
+<div class="highlight"><pre>    <span class="kn">import</span> <span class="nn">java.io.UnsupportedEncodingException</span><span class="p">;</span>
+    <span class="kn">import</span> <span class="nn">java.security.MessageDigest</span><span class="p">;</span>
+    <span class="kn">import</span> <span class="nn">java.security.NoSuchAlgorithmException</span><span class="p">;</span>
+
+    <span class="n">public</span> <span class="k">class</span> <span class="nc">Encryption</span> <span class="p">{</span>
+
+        <span class="n">public</span> <span class="n">String</span> <span class="n">encryptionPwd</span><span class="p">(</span><span class="n">String</span> <span class="n">data</span><span class="p">,</span> <span class="n">String</span> <span class="n">algorithm</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">byte</span> <span class="n">resultData</span><span class="p">[]</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+            <span class="n">MessageDigest</span> <span class="n">m</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="o">//</span><span class="err">创建</span>  <span class="n">MessageDigest</span> <span class="err">对象</span><span class="p">,</span> <span class="err">调用</span> <span class="n">MessageDigest</span> <span class="err">类中的</span> <span class="n">getInstance</span> <span class="err">静态</span> <span class="n">factory</span> <span class="err">方法</span><span class="p">,</span><span class="err">算法名不区分大小写</span>
+                <span class="n">m</span> <span class="o">=</span> <span class="n">MessageDigest</span><span class="o">.</span><span class="n">getInstance</span><span class="p">(</span><span class="n">algorithm</span><span class="p">);</span>
+                <span class="o">//</span><span class="err">向</span><span class="n">MessageDigest</span><span class="err">传送要计算的数据</span><span class="p">,</span><span class="n">update</span><span class="err">传入的参数是字节类型或字节类型数组，</span>
+                <span class="o">//</span><span class="err">对于字符串，需要先使用</span><span class="n">getBytes</span><span class="p">(</span> <span class="p">)</span><span class="err">方法生成字符串数组。</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">getBytes</span><span class="p">(</span><span class="s">&quot;UTF8&quot;</span><span class="p">));</span>
+                <span class="o">//</span><span class="err">计算摘要</span><span class="p">,</span><span class="err">生成散列码</span>
+                <span class="n">resultData</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">digest</span><span class="p">();</span>
+            <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">NoSuchAlgorithmException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">e</span><span class="o">.</span><span class="n">printStackTrace</span><span class="p">();</span>
+            <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">UnsupportedEncodingException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">e</span><span class="o">.</span><span class="n">printStackTrace</span><span class="p">();</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="n">convertToHexString</span><span class="p">(</span><span class="n">resultData</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="o">//</span><span class="err">将计算结果</span><span class="p">(</span><span class="n">byte</span><span class="err">数组</span><span class="p">)</span><span class="err">转换为字符串</span>
+        <span class="n">static</span> <span class="n">String</span> <span class="n">convertToHexString</span><span class="p">(</span><span class="n">byte</span> <span class="n">data</span><span class="p">[])</span> <span class="p">{</span>
+            <span class="n">StringBuffer</span> <span class="n">strBuffer</span> <span class="o">=</span> <span class="n">new</span> <span class="n">StringBuffer</span><span class="p">();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">data</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">strBuffer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Integer</span><span class="o">.</span><span class="n">toHexString</span><span class="p">(</span><span class="mh">0xff</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">strBuffer</span><span class="o">.</span><span class="n">toString</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+            </div><!-- /.entry-content -->
+
+             <ul><!-- Neighbor Articles Plugin -->
+                 <li>
+                     &larr;上一篇：<a href="/posts/2015/01/06/eclipse-tomcat-404/">
+                         Eclipse启动Tomcat访问http://localhost:8080/时报404错误
+                     </a>
+                 </li>
+                 <li>
+                     &rarr;下一篇：<a href="/posts/2015/01/07/Java-jdbc-template/">
+                         Java封装JDBC
+                     </a>
+                 </li>
+            </ul>
+
+            <div class="comments">
+              <h3>Comments</h3>
+              <div id="disqus_thread"></div>
+              <script type="text/javascript">
+                var disqus_identifier = "posts/2015/01/07/java-message-digest/";
+                (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://amazilia.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              </script>
+            </div>
+
+
+        </div><!-- /.eleven.columns -->
+
+<div class="three columns">
+
+<h4>Pages</h4>
+
+ <ul>
+      <li><a href="feeds/all.rss.xml">Feed</a></li>
+      <li><a href="#">About</a></li>
+  </ul>
+
+<h4>Categories</h4>
+<ul>
+		<li><a href="/category/ide.html">IDE</a></li>
+		<li><a href="/category/java.html">Java</a></li>
+		<li><a href="/category/javascript.html">Javascript</a></li>
+		<li><a href="/category/python.html">Python</a></li>
+		<li><a href="/category/server.html">Server</a></li>
+</ul>
+
+
+<h4>Tags</h4>
+	<ul>
+	    <li class="tag-4"><a href="/tag/jdbc.html">JDBC</a></li>
+	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-4"><a href="/tag/server.html">Server</a></li>
+	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
+	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
+	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
+	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
+	    <li class="tag-4"><a href="/tag/security.html">Security</a></li>
+	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
+	    <li class="tag-1"><a href="/tag/ide.html">IDE</a></li>
+	    <li class="tag-1"><a href="/tag/java.html">Java</a></li>
+</ul>
+
+
+<nav class="widget">
+  <h4>Social</h4>
+  <ul>
+    <li><a href="feeds/all.rss.xml">RSS</a></li>
+    <li><a href="https://github.com/allotory">Github</a></li>
+    <li><a href="https://www.facebook.com/allotory">Facebook</a></li>
+    <li><a href="https://twitter.com/allotory">Twitter</a></li>
+  </ul>
+</nav>
+
+</div> </div><!-- /.row -->
+
+
+</section>
+
+       </div><!-- /.row -->
+    </div><!-- /.container -->
+
+
+       <div class="container.nopad bg">
+
+    
+        <footer id="credits" class="row">
+          <div class="seven columns left-center">
+
+                   <address id="about" class="vcard body">
+                    Proudly powered by <a href="http://allotory.github.io/">Ellery</a>,
+                    which takes great advantage of <a href="http://python.org">Python</a> 
+                    and <a href="http://getpelican.com/">Pelican</a>.
+                    <br />
+                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>.&nbsp;&nbsp;&nbsp;Copyright &copy; 2015&nbsp; ALLOTORY
+                    </address>
+          </div>
+
+
+          <div class="seven columns">
+            <div class="row">
+              <ul class="socbtns">
+
+                <li><div class="btn primary"><a href="https://github.com/allotory" target="_blank">Github</a></div></li>
+
+                <li><div class="btn twitter"><a href="https://twitter.com/allotory" target="_blank">Twitter</a></div></li>
+
+                <li><div class="btn facebook"><a href="https://www.facebook.com/allotory" target="_blank">Facebook</a></div></li>
+
+                <li><div class="btn danger"><a href="https://plus.google.com/u/0/105072098982208020695" target="_blank">Google+</a></div></li>
+
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+    </div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'amazilia';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+  <script src="/theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="/theme/js/libs/gumby.min.js"></script>
+  <script src="/theme/js/plugins.js"></script>
+</body>
+</html>
