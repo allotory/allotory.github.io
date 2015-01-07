@@ -316,33 +316,33 @@
             &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;strBuffer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
         &lt;span class="p"&gt;}&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Wed, 07 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-07:posts/2015/01/07/java-message-digest/</guid><category>Java</category><category>Security</category></item><item><title>Python time,datetime,string转换</title><link>/posts/2015/01/07/pelican-time-string/</link><description>&lt;h4&gt;把datetime转换为字符串&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;def datetime_toString(dt):  
-    return dt.strftime(&amp;quot;%Y-%m-%d-%H&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Wed, 07 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-07:posts/2015/01/07/java-message-digest/</guid><category>Java</category><category>Security</category></item><item><title>Python time,datetime,string转换</title><link>/posts/2015/01/07/pelican-time-string/</link><description>&lt;h5&gt;把datetime转换为字符串&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    def datetime_toString(dt):  
+        return dt.strftime(&amp;quot;%Y-%m-%d-%H&amp;quot;)
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h4&gt;把字符串转换为datetime&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;def string_toDatetime(string):  
-     return datetime.strptime(string, &amp;quot;%Y-%m-%d-%H&amp;quot;)
+&lt;h5&gt;把字符串转换为datetime&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    def string_toDatetime(string):  
+         return datetime.strptime(string, &amp;quot;%Y-%m-%d-%H&amp;quot;)
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h4&gt;把字符串转会为时间戳&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;def string_toTimestamp(strTime):  
-    return time.mktime(string_toDatetime(strTime).timetuple())
+&lt;h5&gt;把字符串转会为时间戳&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    def string_toTimestamp(strTime):  
+        return time.mktime(string_toDatetime(strTime).timetuple())
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h4&gt;把时间戳转换为字符串&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;def timestamp_toString(stamp):  
-    return time.strftime(&amp;quot;%Y-%m-%d-%H&amp;quot;, tiem.localtime(stamp))
+&lt;h5&gt;把时间戳转换为字符串&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    def timestamp_toString(stamp):  
+        return time.strftime(&amp;quot;%Y-%m-%d-%H&amp;quot;, tiem.localtime(stamp))
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h4&gt;把datetime类型转换为时间戳&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;def datetime_toTimestamp(dateTim):  
-    return time.mktime(dateTim.timetuple())
+&lt;div class="highlight"&gt;&lt;pre&gt;    def datetime_toTimestamp(dateTim):  
+        return time.mktime(dateTim.timetuple())
 &lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Wed, 07 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-07:posts/2015/01/07/pelican-time-string/</guid><category>Python</category></item><item><title>Eclipse启动Tomcat访问http://localhost:8080/时报404错误</title><link>/posts/2015/01/06/eclipse-tomcat-404/</link><description>&lt;h3&gt;原因&lt;/h3&gt;
 &lt;p&gt;Eclipse启动Tomcat服务输入&lt;code&gt;http://localhost:8080/&lt;/code&gt;会报404错误, 即&lt;code&gt;The requested resource (/) is not avaliable&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;错误产生的原因在于工作空间的项目部署的目录不对。&lt;/p&gt;
