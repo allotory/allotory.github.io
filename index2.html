@@ -55,6 +55,37 @@
         <div class="eleven columns">
 		         <ol id="post-list">
 				        <li><article class="hentry">
+				                <header> <h3 class="entry-title"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">解决Django同步数据库No module named MySQLdb错误</a></h3> </header>
+				                <footer class="post-info">
+				                    <abbr class="published" title="2014-09-24T00:00:00+08:00"> 周三 24 九月 2014 </abbr>
+<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
+				                <div class="entry-content"> <p>Django在同步数据库时会根据<code>models.py</code>中描述的数据模型，在MySQL中创建各个关系表</p>
+<div class="highlight"><pre>python manage.py syncdb
+</pre></div>
+
+
+<p>同步数据库后，Django将建立相关的MySQL表格，并要求你创建一个超级用户等信息，但有时在windows环境下执行上述命令后会提示出错信息：</p>
+<div class="highlight"><pre>django.core.exceptions.ImproperlyConfigured: 
+Error loading MySQLdb module: No module named MySQLdb
+</pre></div>
+
+
+<p>No model named Mysqldb，这是因为当前Python环境没有安装<code>MySQL for Python</code>组件，解决办法：下载相应<a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/">MySQL for Python组件</a>并安装即可。</p> </div><!-- /.entry-content -->
+
+								<div class="medium primary btn"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">Read more <i class="icon-arrow-right"></i></a></div>
+
+
+
+								<div class="row tag-row">
+										<span>Tagged as : </span>
+											<a class="danger label" href="/tag/django.html">Django</a>
+											<a class="danger label" href="/tag/mysql.html">MySQL</a>
+								</div>
+
+
+
+				        </article></li>
+				        <li><article class="hentry">
 				                <header> <h3 class="entry-title"><a href="/posts/2014/09/08/fix-code-err/" rel="bookmark" title="Permalink to 修复Pelican代码块中红框问题">修复Pelican代码块中红框问题</a></h3> </header>
 				                <footer class="post-info">
 				                    <abbr class="published" title="2014-09-08T00:00:00+08:00"> 周一 08 九月 2014 </abbr>
@@ -122,6 +153,7 @@
 <h4>Categories</h4>
 <ul>
 		<li><a href="/category/ide.html">IDE</a></li>
+		<li><a href="/category/java.html">Java</a></li>
 		<li><a href="/category/javascript.html">Javascript</a></li>
 		<li><a href="/category/python.html">Python</a></li>
 		<li><a href="/category/server.html">Server</a></li>
@@ -130,16 +162,18 @@
 
 <h4>Tags</h4>
 	<ul>
-	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
-	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
-	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
-	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
 	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
+	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
+	    <li class="tag-4"><a href="/tag/jdbc.html">JDBC</a></li>
+	    <li class="tag-4"><a href="/tag/java.html">Java</a></li>
 	    <li class="tag-4"><a href="/tag/server.html">Server</a></li>
+	    <li class="tag-1"><a href="/tag/ide.html">IDE</a></li>
 	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
 	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
-	    <li class="tag-1"><a href="/tag/ide.html">IDE</a></li>
 	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
+	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
+	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
 </ul>
 
 
