@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heliactin</title><link>/</link><description></description><atom:link href="/feeds/python.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0800</lastBuildDate><item><title>Django 1.7 使用migrations建立数据库连接</title><link>/posts/2014/09/28/django-migrations/</link><description>&lt;p&gt;Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了&lt;code&gt;django-south&lt;/code&gt;的（数据库）迁移功能，其提供的&lt;code&gt;django-admin migrate&lt;/code&gt;也将代替&lt;code&gt;syncdb&lt;/code&gt;命令.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heliactin</title><link>/</link><description></description><atom:link href="/feeds/python.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 07 Jan 2015 00:00:00 +0800</lastBuildDate><item><title>Python time,datetime,string转换</title><link>/posts/2015/01/07/pelican-time-string/</link><description>&lt;h4&gt;把datetime转换为字符串&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;def datetime_toString(dt):  
+    return dt.strftime(&amp;quot;%Y-%m-%d-%H&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;把字符串转换为datetime&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;def string_toDatetime(string):  
+     return datetime.strptime(string, &amp;quot;%Y-%m-%d-%H&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;把字符串转会为时间戳&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;def string_toTimestamp(strTime):  
+    return time.mktime(string_toDatetime(strTime).timetuple())
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;把时间戳转换为字符串&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;def timestamp_toString(stamp):  
+    return time.strftime(&amp;quot;%Y-%m-%d-%H&amp;quot;, tiem.localtime(stamp))
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;把datetime类型转换为时间戳&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;def datetime_toTimestamp(dateTim):  
+    return time.mktime(dateTim.timetuple())
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Wed, 07 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-07:posts/2015/01/07/pelican-time-string/</guid><category>Python</category></item><item><title>Django 1.7 使用migrations建立数据库连接</title><link>/posts/2014/09/28/django-migrations/</link><description>&lt;p&gt;Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了&lt;code&gt;django-south&lt;/code&gt;的（数据库）迁移功能，其提供的&lt;code&gt;django-admin migrate&lt;/code&gt;也将代替&lt;code&gt;syncdb&lt;/code&gt;命令.&lt;/p&gt;
 &lt;p&gt;因此在我们建立数据库模型之后，就不能使用django的&lt;code&gt;syncdb&lt;/code&gt;命令同步数据库了&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python manage.py syncdb
 &lt;/pre&gt;&lt;/div&gt;

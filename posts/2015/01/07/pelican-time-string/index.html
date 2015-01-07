@@ -2,9 +2,10 @@
 <html lang="cn">
 <head>
 
-        <title>Heliactin - Django</title>
+        <title>Python time,datetime,string转换</title>
         <meta charset="utf-8" />
         <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin RSS Feed" />
+        <link href="/feeds/python.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin Categories RSS Feed" />
 
 
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
@@ -45,77 +46,86 @@
               </ul>
             </div>
 
-<section id="content">
-
-
+<section id="content" class="body">
 
    <div class="row">
-
-
         <div class="eleven columns">
-		         <ol id="post-list">
-				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Django 1.7 使用migrations建立数据库连接</a></h3> </header>
-				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-28T00:00:00+08:00"> 周日 28 九月 2014 </abbr>
-<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <p>Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了<code>django-south</code>的（数据库）迁移功能，其提供的<code>django-admin migrate</code>也将代替<code>syncdb</code>命令.</p>
-<p>因此在我们建立数据库模型之后，就不能使用django的<code>syncdb</code>命令同步数据库了</p>
-<div class="highlight"><pre>python manage.py syncdb
+
+
+            <header>
+              <h3 class="entry-title">
+                <a href="/posts/2015/01/07/pelican-time-string/" rel="bookmark"
+                   title="Permalink to Python time,datetime,string转换">Python time,datetime,string转换</a></h3>
+           
+            </header>
+            <footer class="post-info">
+              <abbr class="published" title="2015-01-07T00:00:00+08:00">
+                周三 07 一月 2015
+              </abbr>
+              <address class="vcard author">
+                By <a class="url fn" href="/author/ellery.html">Ellery</a>
+              </address>
+            </footer><!-- /.post-info -->
+            <div class="entry-content">
+              <h4>把datetime转换为字符串</h4>
+<div class="highlight"><pre>def datetime_toString(dt):  
+    return dt.strftime(&quot;%Y-%m-%d-%H&quot;)
 </pre></div>
 
 
-<p>否则数据库模型将不会同步到真正的数据库中。
- </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-								<div class="row tag-row">
-										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/django.html">Django</a>
-											<a class="danger label" href="/tag/python.html">Python</a>
-								</div>
-
-
-
-				        </article></li>
-				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">解决Django同步数据库No module named MySQLdb错误</a></h3> </header>
-				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-24T00:00:00+08:00"> 周三 24 九月 2014 </abbr>
-<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <p>Django在同步数据库时会根据<code>models.py</code>中描述的数据模型，在MySQL中创建各个关系表</p>
-<div class="highlight"><pre>python manage.py syncdb
+<h4>把字符串转换为datetime</h4>
+<div class="highlight"><pre>def string_toDatetime(string):  
+     return datetime.strptime(string, &quot;%Y-%m-%d-%H&quot;)
 </pre></div>
 
 
-<p>同步数据库后，Django将建立相关的MySQL表格，并要求你创建一个超级用户等信息，但有时在windows环境下执行上述命令后会提示出错信息：</p>
-<div class="highlight"><pre>django.core.exceptions.ImproperlyConfigured: 
-Error loading MySQLdb module: No module named MySQLdb
+<h4>把字符串转会为时间戳</h4>
+<div class="highlight"><pre>def string_toTimestamp(strTime):  
+    return time.mktime(string_toDatetime(strTime).timetuple())
 </pre></div>
 
 
-<p>No model named Mysqldb，这是因为当前Python环境没有安装<code>MySQL for Python</code>组件，解决办法：下载相应<a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/">MySQL for Python组件</a>并安装即可。</p> </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-								<div class="row tag-row">
-										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/django.html">Django</a>
-											<a class="danger label" href="/tag/mysql.html">MySQL</a>
-								</div>
+<h4>把时间戳转换为字符串</h4>
+<div class="highlight"><pre>def timestamp_toString(stamp):  
+    return time.strftime(&quot;%Y-%m-%d-%H&quot;, tiem.localtime(stamp))
+</pre></div>
 
 
+<h4>把datetime类型转换为时间戳</h4>
+<div class="highlight"><pre>def datetime_toTimestamp(dateTim):  
+    return time.mktime(dateTim.timetuple())
+</pre></div>
+            </div><!-- /.entry-content -->
 
-				        </article></li>
-				</ol><!-- /#posts-list -->
+             <ul><!-- Neighbor Articles Plugin -->
+                 <li>
+                     &larr;上一篇：<a href="/posts/2015/01/06/eclipse-tomcat-404/">
+                         Eclipse启动Tomcat访问http://localhost:8080/时报404错误
+                     </a>
+                 </li>
+                 <li>
+                     &rarr;下一篇：<a href="/posts/2015/01/07/java-message-digest/">
+                         Java MessageDiges使用
+                     </a>
+                 </li>
+            </ul>
+
+            <div class="comments">
+              <h3>Comments</h3>
+              <div id="disqus_thread"></div>
+              <script type="text/javascript">
+                var disqus_identifier = "posts/2015/01/07/pelican-time-string/";
+                (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://amazilia.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              </script>
+            </div>
+
 
         </div><!-- /.eleven.columns -->
-        
+
 <div class="three columns">
 
 <h4>Pages</h4>
@@ -165,10 +175,8 @@ Error loading MySQLdb module: No module named MySQLdb
 
 </div> </div><!-- /.row -->
 
-<p class="paginator">
-    Page 1 / 1
-</p>
-</section><!-- /#content -->
+
+</section>
 
        </div><!-- /.row -->
     </div><!-- /.container -->

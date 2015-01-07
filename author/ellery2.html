@@ -55,6 +55,45 @@
         <div class="eleven columns">
 		         <ol id="post-list">
 				        <li><article class="hentry">
+				                <header> <h3 class="entry-title"><a href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">常用Javascript技术</a></h3> </header>
+				                <footer class="post-info">
+				                    <abbr class="published" title="2015-01-06T00:00:00+08:00"> 周二 06 一月 2015 </abbr>
+<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
+				                <div class="entry-content"> <h3>正则表达式校验数据</h3>
+<div class="highlight"><pre>    var username = document.getElementById(&quot;username&quot;).value.trim();
+    var reg = /^[a-zA-Z][a-zA-Z0-9_]{5,14}$/;
+    if (!reg.test(username)){
+        alert(&quot;用户名必须为6-15个以字母开头，可带数字、“_”的字符串&quot;);
+    }else {
+        alert(&quot;用户名可用&quot;);
+    }
+</pre></div>
+
+
+<h3>下拉列表动态添加选项</h3>
+<div class="highlight"><pre>    //根据id查找对象，
+    var obj = document.getElementById(&#39;year&#39;);
+    //添加一个选项
+    obj.add(new Option(&quot;文本&quot;, &quot;值&quot;));         //这个只能在IE中有效
+    obj.options.add(new Option(&quot;文本&quot;, &quot;值&quot;)); //这个兼容IE与firefox
+</pre></div>
+
+
+<h3>动态添加组件 ...</h3> </div><!-- /.entry-content -->
+
+								<div class="medium primary btn"><a href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">Read more <i class="icon-arrow-right"></i></a></div>
+
+
+
+								<div class="row tag-row">
+										<span>Tagged as : </span>
+											<a class="danger label" href="/tag/javascript.html">Javascript</a>
+								</div>
+
+
+
+				        </article></li>
+				        <li><article class="hentry">
 				                <header> <h3 class="entry-title"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Django 1.7 使用migrations建立数据库连接</a></h3> </header>
 				                <footer class="post-info">
 				                    <abbr class="published" title="2014-09-28T00:00:00+08:00"> 周日 28 九月 2014 </abbr>
@@ -189,19 +228,19 @@ Error loading MySQLdb module: No module named MySQLdb
 
 <h4>Tags</h4>
 	<ul>
-	    <li class="tag-4"><a href="/tag/jdbc.html">JDBC</a></li>
-	    <li class="tag-1"><a href="/tag/django.html">Django</a></li>
-	    <li class="tag-4"><a href="/tag/server.html">Server</a></li>
-	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
-	    <li class="tag-1"><a href="/tag/markdown.html">Markdown</a></li>
-	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
-	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
-	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
-	    <li class="tag-1"><a href="/tag/pelican.html">Pelican</a></li>
-	    <li class="tag-4"><a href="/tag/security.html">Security</a></li>
 	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
-	    <li class="tag-1"><a href="/tag/ide.html">IDE</a></li>
-	    <li class="tag-1"><a href="/tag/java.html">Java</a></li>
+	    <li class="tag-4"><a href="/tag/jdbc.html">JDBC</a></li>
+	    <li class="tag-2"><a href="/tag/django.html">Django</a></li>
+	    <li class="tag-2"><a href="/tag/java.html">Java</a></li>
+	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
+	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
+	    <li class="tag-2"><a href="/tag/markdown.html">Markdown</a></li>
+	    <li class="tag-4"><a href="/tag/security.html">Security</a></li>
+	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
+	    <li class="tag-2"><a href="/tag/ide.html">IDE</a></li>
+	    <li class="tag-2"><a href="/tag/pelican.html">Pelican</a></li>
+	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
+	    <li class="tag-4"><a href="/tag/server.html">Server</a></li>
 </ul>
 
 
