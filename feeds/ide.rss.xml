@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heliactin</title><link>/</link><description></description><atom:link href="/feeds/ide.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 06 Jan 2015 00:00:00 +0800</lastBuildDate><item><title>设置IDE移动光标快捷键</title><link>/posts/2015/01/06/ide-key-setting/</link><description>&lt;h3&gt;Eclipse&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Amazilia</title><link href="/" rel="alternate"></link><link href="/feeds/ide.rss.xml" rel="self"></link><id>/</id><updated>2015-01-06T00:00:00+08:00</updated><entry><title>设置IDE移动光标快捷键</title><link href="/posts/2015/01/06/ide-key-setting/" rel="alternate"></link><updated>2015-01-06T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2015-01-06:posts/2015/01/06/ide-key-setting/</id><summary type="html">&lt;h3&gt;Eclipse&lt;/h3&gt;
 &lt;p&gt;在Eclipse的一堆快捷键设置中&lt;code&gt;Window -&amp;gt; Preferences -&amp;gt; General -&amp;gt; Keys&lt;/code&gt; 分别找出上下左右命令名称设置为：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    Previous Column -&amp;gt; Alt + H      
     Line Up         -&amp;gt; Alt + J
@@ -32,4 +32,4 @@
     Shift + Alt + Space     左移光标一个单元
     Alt + K                 下移光标一行
     Alt + J                 上移光标一行
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Tue, 06 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-06:posts/2015/01/06/ide-key-setting/</guid><category>IDE</category></item></channel></rss>
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="IDE"></category></entry></feed>

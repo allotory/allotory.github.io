@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heliactin</title><link>/</link><description></description><atom:link href="/feeds/python.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 07 Jan 2015 00:00:00 +0800</lastBuildDate><item><title>Python time,datetime,string转换</title><link>/posts/2015/01/07/pelican-time-string/</link><description>&lt;h5&gt;把datetime转换为字符串&lt;/h5&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Amazilia</title><link href="/" rel="alternate"></link><link href="/feeds/python.rss.xml" rel="self"></link><id>/</id><updated>2015-01-07T00:00:00+08:00</updated><entry><title>Python time,datetime,string转换</title><link href="/posts/2015/01/07/pelican-time-string/" rel="alternate"></link><updated>2015-01-07T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2015-01-07:posts/2015/01/07/pelican-time-string/</id><summary type="html">&lt;h5&gt;把datetime转换为字符串&lt;/h5&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    def datetime_toString(dt):  
         return dt.strftime(&amp;quot;%Y-%m-%d-%H&amp;quot;)
 &lt;/pre&gt;&lt;/div&gt;
@@ -26,14 +26,14 @@
 &lt;h4&gt;把datetime类型转换为时间戳&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    def datetime_toTimestamp(dateTim):  
         return time.mktime(dateTim.timetuple())
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Wed, 07 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-07:posts/2015/01/07/pelican-time-string/</guid><category>Python</category></item><item><title>Django 1.7 使用migrations建立数据库连接</title><link>/posts/2014/09/28/django-migrations/</link><description>&lt;p&gt;Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了&lt;code&gt;django-south&lt;/code&gt;的（数据库）迁移功能，其提供的&lt;code&gt;django-admin migrate&lt;/code&gt;也将代替&lt;code&gt;syncdb&lt;/code&gt;命令.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>Django 1.7 使用migrations建立数据库连接</title><link href="/posts/2014/09/28/django-migrations/" rel="alternate"></link><updated>2014-09-28T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-28:posts/2014/09/28/django-migrations/</id><summary type="html">&lt;p&gt;Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了&lt;code&gt;django-south&lt;/code&gt;的（数据库）迁移功能，其提供的&lt;code&gt;django-admin migrate&lt;/code&gt;也将代替&lt;code&gt;syncdb&lt;/code&gt;命令.&lt;/p&gt;
 &lt;p&gt;因此在我们建立数据库模型之后，就不能使用django的&lt;code&gt;syncdb&lt;/code&gt;命令同步数据库了&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python manage.py syncdb
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;否则数据库模型将不会同步到真正的数据库中。
-
+&lt;!-- PELICAN_END_SUMMARY --&gt;
 在Django 1.7中使用将使用全新的&lt;code&gt;migrations&lt;/code&gt;同步数据库。建立数据库模型后使用命令&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python manage.py makemigrations west
 &lt;/pre&gt;&lt;/div&gt;
@@ -56,7 +56,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;此时数据库模型已经真正的同步到数据库中了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Sun, 28 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-28:posts/2014/09/28/django-migrations/</guid><category>Django</category><category>Python</category></item><item><title>解决Django同步数据库No module named MySQLdb错误</title><link>/posts/2014/09/24/django-syncdb/</link><description>&lt;p&gt;Django在同步数据库时会根据&lt;code&gt;models.py&lt;/code&gt;中描述的数据模型，在MySQL中创建各个关系表&lt;/p&gt;
+&lt;p&gt;此时数据库模型已经真正的同步到数据库中了。&lt;/p&gt;</summary><category term="Django"></category><category term="Python"></category></entry><entry><title>解决Django同步数据库No module named MySQLdb错误</title><link href="/posts/2014/09/24/django-syncdb/" rel="alternate"></link><updated>2014-09-24T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-24:posts/2014/09/24/django-syncdb/</id><summary type="html">&lt;p&gt;Django在同步数据库时会根据&lt;code&gt;models.py&lt;/code&gt;中描述的数据模型，在MySQL中创建各个关系表&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python manage.py syncdb
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -67,16 +67,16 @@ Error loading MySQLdb module: No module named MySQLdb
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;No model named Mysqldb，这是因为当前Python环境没有安装&lt;code&gt;MySQL for Python&lt;/code&gt;组件，解决办法：下载相应&lt;a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/"&gt;MySQL for Python组件&lt;/a&gt;并安装即可。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Wed, 24 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-24:posts/2014/09/24/django-syncdb/</guid><category>Django</category><category>MySQL</category></item><item><title>修复Pelican代码块中红框问题</title><link>/posts/2014/09/08/fix-code-err/</link><description>&lt;p&gt;在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
+&lt;p&gt;No model named Mysqldb，这是因为当前Python环境没有安装&lt;code&gt;MySQL for Python&lt;/code&gt;组件，解决办法：下载相应&lt;a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/"&gt;MySQL for Python组件&lt;/a&gt;并安装即可。&lt;/p&gt;</summary><category term="Django"></category><category term="MySQL"></category></entry><entry><title>修复Pelican代码块中红框问题</title><link href="/posts/2014/09/08/fix-code-err/" rel="alternate"></link><updated>2014-09-08T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-08:posts/2014/09/08/fix-code-err/</id><summary type="html">&lt;p&gt;在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
 在Pelican中使用&lt;code&gt;pygment.css&lt;/code&gt;文件处理代码高亮，我们可以修改该文件修复红框问题。可以修改&lt;code&gt;output/theme/pygment.css&lt;/code&gt;处理该问题，但是当我们重新调用&lt;code&gt;make html&lt;/code&gt;时，文件会被重置，所以可以修改博客根目录下&lt;code&gt;pelican-themes&lt;/code&gt;里的&lt;code&gt;pygment.css&lt;/code&gt;文件。如本博客为&lt;code&gt;Amazilia\pelican-themes\gum\static&lt;/code&gt;下的&lt;code&gt;pygment.css&lt;/code&gt;。找到如下代码去掉即可。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="na"&gt;.err&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
 &lt;span class="nl"&gt;border:&lt;/span&gt;&lt;span class="err"&gt;1&lt;/span&gt;&lt;span class="nf"&gt;px&lt;/span&gt; &lt;span class="no"&gt;solid&lt;/span&gt; &lt;span class="c"&gt;#FF0000;&lt;/span&gt;
 &lt;span class="err"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Mon, 08 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-08:posts/2014/09/08/fix-code-err/</guid><category>CSS</category><category>Pelican</category><category>Markdown</category></item><item><title>使用Pelican和GitHub搭建个人博客</title><link>/posts/2014/09/08/pelican-install/</link><description>&lt;h3&gt;简介&lt;/h3&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="CSS"></category><category term="Pelican"></category><category term="Markdown"></category></entry><entry><title>使用Pelican和GitHub搭建个人博客</title><link href="/posts/2014/09/08/pelican-install/" rel="alternate"></link><updated>2014-09-08T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-08:posts/2014/09/08/pelican-install/</id><summary type="html">&lt;h3&gt;简介&lt;/h3&gt;
 &lt;p&gt;Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。&lt;/p&gt;
 &lt;h3&gt;基础知识&lt;/h3&gt;
 &lt;p&gt;搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。
-&lt;/p&gt;
+&lt;!-- PELICAN_END_SUMMARY --&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://gihub.com/"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
@@ -101,11 +101,10 @@ Error loading MySQLdb module: No module named MySQLdb
 &lt;li&gt;安装Git，Git简单教程参见&lt;a href="http://www.git-scm.com/book/zh"&gt;Git教程&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;将Python安装文件夹中的scripts和make.exe加入环境变量&lt;/li&gt;
 &lt;li&gt;安装pip，具体可以看&lt;a href="http://www.pip-installer.org/en/latest/installing.html"&gt;官网介绍&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;安装pelican和markdown，具体请参见&lt;a href="http://daringfireball.net/projects/markdown/syntax"&gt;markdown教程&lt;/a&gt;。&lt;div class="highlight"&gt;&lt;pre&gt;pip install pelican
-pip install markdown
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;li&gt;
+&lt;p&gt;安装pelican和markdown，具体请参见&lt;a href="http://daringfireball.net/projects/markdown/syntax"&gt;markdown教程&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;pip install pelican
+pip install markdown&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;开始搭建博客&lt;/h3&gt;
@@ -202,4 +201,4 @@ ARTICLE_SAVE_AS = &amp;#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html
 &lt;p&gt;此时的URL为&lt;code&gt;http://allotory.github.io/posts/2014/09/08/pelican-install/&lt;/code&gt;,而文件保存路径为&lt;code&gt;http://allotory.github.io/posts/2014/09/08/pelican-install/index.html&lt;/code&gt;。&lt;/p&gt;
 &lt;h3&gt;总结&lt;/h3&gt;
 &lt;p&gt;到目前为止博客基本功能已经搭建完成，部分功能还可以进一步完善，最终效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img alt="screenshot" src="/images/screenshot.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Mon, 08 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-08:posts/2014/09/08/pelican-install/</guid><category>Python</category><category>Pelican</category><category>GitHub</category><category>Markdown</category></item></channel></rss>
+&lt;p&gt;&lt;img alt="screenshot" src="/images/screenshot.png" /&gt;&lt;/p&gt;</summary><category term="Python"></category><category term="Pelican"></category><category term="GitHub"></category><category term="Markdown"></category></entry></feed>

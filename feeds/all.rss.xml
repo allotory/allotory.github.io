@@ -1,252 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heliactin</title><link>/</link><description></description><atom:link href="/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 07 Jan 2015 00:00:00 +0800</lastBuildDate><item><title>Java封装JDBC</title><link>/posts/2015/01/07/Java-jdbc-template/</link><description>&lt;h4&gt;目录结构&lt;/h4&gt;
-&lt;p&gt;&lt;img alt="Java-JDBC" src="/images/8-java-jdbc/8-java-jdbc.PNG" /&gt;&lt;/p&gt;
-&lt;h4&gt;User.java&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;archilochus&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bean&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.sql.Timestamp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;User&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-
-        &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-        &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-        &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-        &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;confirmPassword&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-        &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;gender&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-        &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Timestamp&lt;/span&gt; &lt;span class="n"&gt;birthday&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;getId&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setId&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;getUsername&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setUsername&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;getPassword&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setPassword&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;getConfirmPassword&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;confirmPassword&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setConfirmPassword&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;confirmPassword&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;confirmPassword&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;confirmPassword&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;getGender&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;gender&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setGender&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;gender&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gender&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gender&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Timestamp&lt;/span&gt; &lt;span class="n"&gt;getBirthday&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;birthday&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setBirthday&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Timestamp&lt;/span&gt; &lt;span class="n"&gt;birthday&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;birthday&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;birthday&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h4&gt;UserDAO.java&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;archilochus&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dao&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;com.archilochus.bean.User&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;UserDAO&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;findUserByName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;insertUser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h4&gt;UserDAOImpl.java&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;archilochus&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dao&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.sql.Connection&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.sql.PreparedStatement&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.sql.ResultSet&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.sql.SQLException&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;com.archilochus.bean.User&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;com.archilochus.db.DBConnection&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UserDAOImpl&lt;/span&gt; &lt;span class="n"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;UserDAO&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-
-        &lt;span class="nd"&gt;@Override&lt;/span&gt;
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;findUserByName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;Connection&lt;/span&gt; &lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-            &lt;span class="n"&gt;PreparedStatement&lt;/span&gt; &lt;span class="n"&gt;pstmt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-            &lt;span class="n"&gt;ResultSet&lt;/span&gt; &lt;span class="n"&gt;rs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-            &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;sql&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;select * from user where username=?&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-            &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;DBConnection&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getConn&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                &lt;span class="n"&gt;pstmt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prepareStatement&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sql&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-                &lt;span class="n"&gt;pstmt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getUsername&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
-                &lt;span class="n"&gt;rs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pstmt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;executeQuery&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="p"&gt;()){&lt;/span&gt;
-                    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SQLException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;finally&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rs&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;rs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SQLException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pstmt&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;pstmt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SQLException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SQLException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="nd"&gt;@Override&lt;/span&gt;
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;insertUser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;Connection&lt;/span&gt; &lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-            &lt;span class="n"&gt;PreparedStatement&lt;/span&gt; &lt;span class="n"&gt;pstmt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-            &lt;span class="n"&gt;ResultSet&lt;/span&gt; &lt;span class="n"&gt;rs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-            &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;sql&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;insert into user values(0, ?, ?, ?, ?);&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-            &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;DBConnection&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getConn&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                &lt;span class="n"&gt;pstmt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prepareStatement&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sql&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-                &lt;span class="n"&gt;pstmt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getUsername&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
-                &lt;span class="n"&gt;pstmt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getPassword&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
-                &lt;span class="n"&gt;pstmt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setInt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getGender&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
-                &lt;span class="n"&gt;pstmt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setTimestamp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getBirthday&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
-                &lt;span class="n"&gt;pstmt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;executeUpdate&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;commit&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SQLException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;finally&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rs&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;rs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SQLException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pstmt&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;pstmt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SQLException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SQLException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                        &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                    &lt;span class="p"&gt;}&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h4&gt;DBConnection.java&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;archilochus&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.io.IOException&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.io.InputStream&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.sql.Connection&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.sql.DriverManager&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.sql.SQLException&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Properties&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;DBConnection&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-
-        &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Connection&lt;/span&gt; &lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Properties&lt;/span&gt; &lt;span class="n"&gt;props&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-        &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;props&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Properties&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="n"&gt;InputStream&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;DBConnection&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getClassLoader&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getResourceAsStream&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;config.properties&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-            &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-                &lt;span class="n"&gt;Class&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;forName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getProperty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;driverClass&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IOException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ClassNotFoundException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Connection&lt;/span&gt; &lt;span class="n"&gt;getConn&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
-            &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;DriverManager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getConnection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getProperty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; 
-                        &lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getProperty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getProperty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
-                &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setAutoCommit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SQLException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;closeConn&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-                &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SQLException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h4&gt;config.properties&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    driverClass = com.mysql.jdbc.Driver
-    url = jdbc:mysql://localhost/archilochus_im
-    username = root
-    password = root
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Wed, 07 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-07:posts/2015/01/07/Java-jdbc-template/</guid><category>Java</category><category>JDBC</category></item><item><title>Java MessageDiges使用</title><link>/posts/2015/01/07/java-message-digest/</link><description>&lt;h3&gt;MessageDigest简介&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Amazilia</title><link href="/" rel="alternate"></link><link href="/feeds/all.rss.xml" rel="self"></link><id>/</id><updated>2015-01-07T00:00:00+08:00</updated><entry><title>Java MessageDiges使用</title><link href="/posts/2015/01/07/java-message-digest/" rel="alternate"></link><updated>2015-01-07T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2015-01-07:posts/2015/01/07/java-message-digest/</id><summary type="html">&lt;h3&gt;MessageDigest简介&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;java.security.MessageDigest&lt;/code&gt; 类用于为应用程序提供信息摘要算法的功能，如 &lt;code&gt;MD5&lt;/code&gt; 或 &lt;code&gt;SHA&lt;/code&gt; 算法。简单点说就是用于生成散列码。信息摘要是安全的单向哈希函数，它接收任意大小的数据，输出固定长度的哈希值。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;MessageDigest&lt;/code&gt; 通过其 &lt;code&gt;getInstance&lt;/code&gt; 系列静态函数来进行实例化和初始化。&lt;code&gt;MessageDigest&lt;/code&gt; 对象通过使用 &lt;code&gt;update&lt;/code&gt; 方法处理数据。任何时候都可以调用 &lt;code&gt;reset&lt;/code&gt; 方法重置摘要。一旦所有需要更新的数据都已经被更新了，应该调用 &lt;code&gt;digest&lt;/code&gt; 方法之一完成哈希计算并返回结果。&lt;/p&gt;
 &lt;p&gt;对于给定数量的更新数据，&lt;code&gt;digest&lt;/code&gt; 方法只能被调用一次。&lt;code&gt;digest&lt;/code&gt; 方法被调用后，&lt;code&gt;MessageDigest&lt;/code&gt; 对象被重新设置成其初始状态。&lt;/p&gt;
@@ -316,7 +69,7 @@
             &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;strBuffer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
         &lt;span class="p"&gt;}&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Wed, 07 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-07:posts/2015/01/07/java-message-digest/</guid><category>Java</category><category>Security</category></item><item><title>Python time,datetime,string转换</title><link>/posts/2015/01/07/pelican-time-string/</link><description>&lt;h5&gt;把datetime转换为字符串&lt;/h5&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Java"></category><category term="Security"></category></entry><entry><title>Python time,datetime,string转换</title><link href="/posts/2015/01/07/pelican-time-string/" rel="alternate"></link><updated>2015-01-07T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2015-01-07:posts/2015/01/07/pelican-time-string/</id><summary type="html">&lt;h5&gt;把datetime转换为字符串&lt;/h5&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    def datetime_toString(dt):  
         return dt.strftime(&amp;quot;%Y-%m-%d-%H&amp;quot;)
 &lt;/pre&gt;&lt;/div&gt;
@@ -343,16 +96,16 @@
 &lt;h4&gt;把datetime类型转换为时间戳&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    def datetime_toTimestamp(dateTim):  
         return time.mktime(dateTim.timetuple())
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Wed, 07 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-07:posts/2015/01/07/pelican-time-string/</guid><category>Python</category></item><item><title>Eclipse启动Tomcat访问http://localhost:8080/时报404错误</title><link>/posts/2015/01/06/eclipse-tomcat-404/</link><description>&lt;h3&gt;原因&lt;/h3&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>Eclipse启动Tomcat访问http://localhost:8080/时报404错误</title><link href="/posts/2015/01/06/eclipse-tomcat-404/" rel="alternate"></link><updated>2015-01-06T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2015-01-06:posts/2015/01/06/eclipse-tomcat-404/</id><summary type="html">&lt;h3&gt;原因&lt;/h3&gt;
 &lt;p&gt;Eclipse启动Tomcat服务输入&lt;code&gt;http://localhost:8080/&lt;/code&gt;会报404错误, 即&lt;code&gt;The requested resource (/) is not avaliable&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;错误产生的原因在于工作空间的项目部署的目录不对。&lt;/p&gt;
 &lt;p&gt;配置Tomcat时, 如果只想运行Eclipse工作空间的应用项目, 可以选择&lt;code&gt;User workspace metadata&lt;/code&gt;, 此时采用的是&lt;code&gt;%ECLIPSE_WORKSPACE_HOME%/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps&lt;/code&gt;作为webapp目录的, wtpwebapps下没有ROOT webapp或者有时包括一个空的ROOT webapp。在这种情况下, 访问&lt;code&gt;http://localhost:8080/&lt;/code&gt;就会看到HTTP error 404或者一个空白页面。&lt;/p&gt;
 &lt;p&gt;如果希望同时运行其他Eclipse工作空间之外的应用项目, 就可以选择&lt;code&gt;Use Tomcat installation&lt;/code&gt;。启动Tomcat时, 是采用&lt;code&gt;%TOMCAT_HOME%/webapps&lt;/code&gt;（包括docs，host-manager，manager，ROOT4个目录）作为默认的webapp目录的。&lt;/p&gt;
 &lt;h3&gt;解决方法&lt;/h3&gt;
 &lt;p&gt;1.打开Eclipse的Server视图, 双击Tomcat Server打开编辑窗口, 找到&lt;code&gt;Server Locations&lt;/code&gt;如图所示&lt;/p&gt;
-&lt;p&gt;&lt;img alt="eclipse_tomcat_404" src="/images/7-eclipse-tomcat-404/eclipse-tomcat-404.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="eclipse_tomcat_404" src="/images/7-eclipse-tomcat-404.png" /&gt;&lt;/p&gt;
 &lt;p&gt;2.选择第二项&lt;code&gt;Use Tome installation&lt;/code&gt;,并且根据自己tomcat安装路径来修改&lt;code&gt;Server path&lt;/code&gt;的内容。&lt;/p&gt;
-&lt;p&gt;3.如果选项为第一项并且不可选, 可以在Server视图, 右键Properties -&amp;gt; General, 如果&lt;code&gt;Location:[workspace metadata]&lt;/code&gt; ,则单击&lt;code&gt;Switch Location&lt;/code&gt;按钮, 修改为&lt;code&gt;Location:/Servers/Tomcat v8.0 Server at localhost.server&lt;/code&gt;, 应用即可。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Tue, 06 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-06:posts/2015/01/06/eclipse-tomcat-404/</guid><category>IDE</category><category>Server</category></item><item><title>设置IDE移动光标快捷键</title><link>/posts/2015/01/06/ide-key-setting/</link><description>&lt;h3&gt;Eclipse&lt;/h3&gt;
+&lt;p&gt;3.如果选项为第一项并且不可选, 可以在Server视图, 右键Properties -&amp;gt; General, 如果&lt;code&gt;Location:[workspace metadata]&lt;/code&gt; ,则单击&lt;code&gt;Switch Location&lt;/code&gt;按钮, 修改为&lt;code&gt;Location:/Servers/Tomcat v8.0 Server at localhost.server&lt;/code&gt;, 应用即可。&lt;/p&gt;</summary><category term="IDE"></category><category term="Server"></category></entry><entry><title>设置IDE移动光标快捷键</title><link href="/posts/2015/01/06/ide-key-setting/" rel="alternate"></link><updated>2015-01-06T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2015-01-06:posts/2015/01/06/ide-key-setting/</id><summary type="html">&lt;h3&gt;Eclipse&lt;/h3&gt;
 &lt;p&gt;在Eclipse的一堆快捷键设置中&lt;code&gt;Window -&amp;gt; Preferences -&amp;gt; General -&amp;gt; Keys&lt;/code&gt; 分别找出上下左右命令名称设置为：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    Previous Column -&amp;gt; Alt + H      
     Line Up         -&amp;gt; Alt + J
@@ -385,7 +138,7 @@
     Shift + Alt + Space     左移光标一个单元
     Alt + K                 下移光标一行
     Alt + J                 上移光标一行
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Tue, 06 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-06:posts/2015/01/06/ide-key-setting/</guid><category>IDE</category></item><item><title>常用Javascript技术</title><link>/posts/2015/01/06/javascript-skills/</link><description>&lt;h3&gt;正则表达式校验数据&lt;/h3&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="IDE"></category></entry><entry><title>常用Javascript技术</title><link href="/posts/2015/01/06/javascript-skills/" rel="alternate"></link><updated>2015-01-06T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2015-01-06:posts/2015/01/06/javascript-skills/</id><summary type="html">&lt;h3&gt;正则表达式校验数据&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    var username = document.getElementById(&amp;quot;username&amp;quot;).value.trim();
     var reg = /^[a-zA-Z][a-zA-Z0-9_]{5,14}$/;
     if (!reg.test(username)){
@@ -560,14 +313,14 @@
         &lt;span class="p"&gt;}&lt;/span&gt;
 
     &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Tue, 06 Jan 2015 00:00:00 +0800</pubDate><guid>tag:,2015-01-06:posts/2015/01/06/javascript-skills/</guid><category>Javascript</category></item><item><title>Django 1.7 使用migrations建立数据库连接</title><link>/posts/2014/09/28/django-migrations/</link><description>&lt;p&gt;Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了&lt;code&gt;django-south&lt;/code&gt;的（数据库）迁移功能，其提供的&lt;code&gt;django-admin migrate&lt;/code&gt;也将代替&lt;code&gt;syncdb&lt;/code&gt;命令.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Javascript"></category></entry><entry><title>Django 1.7 使用migrations建立数据库连接</title><link href="/posts/2014/09/28/django-migrations/" rel="alternate"></link><updated>2014-09-28T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-28:posts/2014/09/28/django-migrations/</id><summary type="html">&lt;p&gt;Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了&lt;code&gt;django-south&lt;/code&gt;的（数据库）迁移功能，其提供的&lt;code&gt;django-admin migrate&lt;/code&gt;也将代替&lt;code&gt;syncdb&lt;/code&gt;命令.&lt;/p&gt;
 &lt;p&gt;因此在我们建立数据库模型之后，就不能使用django的&lt;code&gt;syncdb&lt;/code&gt;命令同步数据库了&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python manage.py syncdb
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;否则数据库模型将不会同步到真正的数据库中。
-
+&lt;!-- PELICAN_END_SUMMARY --&gt;
 在Django 1.7中使用将使用全新的&lt;code&gt;migrations&lt;/code&gt;同步数据库。建立数据库模型后使用命令&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python manage.py makemigrations west
 &lt;/pre&gt;&lt;/div&gt;
@@ -590,7 +343,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;此时数据库模型已经真正的同步到数据库中了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Sun, 28 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-28:posts/2014/09/28/django-migrations/</guid><category>Django</category><category>Python</category></item><item><title>解决Django同步数据库No module named MySQLdb错误</title><link>/posts/2014/09/24/django-syncdb/</link><description>&lt;p&gt;Django在同步数据库时会根据&lt;code&gt;models.py&lt;/code&gt;中描述的数据模型，在MySQL中创建各个关系表&lt;/p&gt;
+&lt;p&gt;此时数据库模型已经真正的同步到数据库中了。&lt;/p&gt;</summary><category term="Django"></category><category term="Python"></category></entry><entry><title>解决Django同步数据库No module named MySQLdb错误</title><link href="/posts/2014/09/24/django-syncdb/" rel="alternate"></link><updated>2014-09-24T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-24:posts/2014/09/24/django-syncdb/</id><summary type="html">&lt;p&gt;Django在同步数据库时会根据&lt;code&gt;models.py&lt;/code&gt;中描述的数据模型，在MySQL中创建各个关系表&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python manage.py syncdb
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -601,16 +354,16 @@ Error loading MySQLdb module: No module named MySQLdb
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;No model named Mysqldb，这是因为当前Python环境没有安装&lt;code&gt;MySQL for Python&lt;/code&gt;组件，解决办法：下载相应&lt;a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/"&gt;MySQL for Python组件&lt;/a&gt;并安装即可。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Wed, 24 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-24:posts/2014/09/24/django-syncdb/</guid><category>Django</category><category>MySQL</category></item><item><title>修复Pelican代码块中红框问题</title><link>/posts/2014/09/08/fix-code-err/</link><description>&lt;p&gt;在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
+&lt;p&gt;No model named Mysqldb，这是因为当前Python环境没有安装&lt;code&gt;MySQL for Python&lt;/code&gt;组件，解决办法：下载相应&lt;a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/"&gt;MySQL for Python组件&lt;/a&gt;并安装即可。&lt;/p&gt;</summary><category term="Django"></category><category term="MySQL"></category></entry><entry><title>修复Pelican代码块中红框问题</title><link href="/posts/2014/09/08/fix-code-err/" rel="alternate"></link><updated>2014-09-08T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-08:posts/2014/09/08/fix-code-err/</id><summary type="html">&lt;p&gt;在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
 在Pelican中使用&lt;code&gt;pygment.css&lt;/code&gt;文件处理代码高亮，我们可以修改该文件修复红框问题。可以修改&lt;code&gt;output/theme/pygment.css&lt;/code&gt;处理该问题，但是当我们重新调用&lt;code&gt;make html&lt;/code&gt;时，文件会被重置，所以可以修改博客根目录下&lt;code&gt;pelican-themes&lt;/code&gt;里的&lt;code&gt;pygment.css&lt;/code&gt;文件。如本博客为&lt;code&gt;Amazilia\pelican-themes\gum\static&lt;/code&gt;下的&lt;code&gt;pygment.css&lt;/code&gt;。找到如下代码去掉即可。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="na"&gt;.err&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
 &lt;span class="nl"&gt;border:&lt;/span&gt;&lt;span class="err"&gt;1&lt;/span&gt;&lt;span class="nf"&gt;px&lt;/span&gt; &lt;span class="no"&gt;solid&lt;/span&gt; &lt;span class="c"&gt;#FF0000;&lt;/span&gt;
 &lt;span class="err"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Mon, 08 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-08:posts/2014/09/08/fix-code-err/</guid><category>CSS</category><category>Pelican</category><category>Markdown</category></item><item><title>使用Pelican和GitHub搭建个人博客</title><link>/posts/2014/09/08/pelican-install/</link><description>&lt;h3&gt;简介&lt;/h3&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="CSS"></category><category term="Pelican"></category><category term="Markdown"></category></entry><entry><title>使用Pelican和GitHub搭建个人博客</title><link href="/posts/2014/09/08/pelican-install/" rel="alternate"></link><updated>2014-09-08T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:,2014-09-08:posts/2014/09/08/pelican-install/</id><summary type="html">&lt;h3&gt;简介&lt;/h3&gt;
 &lt;p&gt;Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。&lt;/p&gt;
 &lt;h3&gt;基础知识&lt;/h3&gt;
 &lt;p&gt;搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。
-&lt;/p&gt;
+&lt;!-- PELICAN_END_SUMMARY --&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://gihub.com/"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
@@ -635,11 +388,10 @@ Error loading MySQLdb module: No module named MySQLdb
 &lt;li&gt;安装Git，Git简单教程参见&lt;a href="http://www.git-scm.com/book/zh"&gt;Git教程&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;将Python安装文件夹中的scripts和make.exe加入环境变量&lt;/li&gt;
 &lt;li&gt;安装pip，具体可以看&lt;a href="http://www.pip-installer.org/en/latest/installing.html"&gt;官网介绍&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;安装pelican和markdown，具体请参见&lt;a href="http://daringfireball.net/projects/markdown/syntax"&gt;markdown教程&lt;/a&gt;。&lt;div class="highlight"&gt;&lt;pre&gt;pip install pelican
-pip install markdown
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;li&gt;
+&lt;p&gt;安装pelican和markdown，具体请参见&lt;a href="http://daringfireball.net/projects/markdown/syntax"&gt;markdown教程&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;pip install pelican
+pip install markdown&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;开始搭建博客&lt;/h3&gt;
@@ -736,4 +488,4 @@ ARTICLE_SAVE_AS = &amp;#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html
 &lt;p&gt;此时的URL为&lt;code&gt;http://allotory.github.io/posts/2014/09/08/pelican-install/&lt;/code&gt;,而文件保存路径为&lt;code&gt;http://allotory.github.io/posts/2014/09/08/pelican-install/index.html&lt;/code&gt;。&lt;/p&gt;
 &lt;h3&gt;总结&lt;/h3&gt;
 &lt;p&gt;到目前为止博客基本功能已经搭建完成，部分功能还可以进一步完善，最终效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img alt="screenshot" src="/images/screenshot.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ellery</dc:creator><pubDate>Mon, 08 Sep 2014 00:00:00 +0800</pubDate><guid>tag:,2014-09-08:posts/2014/09/08/pelican-install/</guid><category>Python</category><category>Pelican</category><category>GitHub</category><category>Markdown</category></item></channel></rss>
+&lt;p&gt;&lt;img alt="screenshot" src="/images/screenshot.png" /&gt;&lt;/p&gt;</summary><category term="Python"></category><category term="Pelican"></category><category term="GitHub"></category><category term="Markdown"></category></entry></feed>

@@ -1,131 +1,224 @@
-<!DOCTYPE html>
-<html lang="cn">
+<!doctype html>
+<html lang="en">
 <head>
+<title>Amazilia</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Ellery">
 
-        <title>Heliactin</title>
-        <meta charset="utf-8" />
-        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin RSS Feed" />
+<link rel="shortcut icon" href="/images/favicon.ico">
 
+<link href="/theme/css/monokai_sublime.css" rel="stylesheet" type="text/css">
+<link href="/theme/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/theme/css/style.css" rel="stylesheet" type="text/css">
+<link href="/theme/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="/theme/css/responsive.css" rel="stylesheet" type="text/css">
+<link href="/theme/css/animate.css" rel="stylesheet" type="text/css">
 
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
 
-        <link rel="stylesheet" type="text/css" href="/theme/gumby.css" />
-        <link rel="stylesheet" type="text/css" href="/theme/style.css" />
-        <link rel="stylesheet" type="text/css" href="/theme/pygment.css" />
+<script type="text/javascript" src="/theme/js/jquery.1.8.3.min.js"></script>
+<script type="text/javascript" src="/theme/js/bootstrap.js"></script>
+<script type="text/javascript" src="/theme/js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.isotope.js"></script>
+<script type="text/javascript" src="/theme/js/wow.js"></script>
+<script type="text/javascript" src="/theme/js/classie.js"></script>
+<script type="text/javascript" src="/theme/js/highlight.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('pre').each(function(i, block) {
+		hljs.highlightBlock(block);
+	});
+});
+</script>
 
-        <script src="/theme/js/libs/modernizr-2.6.2.min.js"></script>
+<!--[if lt IE 9]>
+	<script src="/js/respond-1.1.0.min.js"></script>
+	<script src="/js/html5shiv.js"></script>
+	<script src="/js/html5element.js"></script>
+<![endif]-->
 
-
-
-
+<link href="/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Amazilia Full Atom Feed" />
 </head>
+<body>
 
-<body id="index" class="home">
+<nav class="main-nav-outer" id="test"><!--main-nav-start-->
+	<div class="container">
+		<ul class="main-nav">
+			<li><a href="/">Home</a></li>
 
+					<li><a href="/about-me.html">About</a></li>
+					<li><a href="/my-life.html">Life</a></li>
 
-    <a href="https://github.com/allotory"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
-    <div class="container">
+			<li class="small-logo"><i class="fa-tree"></i>
 
-        <div class="row">
+				<li><a href="#">Feed</a></li>
+				<li><a href="#">Page2</a></li>
+				<li><a href="#">Page3</a></li>
+			
+			
+		</ul>
+		<a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+	</div>
+</nav><!--main-nav-end-->
 
-          <header id="banner" class="body">
-                  <h1><a href="/">Heliactin <strong></strong></a></h1>
-          </header><!-- /#banner -->
+<section class="main-section" id="service"><!--main-section-start-->
+	<div class="container">
+		<div class="row">
+			
+<div class="col-lg-3 col-sm-6 wow fadeInLeft delay-05s">
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-paw"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Pages</h3>
+			<p>
+				<a href="/">Home</a><br/>
+						<a href="/about-me.html">About</a><br/>
+						<a href="/my-life.html">Life</a><br/>
 
-            <div id="navigation" class="navbar row">
-              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
-             
-              <ul class="columns">
-                <li><a href="/">Home</a></li>
-
-                <li><a href="feeds/all.rss.xml">Feed</a></li>
-                <li><a href="#">About</a></li>
-
-              </ul>
-            </div>
-
-<section id="content">
-
-
-
-   <div class="row">
-
-
-        <div class="eleven columns">
-		         <ol id="post-list">
-				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">常用Javascript技术</a></h3> </header>
-				                <footer class="post-info">
-				                    <abbr class="published" title="2015-01-06T00:00:00+08:00"> 周二 06 一月 2015 </abbr>
-<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <h3>正则表达式校验数据</h3>
-<div class="highlight"><pre>    var username = document.getElementById(&quot;username&quot;).value.trim();
-    var reg = /^[a-zA-Z][a-zA-Z0-9_]{5,14}$/;
-    if (!reg.test(username)){
-        alert(&quot;用户名必须为6-15个以字母开头，可带数字、“_”的字符串&quot;);
-    }else {
-        alert(&quot;用户名可用&quot;);
-    }
-</pre></div>
-
-
-<h3>下拉列表动态添加选项</h3>
-<div class="highlight"><pre>    //根据id查找对象，
-    var obj = document.getElementById(&#39;year&#39;);
-    //添加一个选项
-    obj.add(new Option(&quot;文本&quot;, &quot;值&quot;));         //这个只能在IE中有效
-    obj.options.add(new Option(&quot;文本&quot;, &quot;值&quot;)); //这个兼容IE与firefox
-</pre></div>
-
-
-<h3>动态添加组件 ...</h3> </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-								<div class="row tag-row">
-										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/javascript.html">Javascript</a>
-								</div>
-
-
-
-				        </article></li>
-				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Django 1.7 使用migrations建立数据库连接</a></h3> </header>
-				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-28T00:00:00+08:00"> 周日 28 九月 2014 </abbr>
-<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <p>Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了<code>django-south</code>的（数据库）迁移功能，其提供的<code>django-admin migrate</code>也将代替<code>syncdb</code>命令.</p>
+					<a href="#">Feed</a><br/>
+					<a href="#">Page2</a><br/>
+					<a href="#">Page3</a><br/>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-pagelines"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Categories</h3>
+			<p>
+					<a href="/category/ide.html">IDE</a><br/>
+					<a href="/category/java.html">Java</a><br/>
+					<a href="/category/javascript.html">Javascript</a><br/>
+					<a href="/category/python.html">Python</a><br/>
+					<a href="/category/server.html">Server</a><br/>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-tags"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Tags</h3>
+			<p>
+					<a href="/tag/javascript.html">Javascript</a>
+					<a href="/tag/python.html">Python</a>
+					<a href="/tag/pelican.html">Pelican</a>
+					<a href="/tag/server.html">Server</a>
+					<a href="/tag/java.html">Java</a>
+					<a href="/tag/django.html">Django</a>
+					<a href="/tag/security.html">Security</a>
+					<a href="/tag/css.html">CSS</a>
+					<a href="/tag/github.html">GitHub</a>
+					<a href="/tag/mysql.html">MySQL</a>
+					<a href="/tag/ide.html">IDE</a>
+					<a href="/tag/markdown.html">Markdown</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-link"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Links</h3>
+			<p>
+					<a href="http://getpelican.com/">Pelican</a><br/>
+					<a href="http://python.org/">Python.org</a><br/>
+					<a href="http://jinja.pocoo.org/">Jinja2</a><br/>
+					<a href="#">You can modify those links </a><br/>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-facebook-square"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Social</h3>
+			<p>
+					<a href="feeds/all.rss.xml">RSS</a><br/>
+					<a href="https://github.com/allotory">Github</a><br/>
+					<a href="https://www.facebook.com/allotory">Facebook</a><br/>
+					<a href="https://twitter.com/allotory">Twitter</a><br/>
+			</p>
+		</div>
+	</div>
+</div>
+			<figure class="col-lg-9 col-sm-6  text-left wow fadeInUp delay-02s">
+				<article class="post">
+					<header class="entry-header">
+						<h2 class="entry-title"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Django 1.7 使用migrations建立数据库连接</a></h2>
+						<div class="entry-meta"> 
+							<span class="posted-on">
+								<time class="entry-date published" title="2014-09-28T00:00:00+08:00"> 
+									2014-09-28 00:00:00 
+								</time>
+							</span>
+							<span class="posted-by">By 
+								<a href="/author/ellery.html">
+									Ellery
+								</a>
+							</span>
+           
+						</div>
+					</header>
+					<div class="entry-content">
+						 <p>Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了<code>django-south</code>的（数据库）迁移功能，其提供的<code>django-admin migrate</code>也将代替<code>syncdb</code>命令.</p>
 <p>因此在我们建立数据库模型之后，就不能使用django的<code>syncdb</code>命令同步数据库了</p>
 <div class="highlight"><pre>python manage.py syncdb
 </pre></div>
 
 
 <p>否则数据库模型将不会同步到真正的数据库中。
- </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-								<div class="row tag-row">
-										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/django.html">Django</a>
-											<a class="danger label" href="/tag/python.html">Python</a>
-								</div>
+<!-- PELICAN_END_SUMMARY -->
+在Django 1.7中使用将使用全新的<code>migrations</code>同步数据库。建立数据库模型后使用命令</p>
+<div class="highlight"><pre>python manage.py makemigrations west
+</pre></div>
 
 
+<p>创建migrations，成功显示如下：</p>
+<div class="highlight"><pre>Migrations for &#39;west&#39;:
+    0001_initial.py:
+    - Create model Character
+</pre></div>
 
-				        </article></li>
-				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">解决Django同步数据库No module named MySQLdb错误</a></h3> </header>
-				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-24T00:00:00+08:00"> 周三 24 九月 2014 </abbr>
-<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <p>Django在同步数据库时会根据<code>models.py</code>中描述的数据模型，在MySQL中创建各个关系表</p>
+
+<p>使用<code>sqlmigrate</code>命令查看sql语句</p>
+<div class="highlight"><pre>python ...</pre></div> 
+						 <a class="more-link" href="/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Read more&#8230;</a>
+					</div>
+				</article>
+				<article class="post">
+					<header class="entry-header">
+						<h2 class="entry-title"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">解决Django同步数据库No module named MySQLdb错误</a></h2>
+						<div class="entry-meta"> 
+							<span class="posted-on">
+								<time class="entry-date published" title="2014-09-24T00:00:00+08:00"> 
+									2014-09-24 00:00:00 
+								</time>
+							</span>
+							<span class="posted-by">By 
+								<a href="/author/ellery.html">
+									Ellery
+								</a>
+							</span>
+           
+						</div>
+					</header>
+					<div class="entry-content">
+						 <p>Django在同步数据库时会根据<code>models.py</code>中描述的数据模型，在MySQL中创建各个关系表</p>
 <div class="highlight"><pre>python manage.py syncdb
 </pre></div>
 
@@ -136,183 +229,131 @@ Error loading MySQLdb module: No module named MySQLdb
 </pre></div>
 
 
-<p>No model named Mysqldb，这是因为当前Python环境没有安装<code>MySQL for Python</code>组件，解决办法：下载相应<a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/">MySQL for Python组件</a>并安装即可。</p> </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-								<div class="row tag-row">
-										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/django.html">Django</a>
-											<a class="danger label" href="/tag/mysql.html">MySQL</a>
-								</div>
-
-
-
-				        </article></li>
-				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/08/fix-code-err/" rel="bookmark" title="Permalink to 修复Pelican代码块中红框问题">修复Pelican代码块中红框问题</a></h3> </header>
-				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-08T00:00:00+08:00"> 周一 08 九月 2014 </abbr>
-<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <p>在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
+<p>No model named Mysqldb，这是因为当前Python环境没有安装<code>MySQL for Python</code>组件，解决办法：下载相应<a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/">MySQL for Python组件</a>并安装即可。</p> 
+						 <a class="more-link" href="/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">Read more&#8230;</a>
+					</div>
+				</article>
+				<article class="post">
+					<header class="entry-header">
+						<h2 class="entry-title"><a href="/posts/2014/09/08/fix-code-err/" rel="bookmark" title="Permalink to 修复Pelican代码块中红框问题">修复Pelican代码块中红框问题</a></h2>
+						<div class="entry-meta"> 
+							<span class="posted-on">
+								<time class="entry-date published" title="2014-09-08T00:00:00+08:00"> 
+									2014-09-08 00:00:00 
+								</time>
+							</span>
+							<span class="posted-by">By 
+								<a href="/author/ellery.html">
+									Ellery
+								</a>
+							</span>
+           
+						</div>
+					</header>
+					<div class="entry-content">
+						 <p>在使用Markdown的代码块时，如果代码中有汉字或者按规定书写错误的代码，则生成的HTML文件中错误的代码会有红框框住。
 在Pelican中使用<code>pygment.css</code>文件处理代码高亮，我们可以修改该文件修复红框问题。可以修改<code>output/theme/pygment.css</code>处理该问题，但是当我们重新调用<code>make html</code>时，文件会被重置，所以可以修改博客根目录下<code>pelican-themes</code>里的<code>pygment.css</code>文件。如本博客为<code>Amazilia\pelican-themes\gum\static</code>下的<code>pygment.css</code>。找到如下代码去掉即可。</p>
 <div class="highlight"><pre><span class="na">.err</span> <span class="err">{</span>
 <span class="nl">border:</span><span class="err">1</span><span class="nf">px</span> <span class="no">solid</span> <span class="c">#FF0000;</span>
 <span class="err">}</span>
-</pre></div> </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2014/09/08/fix-code-err/" rel="bookmark" title="Permalink to 修复Pelican代码块中红框问题">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-								<div class="row tag-row">
-										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/css.html">CSS</a>
-											<a class="danger label" href="/tag/pelican.html">Pelican</a>
-											<a class="danger label" href="/tag/markdown.html">Markdown</a>
-								</div>
-
-
-
-				        </article></li>
-				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2014/09/08/pelican-install/" rel="bookmark" title="Permalink to 使用Pelican和GitHub搭建个人博客">使用Pelican和GitHub搭建个人博客</a></h3> </header>
-				                <footer class="post-info">
-				                    <abbr class="published" title="2014-09-08T00:00:00+08:00"> 周一 08 九月 2014 </abbr>
-<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <h3>简介</h3>
+</pre></div> 
+						 <a class="more-link" href="/posts/2014/09/08/fix-code-err/" rel="bookmark" title="Permalink to 修复Pelican代码块中红框问题">Read more&#8230;</a>
+					</div>
+				</article>
+				<article class="post">
+					<header class="entry-header">
+						<h2 class="entry-title"><a href="/posts/2014/09/08/pelican-install/" rel="bookmark" title="Permalink to 使用Pelican和GitHub搭建个人博客">使用Pelican和GitHub搭建个人博客</a></h2>
+						<div class="entry-meta"> 
+							<span class="posted-on">
+								<time class="entry-date published" title="2014-09-08T00:00:00+08:00"> 
+									2014-09-08 00:00:00 
+								</time>
+							</span>
+							<span class="posted-by">By 
+								<a href="/author/ellery.html">
+									Ellery
+								</a>
+							</span>
+           
+						</div>
+					</header>
+					<div class="entry-content">
+						 <h3>简介</h3>
 <p>Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
 <h3>基础知识</h3>
 <p>搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。
- </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2014/09/08/pelican-install/" rel="bookmark" title="Permalink to 使用Pelican和GitHub搭建个人博客">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-								<div class="row tag-row">
-										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/python.html">Python</a>
-											<a class="danger label" href="/tag/pelican.html">Pelican</a>
-											<a class="danger label" href="/tag/github.html">GitHub</a>
-											<a class="danger label" href="/tag/markdown.html">Markdown</a>
-								</div>
-
-
-
-				        </article></li>
-				</ol><!-- /#posts-list -->
-
-        </div><!-- /.eleven.columns -->
-        
-<div class="three columns">
-
-<h4>Pages</h4>
-
- <ul>
-      <li><a href="feeds/all.rss.xml">Feed</a></li>
-      <li><a href="#">About</a></li>
-  </ul>
-
-<h4>Categories</h4>
+<!-- PELICAN_END_SUMMARY --></p>
+<blockquote>
 <ul>
-		<li><a href="/category/ide.html">IDE</a></li>
-		<li><a href="/category/java.html">Java</a></li>
-		<li><a href="/category/javascript.html">Javascript</a></li>
-		<li><a href="/category/python.html">Python</a></li>
-		<li><a href="/category/server.html">Server</a></li>
+<li><a href="https://gihub.com/">GitHub</a></li>
+<li><a href="http://pages.github.com/">GitHub Pages</a></li>
+<li><a href="http://git-scm.com/">Git</a></li>
+<li><a href="http://www.python.org/">Python</a></li>
+<li><a href="https://pypi.python.org/pypi">Pip</a></li>
+<li><a href="http://daringfireball.net/projects/markdown/syntax">Pelican</a></li>
 </ul>
-
-
-<h4>Tags</h4>
-	<ul>
-	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
-	    <li class="tag-4"><a href="/tag/security.html">Security</a></li>
-	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
-	    <li class="tag-2"><a href="/tag/django.html">Django</a></li>
-	    <li class="tag-4"><a href="/tag/jdbc.html">JDBC</a></li>
-	    <li class="tag-2"><a href="/tag/ide.html">IDE</a></li>
-	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
-	    <li class="tag-4"><a href="/tag/server.html">Server</a></li>
-	    <li class="tag-2"><a href="/tag/pelican.html">Pelican</a></li>
-	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
-	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
-	    <li class="tag-2"><a href="/tag/markdown.html">Markdown</a></li>
-	    <li class="tag-2"><a href="/tag/java.html">Java</a></li>
+</blockquote>
+<h3>下载安装</h3>
+<blockquote>
+<ul>
+<li><a href="http://www.python.org/getit/">Python下载</a></li>
+<li><a href="http://msysgit.github.io/">Git下载</a> </li>
+<li><a href="https://pypi.python.org/pypi/distribute#downloads">Pip下载</a> </li>
+<li><a href="http://www.equation.com/servlet/equation.cmd?fa=make">Windows下make下载</a></li>
 </ul>
-
-
-<nav class="widget">
-  <h4>Social</h4>
-  <ul>
-    <li><a href="feeds/all.rss.xml">RSS</a></li>
-    <li><a href="https://github.com/allotory">Github</a></li>
-    <li><a href="https://www.facebook.com/allotory">Facebook</a></li>
-    <li><a href="https://twitter.com/allotory">Twitter</a></li>
-  </ul>
+</blockquote>
+<ol>
+<li>安装Python，本文使用的是Python 2.7</li>
+<li>安装Git，Git简单教程参见<a href="http://www.git-scm.com/book/zh">Git教程</a></li>
+<li>将Python安装文件夹中的scripts和make.exe加入环境变量</li>
+<li>安装pip，具体可以看<a href="http://www.pip-installer.org/en/latest/installing.html">官网介绍</a>。</li>
+<li>
+<p>安装pelican和markdown，具体请参见<a href="http://daringfireball.net/projects/markdown/syntax">markdown教程 ...</a></p></li></ol> 
+						 <a class="more-link" href="/posts/2014/09/08/pelican-install/" rel="bookmark" title="Permalink to 使用Pelican和GitHub搭建个人博客">Read more&#8230;</a>
+					</div>
+				</article>
+				
+<nav>
+	<ul class="pager">
+			<li><a href="/index.html" style="color: #666666;">Previous</a></li>
+	2 / 2
+	</ul>
 </nav>
+				
+			</figure>  
+		</div>
+	</div>
+</section><!--main-section-end-->
 
-</div> </div><!-- /.row -->
-
-<p class="paginator">
-            <a href="/index.html"><i class="icon-arrow-left"></i></a>
-    Page 2 / 2
-</p>
-</section><!-- /#content -->
-
-       </div><!-- /.row -->
-    </div><!-- /.container -->
-
-
-       <div class="container.nopad bg">
-
-    
-        <footer id="credits" class="row">
-          <div class="seven columns left-center">
-
-                   <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://allotory.github.io/">Ellery</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a> 
-                    and <a href="http://getpelican.com/">Pelican</a>.
-                    <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>.&nbsp;&nbsp;&nbsp;Copyright &copy; 2015&nbsp; ALLOTORY
-                    </address>
-          </div>
-
-
-          <div class="seven columns">
-            <div class="row">
-              <ul class="socbtns">
-
-                <li><div class="btn primary"><a href="https://github.com/allotory" target="_blank">Github</a></div></li>
-
-                <li><div class="btn twitter"><a href="https://twitter.com/allotory" target="_blank">Twitter</a></div></li>
-
-                <li><div class="btn facebook"><a href="https://www.facebook.com/allotory" target="_blank">Facebook</a></div></li>
-
-                <li><div class="btn danger"><a href="https://plus.google.com/u/0/105072098982208020695" target="_blank">Google+</a></div></li>
-
-              </ul>
-            </div>
-          </div>
-        </footer>
-
-    </div>
-
+<footer class="footer">
+	<div class="container">
+		<div class="footer-logo"><i class="fa-tree"></i></div>
+		<span class="copyright">Copyright © 2015 By <a href="">Ellery</a>.</span>
+	</div>
+</footer> 
 
 <script type="text/javascript">
-    var disqus_shortname = 'amazilia';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+	$(document).ready(function(e) {
+		$('#test').scrollToFixed();
+		$('.res-nav_click').click(function(){
+			$('.main-nav').slideToggle();
+			return false 
+		});
+	});
 </script>
-  <script src="/theme/js/libs/jquery-1.9.1.min.js"></script>
-  <script src="/theme/js/libs/gumby.min.js"></script>
-  <script src="/theme/js/plugins.js"></script>
+
+<script>
+	wow = new WOW({
+		animateClass: 'animated',
+		offset: 100
+	});
+	wow.init();
+	// document.getElementById('').onclick = function() {
+	// 	var section = document.createElement('section');
+	// 	section.className = 'wow fadeInDown';
+	// 	this.parentNode.insertBefore(section, this);
+	// };
+</script>
+
 </body>
 </html>

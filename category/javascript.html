@@ -1,66 +1,182 @@
-<!DOCTYPE html>
-<html lang="cn">
+<!doctype html>
+<html lang="en">
 <head>
+<title>Amazilia</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Ellery">
 
-        <title>Heliactin</title>
-        <meta charset="utf-8" />
-        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin RSS Feed" />
-        <link href="/feeds/javascript.rss.xml" type="application/rss+xml" rel="alternate" title="Heliactin Categories RSS Feed" />
+<link rel="shortcut icon" href="/images/favicon.ico">
 
+<link href="/theme/css/monokai_sublime.css" rel="stylesheet" type="text/css">
+<link href="/theme/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/theme/css/style.css" rel="stylesheet" type="text/css">
+<link href="/theme/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="/theme/css/responsive.css" rel="stylesheet" type="text/css">
+<link href="/theme/css/animate.css" rel="stylesheet" type="text/css">
 
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
 
-        <link rel="stylesheet" type="text/css" href="/theme/gumby.css" />
-        <link rel="stylesheet" type="text/css" href="/theme/style.css" />
-        <link rel="stylesheet" type="text/css" href="/theme/pygment.css" />
+<script type="text/javascript" src="/theme/js/jquery.1.8.3.min.js"></script>
+<script type="text/javascript" src="/theme/js/bootstrap.js"></script>
+<script type="text/javascript" src="/theme/js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.isotope.js"></script>
+<script type="text/javascript" src="/theme/js/wow.js"></script>
+<script type="text/javascript" src="/theme/js/classie.js"></script>
+<script type="text/javascript" src="/theme/js/highlight.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('pre').each(function(i, block) {
+		hljs.highlightBlock(block);
+	});
+});
+</script>
 
-        <script src="/theme/js/libs/modernizr-2.6.2.min.js"></script>
+<!--[if lt IE 9]>
+	<script src="/js/respond-1.1.0.min.js"></script>
+	<script src="/js/html5shiv.js"></script>
+	<script src="/js/html5element.js"></script>
+<![endif]-->
 
-
-
-
+<link href="/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Amazilia Full Atom Feed" />
+<link href="/feeds/javascript.rss.xml" type="application/atom+xml" rel="alternate" title="Amazilia Categories Atom Feed" />
 </head>
+<body>
 
-<body id="index" class="home">
+<nav class="main-nav-outer" id="test"><!--main-nav-start-->
+	<div class="container">
+		<ul class="main-nav">
+			<li><a href="/">Home</a></li>
 
+					<li><a href="/about-me.html">About</a></li>
+					<li><a href="/my-life.html">Life</a></li>
 
-    <a href="https://github.com/allotory"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
-    <div class="container">
+			<li class="small-logo"><i class="fa-tree"></i>
 
-        <div class="row">
+				<li><a href="#">Feed</a></li>
+				<li><a href="#">Page2</a></li>
+				<li><a href="#">Page3</a></li>
+			
+			
+		</ul>
+		<a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+	</div>
+</nav><!--main-nav-end-->
 
-          <header id="banner" class="body">
-                  <h1><a href="/">Heliactin <strong></strong></a></h1>
-          </header><!-- /#banner -->
+<section class="main-section" id="service"><!--main-section-start-->
+	<div class="container">
+		<div class="row">
+			
+<div class="col-lg-3 col-sm-6 wow fadeInLeft delay-05s">
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-paw"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Pages</h3>
+			<p>
+				<a href="/">Home</a><br/>
+						<a href="/about-me.html">About</a><br/>
+						<a href="/my-life.html">Life</a><br/>
 
-            <div id="navigation" class="navbar row">
-              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
-             
-              <ul class="columns">
-                <li><a href="/">Home</a></li>
-
-                <li><a href="feeds/all.rss.xml">Feed</a></li>
-                <li><a href="#">About</a></li>
-
-              </ul>
-            </div>
-
-<section id="content">
-<h2>Articles in the Javascript category</h2>
-
-
-   <div class="row">
-
-
-        <div class="eleven columns">
-		         <ol id="post-list">
-				        <li><article class="hentry">
-				                <header> <h3 class="entry-title"><a href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">常用Javascript技术</a></h3> </header>
-				                <footer class="post-info">
-				                    <abbr class="published" title="2015-01-06T00:00:00+08:00"> 周二 06 一月 2015 </abbr>
-<address class="vcard author">By <a class="url fn" href="/author/ellery.html">Ellery</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <h3>正则表达式校验数据</h3>
+					<a href="#">Feed</a><br/>
+					<a href="#">Page2</a><br/>
+					<a href="#">Page3</a><br/>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-pagelines"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Categories</h3>
+			<p>
+					<a href="/category/ide.html">IDE</a><br/>
+					<a href="/category/java.html">Java</a><br/>
+					<a href="/category/javascript.html">Javascript</a><br/>
+					<a href="/category/python.html">Python</a><br/>
+					<a href="/category/server.html">Server</a><br/>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-tags"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Tags</h3>
+			<p>
+					<a href="/tag/javascript.html">Javascript</a>
+					<a href="/tag/python.html">Python</a>
+					<a href="/tag/pelican.html">Pelican</a>
+					<a href="/tag/server.html">Server</a>
+					<a href="/tag/java.html">Java</a>
+					<a href="/tag/django.html">Django</a>
+					<a href="/tag/security.html">Security</a>
+					<a href="/tag/css.html">CSS</a>
+					<a href="/tag/github.html">GitHub</a>
+					<a href="/tag/mysql.html">MySQL</a>
+					<a href="/tag/ide.html">IDE</a>
+					<a href="/tag/markdown.html">Markdown</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-link"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Links</h3>
+			<p>
+					<a href="http://getpelican.com/">Pelican</a><br/>
+					<a href="http://python.org/">Python.org</a><br/>
+					<a href="http://jinja.pocoo.org/">Jinja2</a><br/>
+					<a href="#">You can modify those links </a><br/>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-facebook-square"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Social</h3>
+			<p>
+					<a href="feeds/all.rss.xml">RSS</a><br/>
+					<a href="https://github.com/allotory">Github</a><br/>
+					<a href="https://www.facebook.com/allotory">Facebook</a><br/>
+					<a href="https://twitter.com/allotory">Twitter</a><br/>
+			</p>
+		</div>
+	</div>
+</div>
+			<figure class="col-lg-9 col-sm-6  text-left wow fadeInUp delay-02s">
+				<article class="post">
+					<header class="entry-header">
+						<h2 class="entry-title"><a href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">常用Javascript技术</a></h2>
+						<div class="entry-meta"> 
+							<span class="posted-on">
+								<time class="entry-date published" title="2015-01-06T00:00:00+08:00"> 
+									2015-01-06 00:00:00 
+								</time>
+							</span>
+							<span class="posted-by">By 
+								<a href="/author/ellery.html">
+									Ellery
+								</a>
+							</span>
+           
+						</div>
+					</header>
+					<div class="entry-content">
+						 <h3>正则表达式校验数据</h3>
 <div class="highlight"><pre>    var username = document.getElementById(&quot;username&quot;).value.trim();
     var reg = /^[a-zA-Z][a-zA-Z0-9_]{5,14}$/;
     if (!reg.test(username)){
@@ -80,129 +196,51 @@
 </pre></div>
 
 
-<h3>动态添加组件 ...</h3> </div><!-- /.entry-content -->
-
-								<div class="medium primary btn"><a href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-								<div class="row tag-row">
-										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/javascript.html">Javascript</a>
-								</div>
-
-
-
-				        </article></li>
-				</ol><!-- /#posts-list -->
-
-        </div><!-- /.eleven.columns -->
-        
-<div class="three columns">
-
-<h4>Pages</h4>
-
- <ul>
-      <li><a href="feeds/all.rss.xml">Feed</a></li>
-      <li><a href="#">About</a></li>
-  </ul>
-
-<h4>Categories</h4>
-<ul>
-		<li><a href="/category/ide.html">IDE</a></li>
-		<li><a href="/category/java.html">Java</a></li>
-		<li><a href="/category/javascript.html">Javascript</a></li>
-		<li><a href="/category/python.html">Python</a></li>
-		<li><a href="/category/server.html">Server</a></li>
-</ul>
-
-
-<h4>Tags</h4>
-	<ul>
-	    <li class="tag-4"><a href="/tag/css.html">CSS</a></li>
-	    <li class="tag-4"><a href="/tag/security.html">Security</a></li>
-	    <li class="tag-4"><a href="/tag/mysql.html">MySQL</a></li>
-	    <li class="tag-2"><a href="/tag/django.html">Django</a></li>
-	    <li class="tag-4"><a href="/tag/jdbc.html">JDBC</a></li>
-	    <li class="tag-2"><a href="/tag/ide.html">IDE</a></li>
-	    <li class="tag-4"><a href="/tag/javascript.html">Javascript</a></li>
-	    <li class="tag-4"><a href="/tag/server.html">Server</a></li>
-	    <li class="tag-2"><a href="/tag/pelican.html">Pelican</a></li>
-	    <li class="tag-1"><a href="/tag/python.html">Python</a></li>
-	    <li class="tag-4"><a href="/tag/github.html">GitHub</a></li>
-	    <li class="tag-2"><a href="/tag/markdown.html">Markdown</a></li>
-	    <li class="tag-2"><a href="/tag/java.html">Java</a></li>
-</ul>
-
-
-<nav class="widget">
-  <h4>Social</h4>
-  <ul>
-    <li><a href="feeds/all.rss.xml">RSS</a></li>
-    <li><a href="https://github.com/allotory">Github</a></li>
-    <li><a href="https://www.facebook.com/allotory">Facebook</a></li>
-    <li><a href="https://twitter.com/allotory">Twitter</a></li>
-  </ul>
+<h3>动态添加组件 ...</h3> 
+						 <a class="more-link" href="/posts/2015/01/06/javascript-skills/" rel="bookmark" title="Permalink to 常用Javascript技术">Read more&#8230;</a>
+					</div>
+				</article>
+				
+<nav>
+	<ul class="pager">
+	1 / 1
+	</ul>
 </nav>
+				
+			</figure>  
+		</div>
+	</div>
+</section><!--main-section-end-->
 
-</div> </div><!-- /.row -->
-
-<p class="paginator">
-    Page 1 / 1
-</p>
-</section><!-- /#content -->
-
-       </div><!-- /.row -->
-    </div><!-- /.container -->
-
-
-       <div class="container.nopad bg">
-
-    
-        <footer id="credits" class="row">
-          <div class="seven columns left-center">
-
-                   <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://allotory.github.io/">Ellery</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a> 
-                    and <a href="http://getpelican.com/">Pelican</a>.
-                    <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>.&nbsp;&nbsp;&nbsp;Copyright &copy; 2015&nbsp; ALLOTORY
-                    </address>
-          </div>
-
-
-          <div class="seven columns">
-            <div class="row">
-              <ul class="socbtns">
-
-                <li><div class="btn primary"><a href="https://github.com/allotory" target="_blank">Github</a></div></li>
-
-                <li><div class="btn twitter"><a href="https://twitter.com/allotory" target="_blank">Twitter</a></div></li>
-
-                <li><div class="btn facebook"><a href="https://www.facebook.com/allotory" target="_blank">Facebook</a></div></li>
-
-                <li><div class="btn danger"><a href="https://plus.google.com/u/0/105072098982208020695" target="_blank">Google+</a></div></li>
-
-              </ul>
-            </div>
-          </div>
-        </footer>
-
-    </div>
-
+<footer class="footer">
+	<div class="container">
+		<div class="footer-logo"><i class="fa-tree"></i></div>
+		<span class="copyright">Copyright © 2015 By <a href="">Ellery</a>.</span>
+	</div>
+</footer> 
 
 <script type="text/javascript">
-    var disqus_shortname = 'amazilia';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+	$(document).ready(function(e) {
+		$('#test').scrollToFixed();
+		$('.res-nav_click').click(function(){
+			$('.main-nav').slideToggle();
+			return false 
+		});
+	});
 </script>
-  <script src="/theme/js/libs/jquery-1.9.1.min.js"></script>
-  <script src="/theme/js/libs/gumby.min.js"></script>
-  <script src="/theme/js/plugins.js"></script>
+
+<script>
+	wow = new WOW({
+		animateClass: 'animated',
+		offset: 100
+	});
+	wow.init();
+	// document.getElementById('').onclick = function() {
+	// 	var section = document.createElement('section');
+	// 	section.className = 'wow fadeInDown';
+	// 	this.parentNode.insertBefore(section, this);
+	// };
+</script>
+
 </body>
 </html>
