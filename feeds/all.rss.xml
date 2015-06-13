@@ -471,13 +471,13 @@ git push origin master
 
 &lt;p&gt;如此完成博客发布，访问&lt;code&gt;allotory.github.io&lt;/code&gt;即可。&lt;/p&gt;
 &lt;h3&gt;Google Analytics&lt;/h3&gt;
-&lt;p&gt;注册&lt;a href="https://disqus.com/"&gt;Google Analytics&lt;/a&gt;可以更好的管理自己的站点，按顺序注册，得到&lt;code&gt;Tracking ID&lt;/code&gt;配置到&lt;code&gt;pelicanconf.py&lt;/code&gt;里面。&lt;/p&gt;
+&lt;p&gt;注册&lt;a href="https://www.google.com/analytics/"&gt;Google Analytics&lt;/a&gt;可以更好的管理自己的站点，按顺序注册，得到&lt;code&gt;Tracking ID&lt;/code&gt;配置到&lt;code&gt;pelicanconf.py&lt;/code&gt;里面。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;GOOGLE_ANALYTICS = &amp;#39;Tracking ID&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Google Webmasters&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://www.google.com/webmasters"&gt;Google Webmasters&lt;/a&gt;是Google的站长工具，使用它的目的是让博客被Google更好的收录，比如手动让Googlebot抓取、提交Robots、更新Sitemap等功能，使用起来非常方便。要想使用Google Webmasters只要在&lt;a href="http://www.google.com/webmasters"&gt;Google Webmasters&lt;/a&gt;上注册即可。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.google.com/webmasters/"&gt;Google Webmasters&lt;/a&gt;是Google的站长工具，使用它的目的是让博客被Google更好的收录，比如手动让Googlebot抓取、提交Robots、更新Sitemap等功能，使用起来非常方便。要想使用Google Webmasters只要在&lt;a href="https://www.google.com/analytics/"&gt;Google Webmasters&lt;/a&gt;上注册即可。&lt;/p&gt;
 &lt;h3&gt;URL配置&lt;/h3&gt;
 &lt;p&gt;使用URL配置可以更好的设置博文的URL。打开&lt;code&gt;pelicanconf.py&lt;/code&gt;，按照如下修改或添加：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;ARTICLE_URL = &amp;#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/&amp;#39;
@@ -488,4 +488,4 @@ ARTICLE_SAVE_AS = &amp;#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html
 &lt;p&gt;此时的URL为&lt;code&gt;http://allotory.github.io/posts/2014/09/08/pelican-install/&lt;/code&gt;,而文件保存路径为&lt;code&gt;http://allotory.github.io/posts/2014/09/08/pelican-install/index.html&lt;/code&gt;。&lt;/p&gt;
 &lt;h3&gt;总结&lt;/h3&gt;
 &lt;p&gt;到目前为止博客基本功能已经搭建完成，部分功能还可以进一步完善，最终效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img alt="screenshot" src="/images/screenshot.png" /&gt;&lt;/p&gt;</summary><category term="Python"></category><category term="Pelican"></category><category term="GitHub"></category><category term="Markdown"></category></entry></feed>
+&lt;p&gt;&lt;img alt="screenshot" src="/images/1-screenshot.png" /&gt;&lt;/p&gt;</summary><category term="Python"></category><category term="Pelican"></category><category term="GitHub"></category><category term="Markdown"></category></entry></feed>

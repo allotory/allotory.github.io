@@ -42,6 +42,7 @@ $(document).ready(function() {
 
 <link href="http://allotory.github.io/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Amazilia Full Atom Feed" />
 <link href="http://allotory.github.io/feeds/python.rss.xml" type="application/atom+xml" rel="alternate" title="Amazilia Categories Atom Feed" />
+
 </head>
 <body>
 
@@ -111,18 +112,18 @@ $(document).ready(function() {
 		<div class="service-list-col2">
 			<h3>Tags</h3>
 			<p>
-					<a href="http://allotory.github.io/tag/github.html">GitHub</a>
-					<a href="http://allotory.github.io/tag/pelican.html">Pelican</a>
-					<a href="http://allotory.github.io/tag/security.html">Security</a>
-					<a href="http://allotory.github.io/tag/markdown.html">Markdown</a>
-					<a href="http://allotory.github.io/tag/django.html">Django</a>
-					<a href="http://allotory.github.io/tag/ide.html">IDE</a>
-					<a href="http://allotory.github.io/tag/css.html">CSS</a>
-					<a href="http://allotory.github.io/tag/python.html">Python</a>
 					<a href="http://allotory.github.io/tag/mysql.html">MySQL</a>
-					<a href="http://allotory.github.io/tag/server.html">Server</a>
 					<a href="http://allotory.github.io/tag/javascript.html">Javascript</a>
+					<a href="http://allotory.github.io/tag/python.html">Python</a>
+					<a href="http://allotory.github.io/tag/ide.html">IDE</a>
+					<a href="http://allotory.github.io/tag/security.html">Security</a>
+					<a href="http://allotory.github.io/tag/django.html">Django</a>
+					<a href="http://allotory.github.io/tag/markdown.html">Markdown</a>
+					<a href="http://allotory.github.io/tag/pelican.html">Pelican</a>
+					<a href="http://allotory.github.io/tag/server.html">Server</a>
+					<a href="http://allotory.github.io/tag/github.html">GitHub</a>
 					<a href="http://allotory.github.io/tag/java.html">Java</a>
+					<a href="http://allotory.github.io/tag/css.html">CSS</a>
 			</p>
 		</div>
 	</div>
@@ -287,13 +288,13 @@ git push origin master
 
 <p>如此完成博客发布，访问<code>allotory.github.io</code>即可。</p>
 <h3>Google Analytics</h3>
-<p>注册<a href="https://disqus.com/">Google Analytics</a>可以更好的管理自己的站点，按顺序注册，得到<code>Tracking ID</code>配置到<code>pelicanconf.py</code>里面。</p>
+<p>注册<a href="https://www.google.com/analytics/">Google Analytics</a>可以更好的管理自己的站点，按顺序注册，得到<code>Tracking ID</code>配置到<code>pelicanconf.py</code>里面。</p>
 <div class="highlight"><pre>GOOGLE_ANALYTICS = &#39;Tracking ID&#39;
 </pre></div>
 
 
 <h3>Google Webmasters</h3>
-<p><a href="http://www.google.com/webmasters">Google Webmasters</a>是Google的站长工具，使用它的目的是让博客被Google更好的收录，比如手动让Googlebot抓取、提交Robots、更新Sitemap等功能，使用起来非常方便。要想使用Google Webmasters只要在<a href="http://www.google.com/webmasters">Google Webmasters</a>上注册即可。</p>
+<p><a href="http://www.google.com/webmasters/">Google Webmasters</a>是Google的站长工具，使用它的目的是让博客被Google更好的收录，比如手动让Googlebot抓取、提交Robots、更新Sitemap等功能，使用起来非常方便。要想使用Google Webmasters只要在<a href="https://www.google.com/analytics/">Google Webmasters</a>上注册即可。</p>
 <h3>URL配置</h3>
 <p>使用URL配置可以更好的设置博文的URL。打开<code>pelicanconf.py</code>，按照如下修改或添加：</p>
 <div class="highlight"><pre>ARTICLE_URL = &#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/&#39;
@@ -304,7 +305,7 @@ ARTICLE_SAVE_AS = &#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html&#39
 <p>此时的URL为<code>http://allotory.github.io/posts/2014/09/08/pelican-install/</code>,而文件保存路径为<code>http://allotory.github.io/posts/2014/09/08/pelican-install/index.html</code>。</p>
 <h3>总结</h3>
 <p>到目前为止博客基本功能已经搭建完成，部分功能还可以进一步完善，最终效果如下：</p>
-<p><img alt="screenshot" src="/images/screenshot.png" /></p>
+<p><img alt="screenshot" src="/images/1-screenshot.png" /></p>
 					</div>
 
 					<div class="post-tags">
@@ -362,6 +363,14 @@ ARTICLE_SAVE_AS = &#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html&#39
 	// 	this.parentNode.insertBefore(section, this);
 	// };
 </script>
-
+<script type="text/javascript">
+	var disqus_shortname = 'amazilia';
+	(function () {
+		var s = document.createElement('script'); s.async = true;
+		s.type = 'text/javascript';
+		s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	}());
+</script>
 </body>
 </html>
