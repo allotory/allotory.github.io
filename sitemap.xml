@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://allotory.github.io/</loc>
-<lastmod>2015-06-27T10:45:19-00:00</lastmod>
+<lastmod>2015-07-06T21:25:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://allotory.github.io/archives.html</loc>
-<lastmod>2015-06-27T10:45:19-00:00</lastmod>
+<lastmod>2015-07-06T21:25:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://allotory.github.io/tags.html</loc>
-<lastmod>2015-06-27T10:45:19-00:00</lastmod>
+<lastmod>2015-07-06T21:25:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://allotory.github.io/categories.html</loc>
-<lastmod>2015-06-27T10:45:19-00:00</lastmod>
+<lastmod>2015-07-06T21:25:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -109,35 +109,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://allotory.github.io/category/ide.html</loc>
+<loc>http://allotory.github.io/ide/index.html</loc>
 <lastmod>2015-01-06T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://allotory.github.io/category/java.html</loc>
+<loc>http://allotory.github.io/java/index.html</loc>
 <lastmod>2015-01-07T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://allotory.github.io/category/javascript.html</loc>
+<loc>http://allotory.github.io/javascript/index.html</loc>
 <lastmod>2015-01-06T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://allotory.github.io/category/python.html</loc>
+<loc>http://allotory.github.io/python/index.html</loc>
 <lastmod>2015-01-07T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://allotory.github.io/category/server.html</loc>
+<loc>http://allotory.github.io/server/index.html</loc>
 <lastmod>2015-01-06T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>

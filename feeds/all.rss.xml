@@ -449,7 +449,12 @@ Github是一个具有版本管理功能的代码仓库，每个项目都有一�
 
 
 &lt;p&gt;打开配置文件&lt;code&gt;pelicanconf.py&lt;/code&gt;，更改或添加&lt;code&gt;THEME&lt;/code&gt;为自己喜欢的主题。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;THEME = &amp;#39;pelican-themes/gum&amp;#39;
+&lt;div class="highlight"&gt;&lt;pre&gt;THEME = &amp;#39;pelican-themes/threnetes&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;当前主题threnetes是我自用的主题，如果喜欢请到github下载&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;https://github.com/allotory/threnetes
 &lt;/pre&gt;&lt;/div&gt;
 
 

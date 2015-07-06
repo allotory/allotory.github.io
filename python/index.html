@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Amazilia - Markdown</title>
+<title>Amazilia</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, maximum-scale=1">
 <meta name="description" content="">
@@ -41,6 +41,7 @@ $(document).ready(function() {
 <![endif]-->
 
 <link href="http://allotory.github.io/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Amazilia Full Atom Feed" />
+<link href="http://allotory.github.io/feeds/python.rss.xml" type="application/atom+xml" rel="alternate" title="Amazilia Categories Atom Feed" />
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -167,6 +168,129 @@ $(document).ready(function() {
 	</div>
 </div>
 			<figure class="col-lg-9 col-sm-6  text-left wow fadeInUp delay-02s">
+				<article class="post">
+					<header class="entry-header">
+						<h2 class="entry-title"><a href="http://allotory.github.io/posts/2015/01/07/pelican-time-string/" rel="bookmark" title="Permalink to Python time,datetime,string转换">Python time,datetime,string转换</a></h2>
+						<div class="entry-meta"> 
+							<span class="posted-on">
+								<time class="entry-date published" title="2015-01-07T00:00:00+08:00"> 
+									2015-01-07 00:00:00 
+								</time>
+							</span>
+							<span class="posted-by">By 
+								<a href="http://allotory.github.io/author/ellery.html">
+									Ellery
+								</a>
+							</span>
+           
+						</div>
+					</header>
+					<div class="entry-content">
+						 <h5>把datetime转换为字符串</h5>
+<div class="highlight"><pre>    def datetime_toString(dt):  
+        return dt.strftime(&quot;%Y-%m-%d-%H&quot;)
+</pre></div>
+
+
+<h5>把字符串转换为datetime</h5>
+<div class="highlight"><pre>    def string_toDatetime(string):  
+         return datetime.strptime(string, &quot;%Y-%m-%d-%H&quot;)
+</pre></div>
+
+
+<h5>把字符串转会为时间戳</h5>
+<div class="highlight"><pre>    def string_toTimestamp(strTime):  
+        return time.mktime(string_toDatetime(strTime).timetuple())
+</pre></div>
+
+
+<h5>把时间戳转换为字符串</h5>
+<div class="highlight"><pre>    def timestamp_toString(stamp):  
+        return time.strftime(&quot;%Y-%m-%d-%H&quot;, tiem.localtime(stamp))
+</pre></div>
+
+
+<h4>把datetime类型转换为时间戳</h4>
+<div class="highlight"><pre>    def datetime_toTimestamp ...</pre></div> 
+						 <a class="more-link" href="http://allotory.github.io/posts/2015/01/07/pelican-time-string/" rel="bookmark" title="Permalink to Python time,datetime,string转换">Read more&#8230;</a>
+					</div>
+				</article>
+				<article class="post">
+					<header class="entry-header">
+						<h2 class="entry-title"><a href="http://allotory.github.io/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Django 1.7 使用migrations建立数据库连接</a></h2>
+						<div class="entry-meta"> 
+							<span class="posted-on">
+								<time class="entry-date published" title="2014-09-28T00:00:00+08:00"> 
+									2014-09-28 00:00:00 
+								</time>
+							</span>
+							<span class="posted-by">By 
+								<a href="http://allotory.github.io/author/ellery.html">
+									Ellery
+								</a>
+							</span>
+           
+						</div>
+					</header>
+					<div class="entry-content">
+						 <p>Django1.7 采用了全新的APP加载框架，校验框架，数据查询优化，并且还自带整合了<code>django-south</code>的（数据库）迁移功能，其提供的<code>django-admin migrate</code>也将代替<code>syncdb</code>命令.</p>
+<p>因此在我们建立数据库模型之后，就不能使用django的<code>syncdb</code>命令同步数据库了</p>
+<div class="highlight"><pre>python manage.py syncdb
+</pre></div>
+
+
+<p>否则数据库模型将不会同步到真正的数据库中。
+<!-- PELICAN_END_SUMMARY -->
+在Django 1.7中使用将使用全新的<code>migrations</code>同步数据库。建立数据库模型后使用命令</p>
+<div class="highlight"><pre>python manage.py makemigrations west
+</pre></div>
+
+
+<p>创建migrations，成功显示如下：</p>
+<div class="highlight"><pre>Migrations for &#39;west&#39;:
+    0001_initial.py:
+    - Create model Character
+</pre></div>
+
+
+<p>使用<code>sqlmigrate</code>命令查看sql语句</p>
+<div class="highlight"><pre>python ...</pre></div> 
+						 <a class="more-link" href="http://allotory.github.io/posts/2014/09/28/django-migrations/" rel="bookmark" title="Permalink to Django 1.7 使用migrations建立数据库连接">Read more&#8230;</a>
+					</div>
+				</article>
+				<article class="post">
+					<header class="entry-header">
+						<h2 class="entry-title"><a href="http://allotory.github.io/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">解决Django同步数据库No module named MySQLdb错误</a></h2>
+						<div class="entry-meta"> 
+							<span class="posted-on">
+								<time class="entry-date published" title="2014-09-24T00:00:00+08:00"> 
+									2014-09-24 00:00:00 
+								</time>
+							</span>
+							<span class="posted-by">By 
+								<a href="http://allotory.github.io/author/ellery.html">
+									Ellery
+								</a>
+							</span>
+           
+						</div>
+					</header>
+					<div class="entry-content">
+						 <p>Django在同步数据库时会根据<code>models.py</code>中描述的数据模型，在MySQL中创建各个关系表</p>
+<div class="highlight"><pre>python manage.py syncdb
+</pre></div>
+
+
+<p>同步数据库后，Django将建立相关的MySQL表格，并要求你创建一个超级用户等信息，但有时在windows环境下执行上述命令后会提示出错信息：</p>
+<div class="highlight"><pre>django.core.exceptions.ImproperlyConfigured: 
+Error loading MySQLdb module: No module named MySQLdb
+</pre></div>
+
+
+<p>No model named Mysqldb，这是因为当前Python环境没有安装<code>MySQL for Python</code>组件，解决办法：下载相应<a href="http://sourceforge.net/projects/mysql-python/files/mysql-python-test/">MySQL for Python组件</a>并安装即可。</p> 
+						 <a class="more-link" href="http://allotory.github.io/posts/2014/09/24/django-syncdb/" rel="bookmark" title="Permalink to 解决Django同步数据库No module named MySQLdb错误">Read more&#8230;</a>
+					</div>
+				</article>
 				<article class="post">
 					<header class="entry-header">
 						<h2 class="entry-title"><a href="http://allotory.github.io/posts/2014/09/08/fix-code-err/" rel="bookmark" title="Permalink to 修复Pelican代码块中红框问题">修复Pelican代码块中红框问题</a></h2>
