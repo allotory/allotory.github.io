@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>使用Vundle和GitHub管理Vim配置</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Ellery">
+
+<link rel="shortcut icon" href="http://allotory.github.io/images/favicon.ico">
+
+<link href="http://allotory.github.io/theme/css/monokai_sublime.css" rel="stylesheet" type="text/css">
+<link href="http://allotory.github.io/theme/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="http://allotory.github.io/theme/css/style.css" rel="stylesheet" type="text/css">
+<link href="http://allotory.github.io/theme/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="http://allotory.github.io/theme/css/responsive.css" rel="stylesheet" type="text/css">
+<link href="http://allotory.github.io/theme/css/animate.css" rel="stylesheet" type="text/css">
+
+<!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
+
+<script type="text/javascript" src="http://allotory.github.io/theme/js/jquery.1.8.3.min.js"></script>
+<script type="text/javascript" src="http://allotory.github.io/theme/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://allotory.github.io/theme/js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="http://allotory.github.io/theme/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://allotory.github.io/theme/js/jquery.isotope.js"></script>
+<script type="text/javascript" src="http://allotory.github.io/theme/js/wow.js"></script>
+<script type="text/javascript" src="http://allotory.github.io/theme/js/classie.js"></script>
+<script type="text/javascript" src="http://allotory.github.io/theme/js/highlight.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('pre').each(function(i, block) {
+		hljs.highlightBlock(block);
+	});
+});
+</script>
+
+<!--[if lt IE 9]>
+	<script src="http://allotory.github.io/js/respond-1.1.0.min.js"></script>
+	<script src="http://allotory.github.io/js/html5shiv.js"></script>
+	<script src="http://allotory.github.io/js/html5element.js"></script>
+<![endif]-->
+
+<link href="http://allotory.github.io/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Amazilia Full Atom Feed" />
+<link href="http://allotory.github.io/feeds/ide.rss.xml" type="application/atom+xml" rel="alternate" title="Amazilia Categories Atom Feed" />
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-54438115-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+<nav class="main-nav-outer" id="test"><!--main-nav-start-->
+	<div class="container">
+		<ul class="main-nav">
+			<li><a href="http://allotory.github.io/">Home</a></li>
+
+					<li><a href="http://allotory.github.io/about-me.html">About</a></li>
+					<li><a href="http://allotory.github.io/my-life.html">Life</a></li>
+
+			<li class="small-logo"><i class="fa-tree"></i>
+
+				<li><a href="feeds/all.rss.xml">Feed</a></li>
+				<li><a href="#">Page2</a></li>
+				<li><a href="#">Page3</a></li>
+			
+			
+		</ul>
+		<a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+	</div>
+</nav><!--main-nav-end-->
+
+<section class="main-section" id="service"><!--main-section-start-->
+	<div class="container">
+		<div class="row">
+			
+<div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 wow fadeInLeft delay-05s">
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-paw"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Pages</h3>
+			<p>
+				<a href="http://allotory.github.io/">Home</a><br/>
+						<a href="http://allotory.github.io/about-me.html">About</a><br/>
+						<a href="http://allotory.github.io/my-life.html">Life</a><br/>
+
+					<a href="feeds/all.rss.xml">Feed</a><br/>
+					<a href="#">Page2</a><br/>
+					<a href="#">Page3</a><br/>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-pagelines"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Categories</h3>
+			<p>
+					<a href="http://allotory.github.io/ide/index.html">IDE</a><br/>
+					<a href="http://allotory.github.io/java/index.html">Java</a><br/>
+					<a href="http://allotory.github.io/javascript/index.html">Javascript</a><br/>
+					<a href="http://allotory.github.io/python/index.html">Python</a><br/>
+					<a href="http://allotory.github.io/server/index.html">Server</a><br/>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-tags"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Tags</h3>
+			<p>
+					<a href="http://allotory.github.io/tag/server.html">Server</a>
+					<a href="http://allotory.github.io/tag/python.html">Python</a>
+					<a href="http://allotory.github.io/tag/security.html">Security</a>
+					<a href="http://allotory.github.io/tag/css.html">CSS</a>
+					<a href="http://allotory.github.io/tag/vim.html">Vim</a>
+					<a href="http://allotory.github.io/tag/markdown.html">Markdown</a>
+					<a href="http://allotory.github.io/tag/mysql.html">MySQL</a>
+					<a href="http://allotory.github.io/tag/ide.html">IDE</a>
+					<a href="http://allotory.github.io/tag/django.html">Django</a>
+					<a href="http://allotory.github.io/tag/github.html">GitHub</a>
+					<a href="http://allotory.github.io/tag/javascript.html">Javascript</a>
+					<a href="http://allotory.github.io/tag/pelican.html">Pelican</a>
+					<a href="http://allotory.github.io/tag/java.html">Java</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-link"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Links</h3>
+			<p>
+					<a href="http://getpelican.com/">Pelican</a><br/>
+					<a href="http://python.org/">Python.org</a><br/>
+					<a href="http://jinja.pocoo.org/">Jinja2</a><br/>
+					<a href="#">You can modify those links </a><br/>
+			</p>
+		</div>
+	</div>
+	
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-facebook-square"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Social</h3>
+			<p>
+					<a href="feeds/all.rss.xml">RSS</a><br/>
+					<a href="https://github.com/allotory">Github</a><br/>
+					<a href="https://www.facebook.com/allotory">Facebook</a><br/>
+					<a href="https://twitter.com/allotory">Twitter</a><br/>
+			</p>
+		</div>
+	</div>
+</div>
+			<figure class="col-lg-9 col-sm-6  text-left wow fadeInUp delay-02s">
+				<div class="post">                        
+					<a href="http://allotory.github.io/posts/2016/02/25/vimrc_config/" rel="bookmark"
+						title="Permalink to 使用Vundle和GitHub管理Vim配置">
+						<h2>使用Vundle和GitHub管理Vim配置</h2>
+					</a>
+					
+
+					<span  title="2016-02-25T00:00:00+08:00">2016-02-25</span><br/>        
+					
+					<span class="posted-by">By 
+						<a href="http://allotory.github.io/author/ellery.html">
+							Ellery
+						</a>
+					</span>
+   
+
+					<div class="entry-content2">
+						<h3>简介</h3>
+<p>Vim 作为史上最强大的编辑器之一，拥有数以万计的插件。Vim 的生态系统拥有完美的插件机制。Vundle 是现存最好的 Vim 插件管理方案，用 Vundle 管理插件的好处：</p>
+<ul>
+<li>自动下载安装</li>
+<li>自动更新</li>
+<li>轻松异地重装</li>
+<li>自动清理没用的插件</li>
+</ul>
+<h3>前提</h3>
+<p>使用 <a href="https://github.com/VundleVim/Vundle.vim">Vundle</a> 管理 Vim 插件时，绝大多数插件都是使用的 Github 上的开源库直接安装的，并且配置好的 Vundle 插件也需要使用 Github 进行管理。所以如果在 Windows 上首先需要安装 Git 客户端并了解常用 Git 命令。</p>
+<h3>安装</h3>
+<p>Vim 可以轻松安装在 <code>Windows</code> 及 <code>*nix</code> 系统中，但两者的安装目录结构略有不同。所以安装插件时命令格式也略有不同，应该值得注意。</p>
+<div class="highlight"><pre><span class="x">Windows 系统：</span>
+
+<span class="x">    _vimrc  </span><span class="err">#</span><span class="x">配置文件   </span>
+<span class="x">    vmfiles </span><span class="err">#</span><span class="x">插件目录   对应变量   </span><span class="p">$</span><span class="nv">VIM</span><span class="x"></span>
+
+<span class="x">Unix-like 系统：</span>
+
+<span class="x">    .vimrc  </span><span class="err">#</span><span class="x">配置文件</span>
+<span class="x">    .vim    </span><span class="err">#</span><span class="x">插件目录</span>
+</pre></div>
+
+
+<h4>在 Github 上创建 Vim 管理仓库</h4>
+<p>在 Github 上创建一个空白仓库作为 Vim 管理仓库，这样在我们更换系统环境时可以轻松重新恢复已有配置。例如我的仓库为 <a href="https://github.com/allotory/doricha">doicha</a>。该仓库的传输协议地址为：</p>
+<div class="highlight"><pre>git@github.com:allotory/doricha.git
+</pre></div>
+
+
+<h4>Vundle 安装（Windows 版本为例）</h4>
+<ol>
+<li>
+<p>备份 Vim 主目录中的 <code>_vimrc</code> 文件以及 <code>vimfiles</code> 目录（这点非常重要！）。</p>
+</li>
+<li>
+<p>使用 <code>git clone</code> 命令克隆先前创建的 Vim 管理仓库，该例子中为了与 Vim 原始目录名称一致方便管理，所以直接克隆到 <code>vimfiles</code> 目录，其实可以直接克隆到任何地方，只要在配置文件中表明相关路径即可。</p>
+<div class="highlight"><pre><span class="nv">$ </span>git clone git@github.com:allotory/doricha.git vimfiles
+</pre></div>
+
+
+</li>
+<li>
+<p>切换到 <code>vimfiles</code> 目录下使用 <code>git submodule add</code> 命令以 <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">子模块</a>的形式安装 Vundle。</p>
+<div class="highlight"><pre><span class="nv">$ </span>git submodule add https://github.com/VundleVim/Vundle.vim.git bundle/vundle
+</pre></div>
+
+
+</li>
+<li>
+<p>本例中新建了两个新的配置文件 <code>vundle_vimrc</code> 和 <code>basic_vimrc</code> ，分别用来保存自定义的 Vundle 配置和自定义的 Vim 基础的配置。</p>
+</li>
+<li>
+<p>配置 <code>vundle_vimrc</code> 文件具体内容请参考 Vundle 配置文档，其中应重点注意 <code>path</code> 路径问题。</p>
+<div class="highlight"><pre><span class="x">set nocompatible        &quot; be iMproved, required</span>
+<span class="x">filetype off            &quot; required</span>
+
+<span class="x">&quot; 设置包括vundle和初始化相关的runtime path</span>
+<span class="x">&quot; 判断操作系统类型</span>
+<span class="x">if(has(&#39;win32&#39;) || has(&#39;win64&#39;))</span>
+<span class="x">    set rtp+=</span><span class="p">$</span><span class="nv">VIM</span><span class="x">/vimfiles/bundle/Vundle.vim</span>
+<span class="x">    let path=&#39;</span><span class="p">$</span><span class="nv">VIM</span><span class="x">/vimfiles/bundle&#39;</span>
+<span class="x">else</span>
+<span class="x">    set rtp+=~/.vim/bundle/Vundle.vim</span>
+<span class="x">    let path=&#39;~/.vim/bundle&#39;</span>
+<span class="x">endif</span>
+<span class="x">call vundle</span><span class="cp">#</span><span class="nf">begin</span><span class="p">(</span><span class="nf">path</span><span class="p">)</span><span class="x"></span>
+<span class="x">&quot; 另一种选择, 指定一个vundle安装插件的路径</span>
+<span class="x">&quot;call vundle</span><span class="cp">#</span><span class="nf">begin</span><span class="p">(</span><span class="s1">&#39;~/some/path/here&#39;</span><span class="p">)</span><span class="x"></span>
+
+<span class="x">&quot; 让vundle管理插件版本,必须</span>
+<span class="x">Plugin &#39;VundleVim/Vundle.vim&#39;</span>
+
+<span class="x">&quot; 以下范例用来支持不同格式的插件安装.</span>
+<span class="x">&quot; 请将安装插的命令放在vundle</span><span class="cp">#</span><span class="nf">begin</span><span class="x">和vundle</span><span class="cp">#</span><span class="nf">end</span><span class="x">之间.</span>
+
+<span class="x">&quot; Github上的插件</span>
+<span class="x">&quot; 格式为 Plugin &#39;用户名/插件仓库名&#39;</span>
+<span class="x">&quot;Plugin &#39;tpope/vim-fugitive&#39;</span>
+
+<span class="x">&quot; 来自 http://vim-scripts.org/vim/scripts.html 的插件</span>
+<span class="x">&quot; Plugin &#39;插件名称&#39; 实际上是 Plugin &#39;vim-scripts/插件仓库名&#39; 只是此处的用户名可以省略</span>
+<span class="x">&quot;Plugin &#39;L9&#39;</span>
+
+<span class="x">&quot; 由Git支持但不再github上的插件仓库 Plugin &#39;git clone 后面的地址&#39;</span>
+<span class="x">&quot;Plugin &#39;git://git.wincent.com/command-t.git&#39;</span>
+
+<span class="x">&quot; 本地的Git仓库(例如自己的插件) Plugin &#39;file:///+本地插件仓库绝对路径&#39;</span>
+<span class="x">&quot;Plugin &#39;file:///home/gmarik/path/to/plugin&#39;</span>
+
+<span class="x">&quot; 插件在仓库的子目录中.</span>
+<span class="x">&quot; 正确指定路径用以设置runtimepath. 以下范例插件在sparkup/vim目录下</span>
+<span class="x">&quot;Plugin &#39;rstacruz/sparkup&#39;, </span><span class="err">{</span><span class="x">&#39;rtp&#39;: &#39;vim/&#39;}</span>
+
+<span class="x">&quot; 避免插件名冲突,例如L9已存在,则可以指定</span>
+<span class="x">&quot;Plugin &#39;user/L9&#39;, </span><span class="err">{</span><span class="x">&#39;name&#39;: &#39;newL9&#39;}</span>
+
+<span class="x">&quot; 你的所有插件需要在下面这行之前</span>
+<span class="x">call vundle</span><span class="cp">#</span><span class="nf">end</span><span class="p">()</span><span class="x">            &quot; 必须</span>
+<span class="x">filetype plugin indent on    &quot; 必须 加载vim自带和插件相应的语法和文件类型相关脚本</span>
+<span class="x">&quot; 忽视插件改变缩进,可以使用以下替代:</span>
+<span class="x">&quot;filetype plugin on</span>
+<span class="x">&quot;</span>
+<span class="x">&quot; 简要帮助文档</span>
+<span class="x">&quot; :PluginList       - 列出所有已配置的插件</span>
+<span class="x">&quot; :PluginInstall    - 安装插件,追加 `!` 用以更新或使用 :PluginUpdate</span>
+<span class="x">&quot; :PluginSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存</span>
+<span class="x">&quot; :PluginClean      - 清除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件</span>
+<span class="x">&quot;</span>
+<span class="x">&quot; 查阅 :h vundle 获取更多细节和wiki以及FAQ</span>
+<span class="x">&quot; 将你自己对非插件片段放在这行之后</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>配置 <code>baisc_vimrc</code> 文件，这里提供了我自己常用的一些配置仅供参考。</p>
+<div class="highlight"><pre>set nocompatible
+
+&quot; 主题
+colorscheme molokai
+let g:molokai_original = 1
+
+&quot; 基础设置
+set guifont=Monaco:h14          &quot; 字体 &amp;&amp; 字号
+syntax on                       &quot; 打开语法高亮
+set number                      &quot; 显示行号
+set autoindent                  &quot; 设置缩进有三个取值 cindent (c风格)
+                                &quot; smartindent (智能模式)、
+                                &quot; autoindent (简单的与上一行保持一致)
+set tabstop=4                   &quot; 设置 tab 键的宽度
+set shiftwidth=4                &quot; 换行时行间交错使用4个空格
+set backspace=indent,eol,start  &quot; 设置退格键可用
+                                &quot; indent：如果用了 set indent, set ai 等自动缩进，想用退格键将字段缩进的删掉，必须设置这个选项，否则不响应。
+                                &quot; eol：如果插入模式下在行开头，想通过退格键合并两行，需要设置eol。
+                                &quot; start：要想删除此次插入前的输入，需设置这个。
+set smarttab                    &quot; 每次按 backspace 时删除4个空格
+set incsearch                   &quot; 增量式搜索(遍搜索遍显示内容)
+set hlsearch                    &quot; 高亮搜索
+filetype on                     &quot; 打开文件类型检测功能
+filetype plugin on              &quot; 允许加载文件类型插件
+filetype indent on              &quot; 允许为不同类型的文件定义不同的缩进格式
+set showmatch                   &quot; 显示括号配对情况
+&quot;set foldenable                 &quot; 开启代码折叠
+&quot;set foldmethod=syntax          &quot; 自动语法折叠
+set nobackup                    &quot; 禁止生成备份
+set noswapfile                  &quot; 不产生 swp 文件
+set mouse=a                     &quot; 启用鼠标
+set nowrap                      &quot; 设置不自动折行
+set cursorline                  &quot; 突出显示当前行
+set clipboard=unnamed           &quot; 与 windows 共享剪贴板
+set cmdheight=1                 &quot; 命令行（在状态行下）的高度，默认为1
+set laststatus=2                &quot; 开启状态栏信息
+
+&quot; 设置窗口
+if has(&quot;gui_running&quot;)
+    &quot; au GUIEnter * simalt ~x   &quot; 窗口启动时自动最大化
+    winpos 70 25                &quot; 指定窗口出现的位置，坐标原点在屏幕左上角
+    set lines=55 columns=180    &quot; 指定窗口大小，lines 为高度，columns 为宽度
+    set guioptions+=c           &quot; 使用字符提示框
+    set guioptions-=m           &quot; 隐藏菜单栏
+    set guioptions-=T           &quot; 隐藏工具栏
+    set guioptions=L            &quot; 隐藏左侧滚动条
+    set guioptions=r            &quot; 隐藏右侧滚动条
+    set guioptions-=b           &quot; 隐藏底部滚动条
+    set showtabline=0           &quot; 隐藏 Tab 栏
+endif
+
+&quot; 设置编码
+set fenc=utf-8                              &quot; 设置编码
+set encoding=utf-8                          &quot; 内部的程序识别编码
+set fileencoding=utf-8                      &quot; 当前文件编辑时使用的文件编码
+set fileencodings=utf-8,gbk,cp936,latin-1   &quot; gvim 打开文件是支持的编码
+language messages zh_CN.utf-8               &quot; 解决 consle 输出乱码
+set ambiwidth=double                        &quot; 防止特殊符号无法显示
+set helplang=cn                             &quot; 中文帮助
+</pre></div>
+
+
+</li>
+<li>
+<p>最后将我们自定义的配置文件引入到 Vim 的配置文件 <code>_vimrc</code> 中， 同样注意其中路径写法。</p>
+<div class="highlight"><pre><span class="x">&quot; 引用自定义的vundle配置文件,存放vimrc的地方(不是固定写法，可自定义)</span>
+<span class="x">&quot; 判断操作系统类型</span>
+<span class="x">if(has(&#39;win32&#39;) || has(&#39;win64&#39;))</span>
+<span class="x">    source </span><span class="p">$</span><span class="nv">VIM</span><span class="x">/vimfiles/vundle_vimrc</span>
+<span class="x">    source </span><span class="p">$</span><span class="nv">VIM</span><span class="x">/vimfiles/basic_vimrc</span>
+<span class="x">else</span>
+<span class="x">    source ~/.vim/vundle_vimrc</span>
+<span class="x">    source ~/.vim/basic_vimrc</span>
+<span class="x">endif</span>
+</pre></div>
+
+
+</li>
+</ol>
+<p>至此，我们已经完成 Vundle 安装。</p>
+<h4>插件安装</h4>
+<p>Vundle 安装完成后，就可以使用其进行其他插件的安装。这里我们以 <a href="https://github.com/scrooloose/nerdtree">NERDTree</a> 为例，<code>NERDTree</code> 是一个非常好用的 Vim 树形浏览插件。</p>
+<ol>
+<li>
+<p>在 <code>vundle_vimrc</code> 中 <code>Github</code> 插件部分添加如下内容：</p>
+<div class="highlight"><pre>Plugin &#39;scrooloose/nerdtree&#39;
+</pre></div>
+
+
+</li>
+<li>
+<p>重新打开 Vim 命令模式下执行如下命令即可完成安装：</p>
+<div class="highlight"><pre>：PluginInstall
+</pre></div>
+
+
+</li>
+<li>
+<p>在 <code>basic_vimrc</code> 中按需要自行配置 <code>NERDTree</code>， 如：</p>
+<div class="highlight"><pre>autocmd vimenter * NERDTree
+let NERDTreeWinSize=25
+</pre></div>
+
+
+</li>
+</ol>
+<h4>将已安装的插件以子模块形式进行管理</h4>
+<p>最初我们安装 Vundle 时是以 <code>Git</code> 子模块形式进行管理的，但是使用 Vundle 安装的插件并没有以子模块形式进行管理，所以为了方便日后更新管理插件，需要手动将其添加为子模块。</p>
+<div class="highlight"><pre><span class="nv">$ </span>git submodule add https://github.com/scrooloose/nerdtree.git bundle/nerdtree
+Adding existing repo at <span class="s1">&#39;bundle/nerdtree&#39;</span> to the index
+</pre></div>
+
+
+<p>此时我们已经完成了所有的安装配置操作，可以正常的提交到 <code>Github</code>。</p>
+<h3>重新安装（Windows 版本为例）</h3>
+<ol>
+<li>
+<p>克隆主项目到 <code>vimfiles</code> 目录。</p>
+<div class="highlight"><pre><span class="nv">$ </span>git clone git@github.com:allotory/doricha.git vimfiles
+</pre></div>
+
+
+</li>
+<li>
+<p>此时，所有的插件目录均为空，需要重新安装，这是可以使用三种方法安装：</p>
+<ul>
+<li>
+<p>使用 Vundle 命令安装，这种方法需要重新安装 Vundle。</p>
+<div class="highlight"><pre><span class="nv">$ </span>git submodule add https://github.com/VundleVim/Vundle.vim.git bundle/vundle
+</pre></div>
+
+
+<p>然后再使用 Vundle 命令重新安装其他插件。</p>
+<div class="highlight"><pre>：PluginInstall
+</pre></div>
+
+
+</li>
+<li>
+<p>由于之前所有插件均添加为主项目的子模块，所以可以使用 <code>Git</code> 子模块相关命令进行安装。</p>
+<div class="highlight"><pre><span class="nv">$ </span>git submodule —-查看当前项目用到的子模块
+<span class="nv">$ </span>git submodule init —-只在首次检出仓库时运行一次就行
+<span class="nv">$ </span>git submodule update —-更新子模块（子模块会重新检出）
+</pre></div>
+
+
+</li>
+<li>
+<p>更简单的一种方法是克隆主仓库时将其所包含的子模块同时克隆下来。</p>
+<div class="highlight"><pre> $ git clone --recursive git@github.com:allotory/doricha.git vimfiles
+</pre></div>
+
+
+</li>
+</ul>
+</li>
+<li>
+<p>最后不要忘了将我们自定义的配置文件引入到 Vim 的配置文件 <code>_vimrc</code> 中，因为此时的 <code>_vimrc</code> 文件是全新的，需要重新设置。</p>
+</li>
+</ol>
+<h3>总结</h3>
+<p>Vim 是一个神器，但用好不宜。个人觉得不应该安装过多的插件使其成为一个 IDE ，过多的插件会使 Vim 卡顿、启动缓慢等。反而不如真正的 IDE 好用。最后附上我的界面。</p>
+<p><img alt="screenshot" src="/images/10-vim-vundle-config.png" /></p>
+					</div>
+
+					<div class="post-tags">
+							<i class="fa-tags"></i>
+							<a href="http://allotory.github.io/tag/vim.html">Vim</a>
+							<a href="http://allotory.github.io/tag/github.html">GitHub</a>
+					</div>   
+				</div>  
+
+				<div class="comments" style="color:black;">
+					<h3>Comments</h3>
+					<div id="disqus_thread"></div>
+					<script type="text/javascript">
+						var disqus_identifier = "posts/2016/02/25/vimrc_config/";
+						(function() {
+						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+						dsq.src = 'http://amazilia.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+						})();
+					</script>
+				</div>
+			</figure>
+		</div>
+	</div>
+</section><!--main-section-end-->
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer-logo"><i class="fa-tree"></i></div>
+		<span class="copyright">Copyright © 2015 By <a href="http://allotory.github.io">Ellery</a>.</span>
+	</div>
+</footer> 
+
+<script type="text/javascript">
+	$(document).ready(function(e) {
+		$('#test').scrollToFixed();
+		$('.res-nav_click').click(function(){
+			$('.main-nav').slideToggle();
+			return false 
+		});
+	});
+</script>
+
+<script>
+	wow = new WOW({
+		animateClass: 'animated',
+		offset: 100
+	});
+	wow.init();
+	// document.getElementById('').onclick = function() {
+	// 	var section = document.createElement('section');
+	// 	section.className = 'wow fadeInDown';
+	// 	this.parentNode.insertBefore(section, this);
+	// };
+</script>
+<script type="text/javascript">
+	var disqus_shortname = 'amazilia';
+	(function () {
+		var s = document.createElement('script'); s.async = true;
+		s.type = 'text/javascript';
+		s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	}());
+</script>
+</body>
+</html>
