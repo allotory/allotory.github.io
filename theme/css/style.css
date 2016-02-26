@@ -301,13 +301,13 @@ color: #fff;
 .entry-content {
   margin: 0 0 60px 0;
 }
-.entry-content h2 {
+/*.entry-content h2 {
   line-height: 1.2;
   font-size: 30px;
   font-size: 1.875rem;
   padding-top: 20px;
   margin-bottom: 20px;
-}
+}*/
 .meta-nav,
 .more-link {
   font-family: Georgia, serif;
