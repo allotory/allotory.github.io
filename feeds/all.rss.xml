@@ -278,11 +278,11 @@ Adding existing repo at &lt;span class="s1"&gt;&amp;#39;bundle/nerdtree&amp;#39;
 &lt;/ol&gt;
 &lt;h2&gt;总结&lt;/h2&gt;
 &lt;p&gt;Vim 是一个神器，但用好不宜。个人觉得不应该安装过多的插件使其成为一个 IDE ，过多的插件会使 Vim 卡顿、启动缓慢等。反而不如真正的 IDE 好用。最后附上我的界面。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="screenshot" src="/images/10-vim-vundle-config.png" /&gt;&lt;/p&gt;</summary><category term="Vim"></category><category term="GitHub"></category></entry><entry><title>Java MessageDiges使用</title><link href="http://allotory.github.io/posts/2015/01/07/java-message-digest/" rel="alternate"></link><updated>2015-01-07T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:allotory.github.io,2015-01-07:posts/2015/01/07/java-message-digest/</id><summary type="html">&lt;h3&gt;MessageDigest简介&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="screenshot" src="/images/10-vim-vundle-config.png" /&gt;&lt;/p&gt;</summary><category term="Vim"></category><category term="GitHub"></category></entry><entry><title>Java MessageDiges使用</title><link href="http://allotory.github.io/posts/2015/01/07/java-message-digest/" rel="alternate"></link><updated>2015-01-07T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:allotory.github.io,2015-01-07:posts/2015/01/07/java-message-digest/</id><summary type="html">&lt;h2&gt;MessageDigest简介&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;java.security.MessageDigest&lt;/code&gt; 类用于为应用程序提供信息摘要算法的功能，如 &lt;code&gt;MD5&lt;/code&gt; 或 &lt;code&gt;SHA&lt;/code&gt; 算法。简单点说就是用于生成散列码。信息摘要是安全的单向哈希函数，它接收任意大小的数据，输出固定长度的哈希值。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;MessageDigest&lt;/code&gt; 通过其 &lt;code&gt;getInstance&lt;/code&gt; 系列静态函数来进行实例化和初始化。&lt;code&gt;MessageDigest&lt;/code&gt; 对象通过使用 &lt;code&gt;update&lt;/code&gt; 方法处理数据。任何时候都可以调用 &lt;code&gt;reset&lt;/code&gt; 方法重置摘要。一旦所有需要更新的数据都已经被更新了，应该调用 &lt;code&gt;digest&lt;/code&gt; 方法之一完成哈希计算并返回结果。&lt;/p&gt;
 &lt;p&gt;对于给定数量的更新数据，&lt;code&gt;digest&lt;/code&gt; 方法只能被调用一次。&lt;code&gt;digest&lt;/code&gt; 方法被调用后，&lt;code&gt;MessageDigest&lt;/code&gt; 对象被重新设置成其初始状态。&lt;/p&gt;
-&lt;h3&gt;实例&lt;/h3&gt;
+&lt;h2&gt;实例&lt;/h2&gt;
 &lt;p&gt;1.创建 MessageDigest 对象&lt;/p&gt;
 &lt;p&gt;计算信息摘（即散列码）要做的第一步是创建 &lt;code&gt;MessageDigest&lt;/code&gt; 对象实例。像所有的引擎类一样，获取某类报文摘要算法（即散列算法，比如MD5）的 &lt;code&gt;MessageDigest&lt;/code&gt; 对象的途径是调用 &lt;code&gt;MessageDigest&lt;/code&gt; 类中的 &lt;code&gt;getInstance&lt;/code&gt; 静态 &lt;code&gt;factory&lt;/code&gt; 方法：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    public static MessageDigest getInstance(String algorithm)
@@ -312,7 +312,7 @@ Adding existing repo at &lt;span class="s1"&gt;&amp;#39;bundle/nerdtree&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;测试源码&lt;/h3&gt;
+&lt;h2&gt;测试源码&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.io.UnsupportedEncodingException&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.security.MessageDigest&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.security.NoSuchAlgorithmException&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;

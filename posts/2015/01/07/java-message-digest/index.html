@@ -121,19 +121,19 @@ $(document).ready(function() {
 		<div class="service-list-col2">
 			<h3>Tags</h3>
 			<p>
-					<a href="http://allotory.github.io/tag/python.html">Python</a>
-					<a href="http://allotory.github.io/tag/pelican.html">Pelican</a>
-					<a href="http://allotory.github.io/tag/django.html">Django</a>
-					<a href="http://allotory.github.io/tag/security.html">Security</a>
-					<a href="http://allotory.github.io/tag/javascript.html">Javascript</a>
-					<a href="http://allotory.github.io/tag/mysql.html">MySQL</a>
-					<a href="http://allotory.github.io/tag/java.html">Java</a>
-					<a href="http://allotory.github.io/tag/ide.html">IDE</a>
-					<a href="http://allotory.github.io/tag/vim.html">Vim</a>
-					<a href="http://allotory.github.io/tag/css.html">CSS</a>
-					<a href="http://allotory.github.io/tag/server.html">Server</a>
-					<a href="http://allotory.github.io/tag/markdown.html">Markdown</a>
 					<a href="http://allotory.github.io/tag/github.html">GitHub</a>
+					<a href="http://allotory.github.io/tag/ide.html">IDE</a>
+					<a href="http://allotory.github.io/tag/server.html">Server</a>
+					<a href="http://allotory.github.io/tag/java.html">Java</a>
+					<a href="http://allotory.github.io/tag/django.html">Django</a>
+					<a href="http://allotory.github.io/tag/markdown.html">Markdown</a>
+					<a href="http://allotory.github.io/tag/mysql.html">MySQL</a>
+					<a href="http://allotory.github.io/tag/pelican.html">Pelican</a>
+					<a href="http://allotory.github.io/tag/python.html">Python</a>
+					<a href="http://allotory.github.io/tag/security.html">Security</a>
+					<a href="http://allotory.github.io/tag/css.html">CSS</a>
+					<a href="http://allotory.github.io/tag/vim.html">Vim</a>
+					<a href="http://allotory.github.io/tag/javascript.html">Javascript</a>
 			</p>
 		</div>
 	</div>
@@ -187,11 +187,11 @@ $(document).ready(function() {
    
 
 					<div class="entry-content2">
-						<h3>MessageDigest简介</h3>
+						<h2>MessageDigest简介</h2>
 <p><code>java.security.MessageDigest</code> 类用于为应用程序提供信息摘要算法的功能，如 <code>MD5</code> 或 <code>SHA</code> 算法。简单点说就是用于生成散列码。信息摘要是安全的单向哈希函数，它接收任意大小的数据，输出固定长度的哈希值。</p>
 <p><code>MessageDigest</code> 通过其 <code>getInstance</code> 系列静态函数来进行实例化和初始化。<code>MessageDigest</code> 对象通过使用 <code>update</code> 方法处理数据。任何时候都可以调用 <code>reset</code> 方法重置摘要。一旦所有需要更新的数据都已经被更新了，应该调用 <code>digest</code> 方法之一完成哈希计算并返回结果。</p>
 <p>对于给定数量的更新数据，<code>digest</code> 方法只能被调用一次。<code>digest</code> 方法被调用后，<code>MessageDigest</code> 对象被重新设置成其初始状态。</p>
-<h3>实例</h3>
+<h2>实例</h2>
 <p>1.创建 MessageDigest 对象</p>
 <p>计算信息摘（即散列码）要做的第一步是创建 <code>MessageDigest</code> 对象实例。像所有的引擎类一样，获取某类报文摘要算法（即散列算法，比如MD5）的 <code>MessageDigest</code> 对象的途径是调用 <code>MessageDigest</code> 类中的 <code>getInstance</code> 静态 <code>factory</code> 方法：</p>
 <div class="highlight"><pre>    public static MessageDigest getInstance(String algorithm)
@@ -221,7 +221,7 @@ $(document).ready(function() {
 </pre></div>
 
 
-<h3>测试源码</h3>
+<h2>测试源码</h2>
 <div class="highlight"><pre>    <span class="kn">import</span> <span class="nn">java.io.UnsupportedEncodingException</span><span class="p">;</span>
     <span class="kn">import</span> <span class="nn">java.security.MessageDigest</span><span class="p">;</span>
     <span class="kn">import</span> <span class="nn">java.security.NoSuchAlgorithmException</span><span class="p">;</span>

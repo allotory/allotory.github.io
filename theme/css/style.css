@@ -59,7 +59,7 @@ h1{
 	font-size:26px;
 	color:black;
 	font-family: 'Microsoft YaHei','Microsoft YaHei','Montserrat', sans-serif;
-	font-weight:700;
+	font-weight:500;
 	letter-spacing: -1px;
 	margin:0 0 15px 0;
 	text-transform:uppercase;
@@ -68,17 +68,15 @@ h2{
 	font-size:24px;
 	color:#222222;
 	font-family: 'Microsoft YaHei','Microsoft YaHei','Montserrat', sans-serif;
-	font-weight:700;
+	font-weight:500;
 	letter-spacing: -1px;
 	margin:30px 0 15px 0;
-	text-transform:uppercase;
 }
 h3{
 	font-family: 'Microsoft YaHei', 'Microsoft YaHei','Montserrat', sans-serif;
 	color:#222222;
 	font-size:20px;
 	margin:25px 0 15px 0;
-	text-transform:uppercase;
 	font-weight:400;
 }
 h4{
@@ -86,7 +84,6 @@ h4{
 	color:#222222;
 	font-size:19px;
 	margin:15px 0 15px 0;
-	text-transform:uppercase;
 	font-weight:400;
 }
 h5{
@@ -94,7 +91,6 @@ h5{
 	color:#222222;
 	font-size:18px;
 	margin:15px 0 15px 0;
-	text-transform:uppercase;
 	font-weight:400;
 }
 h6{
@@ -256,7 +252,7 @@ color: #fff;
   overflow: hidden;
   margin: 0px 0 25px;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   font-size:16px
   letter-spacing: 1px;
@@ -301,13 +297,15 @@ color: #fff;
 .entry-content {
   margin: 0 0 60px 0;
 }
-/*.entry-content h2 {
-  line-height: 1.2;
-  font-size: 30px;
-  font-size: 1.875rem;
-  padding-top: 20px;
-  margin-bottom: 20px;
-}*/
+.entry-content h1 {
+	font-size:26px;
+	color:black;
+	font-family: 'Microsoft YaHei','Microsoft YaHei','Montserrat', sans-serif;
+	font-weight:500;
+	letter-spacing: -1px;
+	margin:0 0 15px 0;
+	text-transform:uppercase;
+}
 .meta-nav,
 .more-link {
   font-family: Georgia, serif;
