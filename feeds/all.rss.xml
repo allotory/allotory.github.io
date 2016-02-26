@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Amazilia</title><link href="http://allotory.github.io/" rel="alternate"></link><link href="http://allotory.github.io/feeds/all.rss.xml" rel="self"></link><id>http://allotory.github.io/</id><updated>2016-02-25T00:00:00+08:00</updated><entry><title>使用Vundle和GitHub管理Vim配置</title><link href="http://allotory.github.io/posts/2016/02/25/vimrc_config/" rel="alternate"></link><updated>2016-02-25T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:allotory.github.io,2016-02-25:posts/2016/02/25/vimrc_config/</id><summary type="html">&lt;h3&gt;简介&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Amazilia</title><link href="http://allotory.github.io/" rel="alternate"></link><link href="http://allotory.github.io/feeds/all.rss.xml" rel="self"></link><id>http://allotory.github.io/</id><updated>2016-02-25T00:00:00+08:00</updated><entry><title>使用Vundle和GitHub管理Vim配置</title><link href="http://allotory.github.io/posts/2016/02/25/vimrc_config/" rel="alternate"></link><updated>2016-02-25T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:allotory.github.io,2016-02-25:posts/2016/02/25/vimrc_config/</id><summary type="html">&lt;h2&gt;简介&lt;/h2&gt;
 &lt;p&gt;Vim 作为史上最强大的编辑器之一，拥有数以万计的插件。Vim 的生态系统拥有完美的插件机制。Vundle 是现存最好的 Vim 插件管理方案，用 Vundle 管理插件的好处：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;自动下载安装&lt;/li&gt;
@@ -7,9 +7,9 @@
 &lt;li&gt;轻松异地重装&lt;/li&gt;
 &lt;li&gt;自动清理没用的插件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;前提&lt;/h3&gt;
+&lt;h2&gt;前提&lt;/h2&gt;
 &lt;p&gt;使用 &lt;a href="https://github.com/VundleVim/Vundle.vim"&gt;Vundle&lt;/a&gt; 管理 Vim 插件时，绝大多数插件都是使用的 Github 上的开源库直接安装的，并且配置好的 Vundle 插件也需要使用 Github 进行管理。所以如果在 Windows 上首先需要安装 Git 客户端并了解常用 Git 命令。&lt;/p&gt;
-&lt;h3&gt;安装&lt;/h3&gt;
+&lt;h2&gt;安装&lt;/h2&gt;
 &lt;p&gt;Vim 可以轻松安装在 &lt;code&gt;Windows&lt;/code&gt; 及 &lt;code&gt;*nix&lt;/code&gt; 系统中，但两者的安装目录结构略有不同。所以安装插件时命令格式也略有不同，应该值得注意。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;Windows 系统：&lt;/span&gt;
 
@@ -23,13 +23,13 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h4&gt;在 Github 上创建 Vim 管理仓库&lt;/h4&gt;
+&lt;h3&gt;在 Github 上创建 Vim 管理仓库&lt;/h3&gt;
 &lt;p&gt;在 Github 上创建一个空白仓库作为 Vim 管理仓库，这样在我们更换系统环境时可以轻松重新恢复已有配置。例如我的仓库为 &lt;a href="https://github.com/allotory/doricha"&gt;doicha&lt;/a&gt;。该仓库的传输协议地址为：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;git@github.com:allotory/doricha.git
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h4&gt;Vundle 安装（Windows 版本为例）&lt;/h4&gt;
+&lt;h3&gt;Vundle 安装（Windows 版本为例）&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;备份 Vim 主目录中的 &lt;code&gt;_vimrc&lt;/code&gt; 文件以及 &lt;code&gt;vimfiles&lt;/code&gt; 目录（这点非常重要！）。&lt;/p&gt;
@@ -196,7 +196,7 @@ set helplang=cn                             &amp;quot; 中文帮助
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;至此，我们已经完成 Vundle 安装。&lt;/p&gt;
-&lt;h4&gt;插件安装&lt;/h4&gt;
+&lt;h3&gt;插件安装&lt;/h3&gt;
 &lt;p&gt;Vundle 安装完成后，就可以使用其进行其他插件的安装。这里我们以 &lt;a href="https://github.com/scrooloose/nerdtree"&gt;NERDTree&lt;/a&gt; 为例，&lt;code&gt;NERDTree&lt;/code&gt; 是一个非常好用的 Vim 树形浏览插件。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -222,7 +222,7 @@ let NERDTreeWinSize=25
 
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4&gt;将已安装的插件以子模块形式进行管理&lt;/h4&gt;
+&lt;h3&gt;将已安装的插件以子模块形式进行管理&lt;/h3&gt;
 &lt;p&gt;最初我们安装 Vundle 时是以 &lt;code&gt;Git&lt;/code&gt; 子模块形式进行管理的，但是使用 Vundle 安装的插件并没有以子模块形式进行管理，所以为了方便日后更新管理插件，需要手动将其添加为子模块。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git submodule add https://github.com/scrooloose/nerdtree.git bundle/nerdtree
 Adding existing repo at &lt;span class="s1"&gt;&amp;#39;bundle/nerdtree&amp;#39;&lt;/span&gt; to the index
@@ -230,7 +230,7 @@ Adding existing repo at &lt;span class="s1"&gt;&amp;#39;bundle/nerdtree&amp;#39;
 
 
 &lt;p&gt;此时我们已经完成了所有的安装配置操作，可以正常的提交到 &lt;code&gt;Github&lt;/code&gt;。&lt;/p&gt;
-&lt;h3&gt;重新安装（Windows 版本为例）&lt;/h3&gt;
+&lt;h2&gt;重新安装（Windows 版本为例）&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;克隆主项目到 &lt;code&gt;vimfiles&lt;/code&gt; 目录。&lt;/p&gt;
@@ -276,7 +276,7 @@ Adding existing repo at &lt;span class="s1"&gt;&amp;#39;bundle/nerdtree&amp;#39;
 &lt;p&gt;最后不要忘了将我们自定义的配置文件引入到 Vim 的配置文件 &lt;code&gt;_vimrc&lt;/code&gt; 中，因为此时的 &lt;code&gt;_vimrc&lt;/code&gt; 文件是全新的，需要重新设置。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;总结&lt;/h3&gt;
+&lt;h2&gt;总结&lt;/h2&gt;
 &lt;p&gt;Vim 是一个神器，但用好不宜。个人觉得不应该安装过多的插件使其成为一个 IDE ，过多的插件会使 Vim 卡顿、启动缓慢等。反而不如真正的 IDE 好用。最后附上我的界面。&lt;/p&gt;
 &lt;p&gt;&lt;img alt="screenshot" src="/images/10-vim-vundle-config.png" /&gt;&lt;/p&gt;</summary><category term="Vim"></category><category term="GitHub"></category></entry><entry><title>Java MessageDiges使用</title><link href="http://allotory.github.io/posts/2015/01/07/java-message-digest/" rel="alternate"></link><updated>2015-01-07T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:allotory.github.io,2015-01-07:posts/2015/01/07/java-message-digest/</id><summary type="html">&lt;h3&gt;MessageDigest简介&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;java.security.MessageDigest&lt;/code&gt; 类用于为应用程序提供信息摘要算法的功能，如 &lt;code&gt;MD5&lt;/code&gt; 或 &lt;code&gt;SHA&lt;/code&gt; 算法。简单点说就是用于生成散列码。信息摘要是安全的单向哈希函数，它接收任意大小的数据，输出固定长度的哈希值。&lt;/p&gt;
