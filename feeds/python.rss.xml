@@ -72,9 +72,9 @@ Error loading MySQLdb module: No module named MySQLdb
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="na"&gt;.err&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
 &lt;span class="nl"&gt;border:&lt;/span&gt;&lt;span class="err"&gt;1&lt;/span&gt;&lt;span class="nf"&gt;px&lt;/span&gt; &lt;span class="no"&gt;solid&lt;/span&gt; &lt;span class="c"&gt;#FF0000;&lt;/span&gt;
 &lt;span class="err"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="CSS"></category><category term="Pelican"></category><category term="Markdown"></category></entry><entry><title>使用Pelican和GitHub搭建个人博客</title><link href="http://allotory.github.io/posts/2014/09/08/pelican-install/" rel="alternate"></link><updated>2014-09-08T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:allotory.github.io,2014-09-08:posts/2014/09/08/pelican-install/</id><summary type="html">&lt;h3&gt;简介&lt;/h3&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="CSS"></category><category term="Pelican"></category><category term="Markdown"></category></entry><entry><title>使用Pelican和GitHub搭建个人博客</title><link href="http://allotory.github.io/posts/2014/09/08/pelican-install/" rel="alternate"></link><updated>2014-09-08T00:00:00+08:00</updated><author><name>Ellery</name></author><id>tag:allotory.github.io,2014-09-08:posts/2014/09/08/pelican-install/</id><summary type="html">&lt;h2&gt;简介&lt;/h2&gt;
 &lt;p&gt;Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。&lt;/p&gt;
-&lt;h3&gt;基础知识&lt;/h3&gt;
+&lt;h2&gt;基础知识&lt;/h2&gt;
 &lt;p&gt;搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。
 &lt;!-- PELICAN_END_SUMMARY --&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -87,7 +87,7 @@ Error loading MySQLdb module: No module named MySQLdb
 &lt;li&gt;&lt;a href="http://daringfireball.net/projects/markdown/syntax"&gt;Pelican&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h3&gt;下载安装&lt;/h3&gt;
+&lt;h2&gt;下载安装&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.python.org/getit/"&gt;Python下载&lt;/a&gt;&lt;/li&gt;
@@ -107,7 +107,7 @@ Error loading MySQLdb module: No module named MySQLdb
 pip install markdown&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;开始搭建博客&lt;/h3&gt;
+&lt;h2&gt;开始搭建博客&lt;/h2&gt;
 &lt;p&gt;打开Git bash，创建一个文件夹&lt;code&gt;Amazilia&lt;/code&gt;（可以按喜好拟定），执行如下命令：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;mkdir Amazilia
 cd Amazilia
@@ -128,7 +128,7 @@ pelican-quickstart
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;撰写博客&lt;/h3&gt;
+&lt;h2&gt;撰写博客&lt;/h2&gt;
 &lt;p&gt;完成博客主体搭建后，可以使用Sublime Text创建一个&lt;code&gt;.md&lt;/code&gt;文件，使用markdown语法书写博客，完成后保存于&lt;code&gt;content&lt;/code&gt;文件夹中。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;Title: 使用Pelican和GitHub搭建个人博客
 Date: 2014-09-08
@@ -155,7 +155,7 @@ Github是一个具有版本管理功能的代码仓库，每个项目都有一�
 
 
 &lt;p&gt;同样&lt;code&gt;make serve&lt;/code&gt;命令也可以由第二行的&lt;code&gt;Pelican&lt;/code&gt;命令替代，在浏览器中输入&lt;code&gt;http://localhost:8000&lt;/code&gt;即可看到博文效果。&lt;/p&gt;
-&lt;h3&gt;配置主题&lt;/h3&gt;
+&lt;h2&gt;配置主题&lt;/h2&gt;
 &lt;p&gt;在Amazilia目录下，按照如下步骤下载Pelican主题，只挑选喜欢的即可，其他不喜欢的可以删掉。主题可以在&lt;a href="https://github.com/getpelican/pelican-themes"&gt;Pelican主题库&lt;/a&gt;查看。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/getpelican/pelican-themes.git
 &lt;/pre&gt;&lt;/div&gt;
@@ -171,13 +171,13 @@ Github是一个具有版本管理功能的代码仓库，每个项目都有一�
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;添加评论系统&lt;/h3&gt;
+&lt;h2&gt;添加评论系统&lt;/h2&gt;
 &lt;p&gt;在&lt;a href="https://disqus.com/"&gt;Disqus&lt;/a&gt;上注册，按照流程Disqus会分配给站点一个&lt;code&gt;Shortname&lt;/code&gt;，然后修改&lt;code&gt;pelicanconf.py&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;DISQUS_SITENAME=Shortname
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;发布博客&lt;/h3&gt;
+&lt;h2&gt;发布博客&lt;/h2&gt;
 &lt;p&gt;在github上面建立一个&lt;code&gt;当前github用户名.github.io&lt;/code&gt;的版本仓库，如我博客版本仓库的为&lt;code&gt;allotory.github.io&lt;/code&gt;，然后进入&lt;code&gt;output&lt;/code&gt;目录下，依次执行如下命令：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;git init
 git remote add origin git@github.com:allotory/allotory.github.io.git
@@ -188,15 +188,15 @@ git push origin master
 
 
 &lt;p&gt;如此完成博客发布，访问&lt;code&gt;allotory.github.io&lt;/code&gt;即可。&lt;/p&gt;
-&lt;h3&gt;Google Analytics&lt;/h3&gt;
+&lt;h2&gt;Google Analytics&lt;/h2&gt;
 &lt;p&gt;注册&lt;a href="https://www.google.com/analytics/"&gt;Google Analytics&lt;/a&gt;可以更好的管理自己的站点，按顺序注册，得到&lt;code&gt;Tracking ID&lt;/code&gt;配置到&lt;code&gt;pelicanconf.py&lt;/code&gt;里面。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;GOOGLE_ANALYTICS = &amp;#39;Tracking ID&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Google Webmasters&lt;/h3&gt;
+&lt;h2&gt;Google Webmasters&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://www.google.com/webmasters/"&gt;Google Webmasters&lt;/a&gt;是Google的站长工具，使用它的目的是让博客被Google更好的收录，比如手动让Googlebot抓取、提交Robots、更新Sitemap等功能，使用起来非常方便。要想使用Google Webmasters只要在&lt;a href="https://www.google.com/analytics/"&gt;Google Webmasters&lt;/a&gt;上注册即可。&lt;/p&gt;
-&lt;h3&gt;URL配置&lt;/h3&gt;
+&lt;h2&gt;URL配置&lt;/h2&gt;
 &lt;p&gt;使用URL配置可以更好的设置博文的URL。打开&lt;code&gt;pelicanconf.py&lt;/code&gt;，按照如下修改或添加：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;ARTICLE_URL = &amp;#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/&amp;#39;
 ARTICLE_SAVE_AS = &amp;#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html&amp;#39;
@@ -204,6 +204,6 @@ ARTICLE_SAVE_AS = &amp;#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html
 
 
 &lt;p&gt;此时的URL为&lt;code&gt;http://allotory.github.io/posts/2014/09/08/pelican-install/&lt;/code&gt;,而文件保存路径为&lt;code&gt;http://allotory.github.io/posts/2014/09/08/pelican-install/index.html&lt;/code&gt;。&lt;/p&gt;
-&lt;h3&gt;总结&lt;/h3&gt;
+&lt;h2&gt;总结&lt;/h2&gt;
 &lt;p&gt;到目前为止博客基本功能已经搭建完成，部分功能还可以进一步完善，最终效果如下：&lt;/p&gt;
 &lt;p&gt;&lt;img alt="screenshot" src="/images/1-screenshot.png" /&gt;&lt;/p&gt;</summary><category term="Python"></category><category term="Pelican"></category><category term="GitHub"></category><category term="Markdown"></category></entry></feed>

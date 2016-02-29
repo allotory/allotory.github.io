@@ -105,6 +105,7 @@ $(document).ready(function() {
 		<div class="service-list-col2">
 			<h3>Categories</h3>
 			<p>
+					<a href="http://allotory.github.io/git/index.html">Git</a><br/>
 					<a href="http://allotory.github.io/ide/index.html">IDE</a><br/>
 					<a href="http://allotory.github.io/java/index.html">Java</a><br/>
 					<a href="http://allotory.github.io/javascript/index.html">Javascript</a><br/>
@@ -121,19 +122,20 @@ $(document).ready(function() {
 		<div class="service-list-col2">
 			<h3>Tags</h3>
 			<p>
-					<a href="http://allotory.github.io/tag/github.html">GitHub</a>
-					<a href="http://allotory.github.io/tag/ide.html">IDE</a>
-					<a href="http://allotory.github.io/tag/server.html">Server</a>
-					<a href="http://allotory.github.io/tag/java.html">Java</a>
-					<a href="http://allotory.github.io/tag/django.html">Django</a>
+					<a href="http://allotory.github.io/tag/css.html">CSS</a>
 					<a href="http://allotory.github.io/tag/markdown.html">Markdown</a>
-					<a href="http://allotory.github.io/tag/mysql.html">MySQL</a>
-					<a href="http://allotory.github.io/tag/pelican.html">Pelican</a>
 					<a href="http://allotory.github.io/tag/python.html">Python</a>
 					<a href="http://allotory.github.io/tag/security.html">Security</a>
-					<a href="http://allotory.github.io/tag/css.html">CSS</a>
+					<a href="http://allotory.github.io/tag/git.html">Git</a>
 					<a href="http://allotory.github.io/tag/vim.html">Vim</a>
+					<a href="http://allotory.github.io/tag/mysql.html">MySQL</a>
+					<a href="http://allotory.github.io/tag/pelican.html">Pelican</a>
+					<a href="http://allotory.github.io/tag/ide.html">IDE</a>
+					<a href="http://allotory.github.io/tag/django.html">Django</a>
 					<a href="http://allotory.github.io/tag/javascript.html">Javascript</a>
+					<a href="http://allotory.github.io/tag/server.html">Server</a>
+					<a href="http://allotory.github.io/tag/github.html">GitHub</a>
+					<a href="http://allotory.github.io/tag/java.html">Java</a>
 			</p>
 		</div>
 	</div>
@@ -187,9 +189,9 @@ $(document).ready(function() {
    
 
 					<div class="entry-content2">
-						<h3>简介</h3>
+						<h2>简介</h2>
 <p>Github是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。GitHub设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
-<h3>基础知识</h3>
+<h2>基础知识</h2>
 <p>搭建博客使用的工具是基于Python的Pelican。相对于WordPress，Pelican有着轻便小巧的特性，与GitHub Pages搭配很完美。当然其他的工具如Jeklly也非常棒，基于octopress相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，并且最近一直在学习Python，所以最终选择了基于Python的Pelican。
 <!-- PELICAN_END_SUMMARY --></p>
 <blockquote>
@@ -202,7 +204,7 @@ $(document).ready(function() {
 <li><a href="http://daringfireball.net/projects/markdown/syntax">Pelican</a></li>
 </ul>
 </blockquote>
-<h3>下载安装</h3>
+<h2>下载安装</h2>
 <blockquote>
 <ul>
 <li><a href="http://www.python.org/getit/">Python下载</a></li>
@@ -222,7 +224,7 @@ $(document).ready(function() {
 pip install markdown</p>
 </li>
 </ol>
-<h3>开始搭建博客</h3>
+<h2>开始搭建博客</h2>
 <p>打开Git bash，创建一个文件夹<code>Amazilia</code>（可以按喜好拟定），执行如下命令：</p>
 <div class="highlight"><pre>mkdir Amazilia
 cd Amazilia
@@ -243,7 +245,7 @@ pelican-quickstart
 </pre></div>
 
 
-<h3>撰写博客</h3>
+<h2>撰写博客</h2>
 <p>完成博客主体搭建后，可以使用Sublime Text创建一个<code>.md</code>文件，使用markdown语法书写博客，完成后保存于<code>content</code>文件夹中。</p>
 <div class="highlight"><pre>Title: 使用Pelican和GitHub搭建个人博客
 Date: 2014-09-08
@@ -270,7 +272,7 @@ Github是一个具有版本管理功能的代码仓库，每个项目都有一�
 
 
 <p>同样<code>make serve</code>命令也可以由第二行的<code>Pelican</code>命令替代，在浏览器中输入<code>http://localhost:8000</code>即可看到博文效果。</p>
-<h3>配置主题</h3>
+<h2>配置主题</h2>
 <p>在Amazilia目录下，按照如下步骤下载Pelican主题，只挑选喜欢的即可，其他不喜欢的可以删掉。主题可以在<a href="https://github.com/getpelican/pelican-themes">Pelican主题库</a>查看。</p>
 <div class="highlight"><pre>git clone https://github.com/getpelican/pelican-themes.git
 </pre></div>
@@ -286,13 +288,13 @@ Github是一个具有版本管理功能的代码仓库，每个项目都有一�
 </pre></div>
 
 
-<h3>添加评论系统</h3>
+<h2>添加评论系统</h2>
 <p>在<a href="https://disqus.com/">Disqus</a>上注册，按照流程Disqus会分配给站点一个<code>Shortname</code>，然后修改<code>pelicanconf.py</code></p>
 <div class="highlight"><pre>DISQUS_SITENAME=Shortname
 </pre></div>
 
 
-<h3>发布博客</h3>
+<h2>发布博客</h2>
 <p>在github上面建立一个<code>当前github用户名.github.io</code>的版本仓库，如我博客版本仓库的为<code>allotory.github.io</code>，然后进入<code>output</code>目录下，依次执行如下命令：</p>
 <div class="highlight"><pre>git init
 git remote add origin git@github.com:allotory/allotory.github.io.git
@@ -303,15 +305,15 @@ git push origin master
 
 
 <p>如此完成博客发布，访问<code>allotory.github.io</code>即可。</p>
-<h3>Google Analytics</h3>
+<h2>Google Analytics</h2>
 <p>注册<a href="https://www.google.com/analytics/">Google Analytics</a>可以更好的管理自己的站点，按顺序注册，得到<code>Tracking ID</code>配置到<code>pelicanconf.py</code>里面。</p>
 <div class="highlight"><pre>GOOGLE_ANALYTICS = &#39;Tracking ID&#39;
 </pre></div>
 
 
-<h3>Google Webmasters</h3>
+<h2>Google Webmasters</h2>
 <p><a href="http://www.google.com/webmasters/">Google Webmasters</a>是Google的站长工具，使用它的目的是让博客被Google更好的收录，比如手动让Googlebot抓取、提交Robots、更新Sitemap等功能，使用起来非常方便。要想使用Google Webmasters只要在<a href="https://www.google.com/analytics/">Google Webmasters</a>上注册即可。</p>
-<h3>URL配置</h3>
+<h2>URL配置</h2>
 <p>使用URL配置可以更好的设置博文的URL。打开<code>pelicanconf.py</code>，按照如下修改或添加：</p>
 <div class="highlight"><pre>ARTICLE_URL = &#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/&#39;
 ARTICLE_SAVE_AS = &#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html&#39;
@@ -319,7 +321,7 @@ ARTICLE_SAVE_AS = &#39;posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html&#39
 
 
 <p>此时的URL为<code>http://allotory.github.io/posts/2014/09/08/pelican-install/</code>,而文件保存路径为<code>http://allotory.github.io/posts/2014/09/08/pelican-install/index.html</code>。</p>
-<h3>总结</h3>
+<h2>总结</h2>
 <p>到目前为止博客基本功能已经搭建完成，部分功能还可以进一步完善，最终效果如下：</p>
 <p><img alt="screenshot" src="/images/1-screenshot.png" /></p>
 					</div>
